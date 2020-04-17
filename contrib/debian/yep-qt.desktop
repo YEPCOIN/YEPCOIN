@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=YEP
+Comment=YEP P2P Cryptocurrency
+Comment[fr]=YEP, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=YEP, eşten eşe kriptografik sanal para birimi
+Exec=yep-qt %u
+Terminal=false
+Type=Application
+Icon=yep128
+MimeType=x-scheme-handler/yep;
+Categories=Office;Finance;
+StartupWMClass=YEP-qt
