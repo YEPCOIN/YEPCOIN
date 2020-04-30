@@ -16,7 +16,11 @@ Which has an evolutionary value that will improve:
     Giving money or pay your service anonymously with just a simple option
 
 
-![Yep Logo](https://github.com/YEPCOIN/Yep-Core/blob/master/src/qt/res/images/pivx_logo_horizontal.png)
+<p align="center">
+  <img width="360" height="360" src="https://yepcoin.io/assets/images/logo-black-white-matte.gif">
+</p>
+
+
 
 
 You bring value to the long term success of the project, not how much money you have in your pocket. Become an integral part of the network with minimal investment.
