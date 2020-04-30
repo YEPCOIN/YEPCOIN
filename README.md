@@ -1,7 +1,10 @@
 YEP COIN
 =====================================
 
- [![Build Status](https://travis-ci.com/yep/yep.svg?branch=master)](https://travis-ci.com/yep-crypto/yep-explorer) [![Discord](https://img.shields.io/discord/479050479330918410.svg)](https://discord.gg/PGJte7Y) [![GitHub version](https://badge.fury.io/gh/yep%2Fyep.svg)](https://badge.fury.io/gh/yep%2Fyep)
+
+![Discord](https://img.shields.io/discord/501493484046516245?color=GOLD&label=YEP%20COIN) 
+![CPAN](https://img.shields.io/cpan/v/Config-Augeas?color=GOLD&label=VERSION)
+ 
 <br>
 YEP COIN is a Crypto currency.
 Allowing everyone to easily send and receive YEP currency through all the existing means of communication!
