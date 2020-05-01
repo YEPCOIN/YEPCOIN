@@ -29,8 +29,13 @@ Which has an evolutionary value that will improve:
 You bring value to the long term success of the project, not how much money you have in your pocket. Become an integral part of the network with minimal investment.
 
 
-
-
+### Cost of the project as of : MAY 1 2020
+<table>
+<tr><td>Spend in &#36</td><td>6025,69</td></tr>
+<tr><td>Spend in &#8364</td><td>21220,222</td></tr>
+<tr><td>Spend in &#8383 </td><td>0,338</td></tr>
+<tr><td>Profit &#128181 </td><td>0</td></tr>
+</table>
 
 ### More information
 <table>
