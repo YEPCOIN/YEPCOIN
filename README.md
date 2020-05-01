@@ -14,9 +14,9 @@ The first objective is to facilitate the payment using the existing means of com
 With YEP COIN, this person and yourself open the door to opportunities to receive a few coins from anyone in the world who uses YEP COIN.
 Which has an evolutionary value that will improve:
 
-    Discard your bank card, pay anytime online or offline
-    Exchange any things in social medias with just a click in YEP Link
-    Giving money or pay your service anonymously with just a simple option
+- Discard your bank card, pay anytime online or offline
+- Exchange any things in social medias with just a click in YEP Link
+- Giving money or pay your service anonymously with just a simple option
 
 
 <p align="center">
