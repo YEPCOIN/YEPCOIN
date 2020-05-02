@@ -33,7 +33,7 @@ You bring value to the long term success of the project, not how much money you 
 <table>
 <tr><td>Spend in &#36</td><td>6025,69</td></tr>
 <tr><td>Spend in &#8364</td><td>21220,222</td></tr>
-<tr><td>Spend in &#8383 </td><td>0,338</td></tr>
+<tr><td>Spend in &#8383 </td><td>0,388</td></tr>
 <tr><td>Profit &#128181 </td><td>0</td></tr>
 <tr><td>Details of expenses and earnings</td><td><a style="display:inline-block;width:100%;height:100%;" href="https://cdn.discordapp.com/attachments/705817898878238860/706075687886389279/Cost_of_the_Project_YEP_COIN.xlsx">PROJECT YEP COIN</a></TD></tr>
 
