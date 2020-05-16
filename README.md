@@ -90,7 +90,7 @@ You bring value to the long term success of the project, not how much money you 
 ### PoS Rewards Breakdown Masternodes & Stakers
 
 <table>
-<th>Phase</th><th>duration</th><th>Block Height</th><th>Reward</th><th>Masternodes</th><th>Stakers</th>
+<th>Phase</th><th>Duration</th><th>Block Height</th><th>Reward</th><th>Masternodes</th><th>Stakers</th>
 <tr><td>Phase 1</td><td>1 Month</td><td>1001-22601</td><td>100 YEP</td><td>64</td><td>16</td></tr>
 <tr><td>Phase 2</td><td>1 Month</td><td>22602-44202</td><td>90 YEP</td><td>57,6</td><td>14,4</td></tr>
 <tr><td>Phase 3</td><td>1 Month</td><td>44203-65803</td><td>80 YEP</td><td>51,2</td><td>12,8</td></tr>
