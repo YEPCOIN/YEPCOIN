@@ -46,7 +46,7 @@ You bring value to the long term success of the project, not how much money you 
 <tr><td>Website</td><td><a style="display:inline-block;width:100%;height:100%;" href="https://yepcoin.io">Yepcoin.io</a></TD></tr>
 <tr><td>Store</td><td><a style="display:inline-block;width:100%;height:100%;" href="https://yepstore.io">Yepstore.io</a></TD></tr>
 <tr><td>Visit our announcement thread</td><td><a style="display:inline-block;width:100%;height:100%;" href="https://bitcointalk.org/index.php?topic=5098691.msg49280618#msg49280618">BitcoinTalk</a></TD></tr>
-<tr><td>YEP COIN Transaction Demo</td><td><a style="display:inline-block;width:100%;height:100%;" href="https://yepcoin.herokuapp.com/withdraw/SJD94">YEP ME</a></TD></tr>
+<tr><td>YEP COIN Transaction Demo</td><td><a style="display:inline-block;width:100%;height:100%;" href="https://yepme.herokuapp.com/withdraw/SJD94">YEP ME</a></TD></tr>
 <tr><td>Explorer</td><td><a style="display:inline-block;width:100%;height:100%;" href="https://explorer.yepcoin.io">Explorer</a></TD></tr>
 <tr><td>Masternode</td><td><a style="display:inline-block;width:100%;height:100%;" href="https://cdn.discordapp.com/attachments/707855525051891773/707902529731690586/Masternode_Installation_Process.pdf">Masternode Installation Process</a></TD></tr>
 </table>
