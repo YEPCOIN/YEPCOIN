@@ -1,5 +1,6 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.10)
 
+set(QT_MINIMUM_VERSION 5.5.1)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/forms ${CMAKE_CURRENT_SOURCE_DIR}/yep/forms ${CMAKE_CURRENT_SOURCE_DIR}/yep/settings/forms)
 set(CMAKE_AUTOMOC ON)
@@ -10,18 +11,12 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 endif ()
 
-find_package(Qrcode)
-if (QRCODE_FOUND)
-    include_directories ( ${QRCODE_INCLUDE_DIR} )
-    link_directories ( ${QRCODE_LIBRARY_DIRS} )
-endif()
-
 unset(Qt5Enables)
 foreach(comp Widgets Core Gui Network LinguistTools DBus Svg Charts)
     find_package(Qt5${comp})
     set(Qt5Enables "${Qt5Enables};Qt5${comp}_FOUND")
     if(Qt5${comp}_FOUND)
-        MESSAGE(STATUS "FOUND QT5${comp}")
+        MESSAGE(STATUS "FOUND Qt5${comp}")
         include_directories(${include_directories} ${Qt5${comp}_INCLUDE_DIRS} ${QT_USE_FILE})
         add_definitions(${Qt5${comp}_DEFINITIONS})
         list(APPEND Qt5_LIBRARIES ${Qt5${comp}_LIBRARIES})
@@ -29,6 +24,16 @@ foreach(comp Widgets Core Gui Network LinguistTools DBus Svg Charts)
         MESSAGE(WARNING "Cant find Qt5${comp}")
     endif()
 endforeach(comp)
+
+if (Qt5Core_FOUND)
+    if (Qt5Core_VERSION VERSION_LESS QT_MINIMUM_VERSION)
+        MESSAGE(FATAL_ERROR "Minimum supported Qt5 version is ${QT_MINIMUM_VERSION}")
+    else()
+        MESSAGE(STATUS "Found Qt5 version: ${Qt5Core_VERSION}")
+    endif()
+else()
+    MESSAGE(FATAL_ERROR "Could not find any Qt5 installation")
+endif()
 
 if (Qt5DBus_FOUND)
     add_compile_options("-DUSE_DBUS")
@@ -38,14 +43,21 @@ if (Qt5Charts_FOUND)
     add_compile_options("-DUSE_QTCHARTS")
 endif()
 
+find_package(Qrcode)
+if (QRCODE_FOUND)
+    include_directories ( ${QRCODE_INCLUDE_DIR} )
+    link_directories ( ${QRCODE_LIBRARY_DIRS} )
+endif()
+
 find_program(MOC_BIN NAMES moc moc-qt5 qt5-moc
         PATHS /usr/lib/qt5/bin /usr/lib/x86_64-linux-gnu/qt5/bin /usr/local/opt/qt/bin /usr/local/opt/qt5/bin
         NO_DEFAULT_PATH
         NO_SYSTEM_ENVIRONMENT_PATH)
 if (MOC_BIN)
     MESSAGE(STATUS "FOUND MOC ${MOC_BIN}")
-
 endif ()
+
+add_compile_options("-DQT_NO_KEYWORDS")
 
 # Why isn't this done automatically??
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
@@ -67,13 +79,10 @@ PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ${CMAKE_CURRENT_SOURCE_DIR}/paymentr
 
 SET(QT_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/bantablemodel.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/blockexplorer.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/bitcoinaddressvalidator.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/bitcoinamountfield.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/bitcoinunits.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/clientmodel.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/csvmodelwriter.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/governancepage.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/guiutil.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/intro.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/networkstyle.cpp
@@ -85,31 +94,27 @@ SET(QT_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/qvalidatedlineedit.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/qvaluecombobox.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/rpcconsole.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/splashscreen.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/trafficgraphwidget.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/utilitydialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/addressbookpage.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/addresstablemodel.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/askpassphrasedialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/coincontroldialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/zyepcontroldialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/coincontroltreewidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/proposalframe.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/editaddressdialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/openuridialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/paymentrequestplus.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/paymentserver.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/recentrequeststablemodel.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/transactiondesc.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/transactionfilterproxy.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/transactionrecord.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/transactiontablemodel.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/walletmodel.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/walletmodeltransaction.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/zyepcontroldialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/yepgui.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/loadingdialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/pwidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/yep/focuseddialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/guitransactionsutils.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/snackbar.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/navmenuwidget.cpp
@@ -119,12 +124,10 @@ SET(QT_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/txviewholder.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/qtutils.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/expandablebutton.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/yep/walletpassworddialog.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/topbar.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/txrow.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/addressfilterproxymodel.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/dashboardwidget.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/yep/coincontrolyepwidget.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/addresslabelrow.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/contactdropdownrow.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/contactsdropdown.cpp
@@ -151,8 +154,6 @@ SET(QT_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/tooltipmenu.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/addresseswidget.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/defaultdialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/yep/denomgenerationdialog.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/yep/privacywidget.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/coldstakingwidget.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/settings/settingsbackupwallet.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/settings/settingsbittoolwidget.cpp
@@ -166,6 +167,7 @@ SET(QT_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/settings/settingssignmessagewidgets.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/settings/settingswalletoptionswidget.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/settings/settingswalletrepairwidget.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/yep/settings/settingsexportcsv.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/settings/settingswidget.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/welcomecontentwidget.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/yep/splash.cpp
@@ -214,15 +216,16 @@ QT5_ADD_RESOURCES(QRC_RESOURCE yep.qrc)
 QT5_ADD_RESOURCES(QRC_LOCALE_RESOURCE yep_locale.qrc)
 
 add_executable(yep-qt yep.cpp ${QM} ${QRC_RESOURCE} ${QRC_LOCALE_RESOURCE})
-add_dependencies(yep-qt translations_target libunivalue libsecp256k1 leveldb leveldb_sse42 memenv)
+add_dependencies(yep-qt translations_target libunivalue libsecp256k1 libzcashrust leveldb crc32c)
 target_include_directories(yep-qt PUBLIC ${ENDIAN_INCLUDES})
 target_link_libraries(yep-qt
         qt_stuff
         univalue
-        SERVER_A UTIL_A WALLET_A CLI_A COMMON_A BITCOIN_CRYPTO_A ZEROCOIN_A
-        leveldb leveldb_sse42 memenv secp256k1
+        SERVER_A UTIL_A WALLET_A CLI_A COMMON_A BITCOIN_CRYPTO_A ZEROCOIN_A SAPLING_A
+        leveldb crc32c secp256k1 rustzcash
         ${BerkeleyDB_LIBRARIES} ${OPENSSL_LIBRARIES} ${Boost_LIBRARIES} ${PROTOBUF_LIBRARIES} ${LIBEVENT_LIB}
-        pthread
+        ${sodium_LIBRARY_RELEASE}
+        -ldl pthread
         )
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     target_link_libraries(yep-qt "-framework Cocoa")

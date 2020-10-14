@@ -11,6 +11,7 @@ src/yep
 src/yepd
 src/yep-cli
 src/yep-tx
+src/bench/bench_yep
 src/test/test_yep
 src/qt/test/test_yep-qt
 
@@ -87,6 +88,11 @@ Makefile
 yep-qt
 YEP-Qt.app
 background.tiff*
+
+# Rust
+.cargo/.configured-for-*
+.cargo/config
+target/
 
 # Unit-tests
 Makefile.test

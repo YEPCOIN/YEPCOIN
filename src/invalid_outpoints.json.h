@@ -6794,4 +6794,4 @@ std::string LoadInvalidOutPoints()
     return str;
 }
 
-#endif //YEP_INVALID_OUTPOINTS_JSON_H
+#endif //PIVX_INVALID_OUTPOINTS_JSON_H

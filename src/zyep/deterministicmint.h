@@ -50,9 +50,9 @@ public:
     ADD_SERIALIZE_METHODS;
 
     template <typename Stream, typename Operation>
-    inline void SerializationOp(Stream& s, Operation ser_action, int nType, int nVersion)
+    inline void SerializationOp(Stream& s, Operation ser_action)
     {
-        READWRITE(this->nVersion);
+        READWRITE(nVersion);
         READWRITE(nCount);
         READWRITE(hashSeed);
         READWRITE(hashSerial);
@@ -65,4 +65,4 @@ public:
     };
 };
 
-#endif //YEP_DETERMINISTICMINT_H
+#endif //PIVX_DETERMINISTICMINT_H

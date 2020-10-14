@@ -1,0 +1,15 @@
+QT_TS = \
+  qt/locale/yep_de.ts \
+  qt/locale/yep_en.ts \
+  qt/locale/yep_en_US.ts \
+  qt/locale/yep_es.ts \
+  qt/locale/yep_es_ES.ts \
+  qt/locale/yep_fr_FR.ts \
+  qt/locale/yep_hr_HR.ts \
+  qt/locale/yep_it.ts \
+  qt/locale/yep_ko_KR.ts \
+  qt/locale/yep_nl.ts \
+  qt/locale/yep_pl.ts \
+  qt/locale/yep_ru.ts \
+  qt/locale/yep_tr.ts \
+  qt/locale/yep_zh_CN.ts

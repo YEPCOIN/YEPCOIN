@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
-// Copyright (c) 2017-2019 The PIVX developers
+// Copyright (c) 2017-2020 The PIVX developers
 // Copyright (c) 2020 The YEP developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -19,18 +19,19 @@ namespace boost
 class thread_group;
 } // namespace boost
 
-extern CWallet* pwalletMain;
-extern CzYEPWallet* zwalletMain;
-
 void StartShutdown();
 bool ShutdownRequested();
 /** Interrupt threads */
 void Interrupt();
 void Shutdown();
 void PrepareShutdown();
+//!Initialize the logging infrastructure
+void InitLogging();
+//!Parameter interaction: change current parameters depending on various rules
+void InitParameterInteraction();
 bool AppInit2();
 
-/** Initialize YEP: Basic context setup.
+/** Initialize PIVX core: Basic context setup.
  *  @note This can be done before daemonization. Do not call Shutdown() if this function fails.
  *  @pre Parameters should be parsed and config file should be read.
  */

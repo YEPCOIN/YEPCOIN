@@ -9,10 +9,10 @@ filters are not enabled.
 """
 
 from test_framework.mininode import *
-from test_framework.test_framework import YEPTestFramework
+from test_framework.test_framework import YepTestFramework
 from test_framework.util import *
 
-class P2PMempoolTests(YEPTestFramework):
+class P2PMempoolTests(YepTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

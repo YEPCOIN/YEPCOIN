@@ -33,10 +33,10 @@ and confirm again balances are correct.
 from random import randint
 import shutil
 
-from test_framework.test_framework import YEPTestFramework
+from test_framework.test_framework import YepTestFramework
 from test_framework.util import *
 
-class WalletBackupTest(YEPTestFramework):
+class WalletBackupTest(YepTestFramework):
     def set_test_params(self):
         self.num_nodes = 4
         self.setup_clean_chain = True

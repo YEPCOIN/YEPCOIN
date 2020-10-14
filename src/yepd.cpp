@@ -7,6 +7,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "clientversion.h"
+#include "fs.h"
 #include "init.h"
 #include "main.h"
 #include "masternodeconfig.h"
@@ -18,7 +19,6 @@
 #include "httprpc.h"
 
 #include <boost/algorithm/string/predicate.hpp>
-#include <boost/filesystem.hpp>
 #include <boost/thread.hpp>
 
 #include <stdio.h>
@@ -29,8 +29,8 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called YEP (http://www.yep.org),
- * which enables instant payments to anyone, anywhere in the world. YEP uses peer-to-peer technology to operate
+ * This is the developer documentation of the reference client for an experimental new digital currency called PIVX (http://www.pivx.org),
+ * which enables instant payments to anyone, anywhere in the world. PIVX uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
  * The software is a community-driven open source project, released under the MIT license.
@@ -63,18 +63,18 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/yep.conf are parsed in qt/yep.cpp's main()
+    // If Qt is used, parameters/pivx.conf are parsed in qt/pivx.cpp's main()
     ParseParameters(argc, argv);
 
     // Process help and version before taking care about datadir
     if (mapArgs.count("-?") || mapArgs.count("-help") || mapArgs.count("-version")) {
-        std::string strUsage = _("YEP Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n";
+        std::string strUsage = _("Yep Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n";
 
         if (mapArgs.count("-version")) {
             strUsage += LicenseInfo();
         } else {
             strUsage += "\n" + _("Usage:") + "\n" +
-                        "  yepd [options]                     " + _("Start YEP Daemon") + "\n";
+                        "  yepd [options]                     " + _("Start Yep Core Daemon") + "\n";
 
             strUsage += "\n" + HelpMessage(HMM_BITCOIND);
         }
@@ -84,7 +84,7 @@ bool AppInit(int argc, char* argv[])
     }
 
     try {
-        if (!boost::filesystem::is_directory(GetDataDir(false))) {
+        if (!fs::is_directory(GetDataDir(false))) {
             fprintf(stderr, "Error: Specified data directory \"%s\" does not exist.\n", mapArgs["-datadir"].c_str());
             return false;
         }
@@ -141,6 +141,9 @@ bool AppInit(int argc, char* argv[])
 #endif
         SoftSetBoolArg("-server", true);
 
+        // Set this early so that parameter interactions go to console
+        InitLogging();
+        InitParameterInteraction();
         fRet = AppInit2();
     } catch (const std::exception& e) {
         PrintExceptionContinue(&e, "AppInit()");
@@ -162,7 +165,7 @@ int main(int argc, char* argv[])
 {
     SetupEnvironment();
 
-    // Connect yepd signal handlers
+    // Connect pivxd signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? 0 : 1);

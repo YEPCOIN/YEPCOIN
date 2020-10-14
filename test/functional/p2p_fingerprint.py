@@ -21,12 +21,12 @@ from test_framework.mininode import (
     network_thread_start,
     wait_until,
 )
-from test_framework.test_framework import YEPTestFramework
+from test_framework.test_framework import YepTestFramework
 from test_framework.util import (
     assert_equal,
 )
 
-class P2PFingerprintTest(YEPTestFramework):
+class P2PFingerprintTest(YepTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

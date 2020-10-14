@@ -22,7 +22,7 @@ from decimal import Decimal
 import http.client
 import subprocess
 
-from test_framework.test_framework import YEPTestFramework
+from test_framework.test_framework import YepTestFramework
 from test_framework.util import (
     assert_equal,
     assert_greater_than,
@@ -33,7 +33,7 @@ from test_framework.util import (
     assert_is_hash_string,
 )
 
-class BlockchainTest(YEPTestFramework):
+class BlockchainTest(YepTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
 
@@ -69,9 +69,12 @@ class BlockchainTest(YEPTestFramework):
         assert_equal(res['transactions'], 200)
         assert_equal(res['height'], 200)
         assert_equal(res['txouts'], 200)
-        assert_equal(res['bytes_serialized'], 14073),
+        assert_equal(res['bestblock'], node.getblockhash(200))
+        size = res['disk_size']
+        assert_greater_than_or_equal(size, 6400)
+        assert_greater_than_or_equal(64000, size)
         assert_equal(len(res['bestblock']), 64)
-        assert_equal(len(res['hash_serialized']), 64)
+        assert_equal(len(res['hash_serialized_2']), 64)
 
     def _test_getblockheader(self):
         node = self.nodes[0]

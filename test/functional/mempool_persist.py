@@ -38,10 +38,10 @@ Test is as follows:
 import os
 import time
 
-from test_framework.test_framework import YEPTestFramework
+from test_framework.test_framework import YepTestFramework
 from test_framework.util import *
 
-class MempoolPersistTest(YEPTestFramework):
+class MempoolPersistTest(YepTestFramework):
     def set_test_params(self):
         self.num_nodes = 3
         self.extra_args = [[], ["-persistmempool=0"], []]

@@ -53,4 +53,4 @@ protected:
 
 };
 
-#endif //YEP_PFBorderImage_H
+#endif //PIVX_PFBorderImage_H

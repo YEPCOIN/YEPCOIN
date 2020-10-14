@@ -19,16 +19,17 @@
 #include "qt/yep/defaultdialog.h"
 #include "qt/yep/settings/settingsfaqwidget.h"
 
-#include <QDesktopWidget>
-#include <QHBoxLayout>
-#include <QVBoxLayout>
+#include "init.h"
+#include "util.h"
+
 #include <QApplication>
 #include <QColor>
-#include <QShortcut>
+#include <QHBoxLayout>
 #include <QKeySequence>
+#include <QScreen>
+#include <QShortcut>
 #include <QWindowStateChangeEvent>
 
-#include "util.h"
 
 #define BASE_WINDOW_WIDTH 1200
 #define BASE_WINDOW_HEIGHT 740
@@ -48,7 +49,7 @@ YEPGUI::YEPGUI(const NetworkStyle* networkStyle, QWidget* parent) :
 
 
     // Adapt screen size
-    QRect rec = QApplication::desktop()->screenGeometry();
+    QRect rec = QGuiApplication::primaryScreen()->geometry();
     int adaptedHeight = (rec.height() < BASE_WINDOW_HEIGHT) ?  BASE_WINDOW_MIN_HEIGHT : BASE_WINDOW_HEIGHT;
     int adaptedWidth = (rec.width() < BASE_WINDOW_WIDTH) ?  BASE_WINDOW_MIN_WIDTH : BASE_WINDOW_WIDTH;
     GUIUtil::restoreWindowGeometry(
@@ -64,25 +65,20 @@ YEPGUI::YEPGUI(const NetworkStyle* networkStyle, QWidget* parent) :
     enableWallet = false;
 #endif // ENABLE_WALLET
 
-    QString windowTitle = tr("YEP COIN") + " - ";
-    windowTitle += ((enableWallet) ? tr("Wallet") : tr("Node"));
+    QString windowTitle = QString::fromStdString(GetArg("-windowtitle", ""));
+    if (windowTitle.isEmpty()) {
+        windowTitle = tr("YEP Core") + " - ";
+        windowTitle += ((enableWallet) ? tr("Wallet") : tr("Node"));
+    }
     windowTitle += " " + networkStyle->getTitleAddText();
     setWindowTitle(windowTitle);
 
-#ifndef Q_OS_MAC
     QApplication::setWindowIcon(networkStyle->getAppIcon());
     setWindowIcon(networkStyle->getAppIcon());
-#else
-    MacDockIconHandler::instance()->setIcon(networkStyle->getAppIcon());
-#endif
-
-
-
 
 #ifdef ENABLE_WALLET
     // Create wallet frame
-    if(enableWallet){
-
+    if (enableWallet) {
         QFrame* centralWidget = new QFrame(this);
         this->setMinimumWidth(BASE_WINDOW_MIN_WIDTH);
         this->setMinimumHeight(BASE_WINDOW_MIN_HEIGHT);
@@ -170,7 +166,8 @@ YEPGUI::YEPGUI(const NetworkStyle* networkStyle, QWidget* parent) :
 
 }
 
-void YEPGUI::createActions(const NetworkStyle* networkStyle){
+void YEPGUI::createActions(const NetworkStyle* networkStyle)
+{
     toggleHideAction = new QAction(networkStyle->getAppIcon(), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
 
@@ -179,14 +176,15 @@ void YEPGUI::createActions(const NetworkStyle* networkStyle){
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
 
-    connect(toggleHideAction, SIGNAL(triggered()), this, SLOT(toggleHidden()));
-    connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
+    connect(toggleHideAction, &QAction::triggered, this, &YEPGUI::toggleHidden);
+    connect(quitAction, &QAction::triggered, qApp, &QApplication::quit);
 }
 
 /**
  * Here add every event connection
  */
-void YEPGUI::connectActions() {
+void YEPGUI::connectActions()
+{
     QShortcut *consoleShort = new QShortcut(this);
     consoleShort->setKey(QKeySequence(SHORT_KEY + Qt::Key_C));
     connect(consoleShort, &QShortcut::activated, [this](){
@@ -209,10 +207,11 @@ void YEPGUI::connectActions() {
 }
 
 
-void YEPGUI::createTrayIcon(const NetworkStyle* networkStyle) {
+void YEPGUI::createTrayIcon(const NetworkStyle* networkStyle)
+{
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
-    QString toolTip = tr("YEP client") + " " + networkStyle->getTitleAddText();
+    QString toolTip = tr("YEP Core client") + " " + networkStyle->getTitleAddText();
     trayIcon->setToolTip(toolTip);
     trayIcon->setIcon(networkStyle->getAppIcon());
     trayIcon->hide();
@@ -220,8 +219,8 @@ void YEPGUI::createTrayIcon(const NetworkStyle* networkStyle) {
     notificator = new Notificator(QApplication::applicationName(), trayIcon, this);
 }
 
-//
-YEPGUI::~YEPGUI() {
+YEPGUI::~YEPGUI()
+{
     // Unsubscribe from notifications from core
     unsubscribeFromCoreSignals();
 
@@ -235,16 +234,17 @@ YEPGUI::~YEPGUI() {
 
 
 /** Get restart command-line parameters and request restart */
-void YEPGUI::handleRestart(QStringList args){
+void YEPGUI::handleRestart(QStringList args)
+{
     if (!ShutdownRequested())
-        emit requestedRestart(args);
+        Q_EMIT requestedRestart(args);
 }
 
 
-void YEPGUI::setClientModel(ClientModel* clientModel) {
+void YEPGUI::setClientModel(ClientModel* clientModel)
+{
     this->clientModel = clientModel;
-    if(this->clientModel) {
-
+    if (this->clientModel) {
         // Create system tray menu (or setup the dock menu) that late to prevent users from calling actions,
         // while the client has not yet fully loaded
         createTrayIconMenu();
@@ -255,9 +255,9 @@ void YEPGUI::setClientModel(ClientModel* clientModel) {
         settingsWidget->setClientModel(clientModel);
 
         // Receive and report messages from client model
-        connect(clientModel, SIGNAL(message(QString, QString, unsigned int)), this, SLOT(message(QString, QString, unsigned int)));
-        connect(topBar, SIGNAL(walletSynced(bool)), dashboard, SLOT(walletSynced(bool)));
-        connect(topBar, SIGNAL(walletSynced(bool)), coldStakingWidget, SLOT(walletSynced(bool)));
+        connect(clientModel, &ClientModel::message, this, &YEPGUI::message);
+        connect(topBar, &TopBar::walletSynced, dashboard, &DashboardWidget::walletSynced);
+        connect(topBar, &TopBar::walletSynced, coldStakingWidget, &ColdStakingWidget::walletSynced);
 
         // Get restart command-line parameters and handle restart
         connect(settingsWidget, &SettingsWidget::handleRestart, [this](QStringList arg){handleRestart(arg);});
@@ -279,29 +279,31 @@ void YEPGUI::setClientModel(ClientModel* clientModel) {
     }
 }
 
-void YEPGUI::createTrayIconMenu() {
+void YEPGUI::createTrayIconMenu()
+{
 #ifndef Q_OS_MAC
-    // return if trayIcon is unset (only on non-Mac OSes)
+    // return if trayIcon is unset (only on non-macOSes)
     if (!trayIcon)
         return;
 
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
 
-    connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
-            this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
+    connect(trayIcon, &QSystemTrayIcon::activated, this, &YEPGUI::trayIconActivated);
 #else
-    // Note: On Mac, the dock icon is used to provide the tray's functionality.
+    // Note: On macOS, the Dock icon is used to provide the tray's functionality.
     MacDockIconHandler* dockIconHandler = MacDockIconHandler::instance();
-    dockIconHandler->setMainWindow((QMainWindow*)this);
-    trayIconMenu = dockIconHandler->dockMenu();
+    connect(dockIconHandler, &MacDockIconHandler::dockIconClicked, this, &YEPGUI::macosDockIconActivated);
+
+    trayIconMenu = new QMenu(this);
+    trayIconMenu->setAsDockMenu();
 #endif
 
-    // Configuration of the tray icon (or dock icon) icon menu
+    // Configuration of the tray icon (or Dock icon) icon menu
     trayIconMenu->addAction(toggleHideAction);
     trayIconMenu->addSeparator();
 
-#ifndef Q_OS_MAC // This is built-in on Mac
+#ifndef Q_OS_MAC // This is built-in on macOS
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(quitAction);
 #endif
@@ -315,6 +317,12 @@ void YEPGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
         toggleHidden();
     }
 }
+#else
+void YEPGUI::macosDockIconActivated()
+ {
+     show();
+     activateWindow();
+ }
 #endif
 
 void YEPGUI::changeEvent(QEvent* e)
@@ -325,7 +333,7 @@ void YEPGUI::changeEvent(QEvent* e)
         if (clientModel && clientModel->getOptionsModel() && clientModel->getOptionsModel()->getMinimizeToTray()) {
             QWindowStateChangeEvent* wsevt = static_cast<QWindowStateChangeEvent*>(e);
             if (!(wsevt->oldState() & Qt::WindowMinimized) && isMinimized()) {
-                QTimer::singleShot(0, this, SLOT(hide()));
+                QTimer::singleShot(0, this, &YEPGUI::hide);
                 e->ignore();
             }
         }
@@ -346,16 +354,18 @@ void YEPGUI::closeEvent(QCloseEvent* event)
 }
 
 
-void YEPGUI::messageInfo(const QString& text){
-    if(!this->snackBar) this->snackBar = new SnackBar(this, this);
+void YEPGUI::messageInfo(const QString& text)
+{
+    if (!this->snackBar) this->snackBar = new SnackBar(this, this);
     this->snackBar->setText(text);
     this->snackBar->resize(this->width(), snackBar->height());
     openDialog(this->snackBar, this);
 }
 
 
-void YEPGUI::message(const QString& title, const QString& message, unsigned int style, bool* ret) {
-    QString strTitle =  tr("YEP"); // default title
+void YEPGUI::message(const QString& title, const QString& message, unsigned int style, bool* ret)
+{
+    QString strTitle =  tr("YEP Core"); // default title
     // Default to information icon
     int nNotifyIcon = Notificator::Information;
 
@@ -393,26 +403,27 @@ void YEPGUI::message(const QString& title, const QString& message, unsigned int 
         // Check for buttons, use OK as default, if none was supplied
         int r = 0;
         showNormalIfMinimized();
-        if(style & CClientUIInterface::BTN_MASK){
+        if (style & CClientUIInterface::BTN_MASK) {
             r = openStandardDialog(
                     (title.isEmpty() ? strTitle : title), message, "OK", "CANCEL"
                 );
-        }else{
+        } else {
             r = openStandardDialog((title.isEmpty() ? strTitle : title), message, "OK");
         }
         if (ret != NULL)
             *ret = r;
-    } else if(style & CClientUIInterface::MSG_INFORMATION_SNACK){
+    } else if (style & CClientUIInterface::MSG_INFORMATION_SNACK) {
         messageInfo(message);
-    }else {
-        // Append title to "YEP - "
+    } else {
+        // Append title to "PIVX - "
         if (!msgType.isEmpty())
             strTitle += " - " + msgType;
         notificator->notify((Notificator::Class) nNotifyIcon, strTitle, message);
     }
 }
 
-bool YEPGUI::openStandardDialog(QString title, QString body, QString okBtn, QString cancelBtn){
+bool YEPGUI::openStandardDialog(QString title, QString body, QString okBtn, QString cancelBtn)
+{
     DefaultDialog *dialog;
     if (isVisible()) {
         showHide(true);
@@ -423,7 +434,7 @@ bool YEPGUI::openStandardDialog(QString title, QString body, QString okBtn, QStr
     } else {
         dialog = new DefaultDialog();
         dialog->setText(title, body, okBtn);
-        dialog->setWindowTitle(tr("YEP"));
+        dialog->setWindowTitle(tr("YEP Core"));
         dialog->adjustSize();
         dialog->raise();
         dialog->exec();
@@ -434,28 +445,24 @@ bool YEPGUI::openStandardDialog(QString title, QString body, QString okBtn, QStr
 }
 
 
-void YEPGUI::showNormalIfMinimized(bool fToggleHidden) {
+void YEPGUI::showNormalIfMinimized(bool fToggleHidden)
+{
     if (!clientModel)
         return;
-    // activateWindow() (sometimes) helps with keyboard focus on Windows
-    if (isHidden()) {
-        show();
-        activateWindow();
-    } else if (isMinimized()) {
-        showNormal();
-        activateWindow();
-    } else if (GUIUtil::isObscured(this)) {
-        raise();
-        activateWindow();
-    } else if (fToggleHidden)
+    if (!isHidden() && !isMinimized() && !GUIUtil::isObscured(this) && fToggleHidden) {
         hide();
+    } else {
+        GUIUtil::bringToFront(this);
+    }
 }
 
-void YEPGUI::toggleHidden() {
+void YEPGUI::toggleHidden()
+{
     showNormalIfMinimized(true);
 }
 
-void YEPGUI::detectShutdown() {
+void YEPGUI::detectShutdown()
+{
     if (ShutdownRequested()) {
         if (rpcConsole)
             rpcConsole->hide();
@@ -463,26 +470,31 @@ void YEPGUI::detectShutdown() {
     }
 }
 
-void YEPGUI::goToDashboard(){
-    if(stackedContainer->currentWidget() != dashboard){
+void YEPGUI::goToDashboard()
+{
+    if (stackedContainer->currentWidget() != dashboard) {
         stackedContainer->setCurrentWidget(dashboard);
         topBar->showBottom();
     }
 }
 
-void YEPGUI::goToSend(){
+void YEPGUI::goToSend()
+{
     showTop(sendWidget);
 }
 
-void YEPGUI::goToAddresses(){
+void YEPGUI::goToAddresses()
+{
     showTop(addressesWidget);
 }
 
-void YEPGUI::goToMasterNodes(){
+void YEPGUI::goToMasterNodes()
+{
     showTop(masterNodesWidget);
 }
 
-void YEPGUI::goToColdStaking(){
+void YEPGUI::goToColdStaking()
+{
     showTop(coldStakingWidget);
 }
 
@@ -490,51 +502,69 @@ void YEPGUI::goToSettings(){
     showTop(settingsWidget);
 }
 
-void YEPGUI::goToReceive(){
+void YEPGUI::goToSettingsInfo()
+{
+    navMenu->selectSettings();
+    settingsWidget->showInformation();
+    goToSettings();
+}
+
+void YEPGUI::goToReceive()
+{
     showTop(receiveWidget);
 }
 
-void YEPGUI::showTop(QWidget* view){
-    if(stackedContainer->currentWidget() != view){
+void YEPGUI::openNetworkMonitor()
+{
+    settingsWidget->openNetworkMonitor();
+}
+
+void YEPGUI::showTop(QWidget* view)
+{
+    if (stackedContainer->currentWidget() != view) {
         stackedContainer->setCurrentWidget(view);
         topBar->showTop();
     }
 }
 
-void YEPGUI::changeTheme(bool isLightTheme){
+void YEPGUI::changeTheme(bool isLightTheme)
+{
 
     QString css = GUIUtil::loadStyleSheet();
     this->setStyleSheet(css);
 
     // Notify
-    emit themeChanged(isLightTheme, css);
+    Q_EMIT themeChanged(isLightTheme, css);
 
     // Update style
     updateStyle(this);
 }
 
-void YEPGUI::resizeEvent(QResizeEvent* event){
+void YEPGUI::resizeEvent(QResizeEvent* event)
+{
     // Parent..
     QMainWindow::resizeEvent(event);
     // background
     showHide(opEnabled);
     // Notify
-    emit windowResizeEvent(event);
+    Q_EMIT windowResizeEvent(event);
 }
 
-bool YEPGUI::execDialog(QDialog *dialog, int xDiv, int yDiv){
+bool YEPGUI::execDialog(QDialog *dialog, int xDiv, int yDiv)
+{
     return openDialogWithOpaqueBackgroundY(dialog, this);
 }
 
-void YEPGUI::showHide(bool show){
-    if(!op) op = new QLabel(this);
-    if(!show){
+void YEPGUI::showHide(bool show)
+{
+    if (!op) op = new QLabel(this);
+    if (!show) {
         op->setVisible(false);
         opEnabled = false;
-    }else{
+    } else {
         QColor bg("#000000");
         bg.setAlpha(200);
-        if(!isLightTheme()){
+        if (!isLightTheme()) {
             bg = QColor("#00000000");
             bg.setAlpha(150);
         }
@@ -553,11 +583,13 @@ void YEPGUI::showHide(bool show){
     }
 }
 
-int YEPGUI::getNavWidth(){
+int YEPGUI::getNavWidth()
+{
     return this->navMenu->width();
 }
 
-void YEPGUI::openFAQ(int section){
+void YEPGUI::openFAQ(int section)
+{
     showHide(true);
     SettingsFaqWidget* dialog = new SettingsFaqWidget(this);
     if (section > 0) dialog->setSection(section);
@@ -570,7 +602,7 @@ void YEPGUI::openFAQ(int section){
 bool YEPGUI::addWallet(const QString& name, WalletModel* walletModel)
 {
     // Single wallet supported for now..
-    if(!stackedContainer || !clientModel || !walletModel)
+    if (!stackedContainer || !clientModel || !walletModel)
         return false;
 
     // set the model for every view
@@ -585,8 +617,9 @@ bool YEPGUI::addWallet(const QString& name, WalletModel* walletModel)
     settingsWidget->setWalletModel(walletModel);
 
     // Connect actions..
+    connect(walletModel, &WalletModel::message, this, &YEPGUI::message);
     connect(masterNodesWidget, &MasterNodesWidget::message, this, &YEPGUI::message);
-    connect(coldStakingWidget, &MasterNodesWidget::message, this, &YEPGUI::message);
+    connect(coldStakingWidget, &ColdStakingWidget::message, this, &YEPGUI::message);
     connect(topBar, &TopBar::message, this, &YEPGUI::message);
     connect(sendWidget, &SendWidget::message,this, &YEPGUI::message);
     connect(receiveWidget, &ReceiveWidget::message,this, &YEPGUI::message);
@@ -594,23 +627,26 @@ bool YEPGUI::addWallet(const QString& name, WalletModel* walletModel)
     connect(settingsWidget, &SettingsWidget::message, this, &YEPGUI::message);
 
     // Pass through transaction notifications
-    connect(dashboard, SIGNAL(incomingTransaction(QString, int, CAmount, QString, QString)), this, SLOT(incomingTransaction(QString, int, CAmount, QString, QString)));
+    connect(dashboard, &DashboardWidget::incomingTransaction, this, &YEPGUI::incomingTransaction);
 
     return true;
 }
 
-bool YEPGUI::setCurrentWallet(const QString& name) {
+bool YEPGUI::setCurrentWallet(const QString& name)
+{
     // Single wallet supported.
     return true;
 }
 
-void YEPGUI::removeAllWallets() {
+void YEPGUI::removeAllWallets()
+{
     // Single wallet supported.
 }
 
-void YEPGUI::incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address) {
+void YEPGUI::incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address)
+{
     // Only send notifications when not disabled
-    if(!bdisableSystemnotifications){
+    if (!bdisableSystemnotifications) {
         // On new transaction, make an info balloon
         message((amount) < 0 ? (pwalletMain->fMultiSendNotify == true ? tr("Sent MultiSend transaction") : tr("Sent transaction")) : tr("Incoming transaction"),
             tr("Date: %1\n"

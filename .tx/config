@@ -1,0 +1,7 @@
+[main]
+host = https://www.transifex.com
+
+[yep-project-translations.qt-translation-43x]
+file_filter = src/qt/locale/yep_<lang>.ts
+source_file = src/qt/locale/yep_en.ts
+source_lang = en

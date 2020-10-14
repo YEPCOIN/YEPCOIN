@@ -2,10 +2,10 @@
 
 [Desktop Entry]
 Encoding=UTF-8
-Name=YEP
-Comment=YEP QT test network
+Name=YEP Core
+Comment=YEP Core QT test network
 GenericName=YEP Digital Currency QT client testnet network
-Exec=YEP.qt-testnet %u
+Exec=yep-core.qt-testnet %u
 Terminal=false
 Type=Application
 Icon=${SNAP}/share/pixmaps/yep_testnet.png

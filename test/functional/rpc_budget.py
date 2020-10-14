@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
-# Copyright (c) 2019 The PIVX developers
-# Copyright (c) 2020 The YEP developers
+# Copyright (c) 2019 The YEP developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test RPC commands for budget proposal creation, submission, and verification."""
 
-from test_framework.test_framework import YEPTestFramework
+from test_framework.test_framework import YepTestFramework
 from test_framework.util import *
 
 
-class BudgetProposalTest(YEPTestFramework):
+class BudgetProposalTest(YepTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
 

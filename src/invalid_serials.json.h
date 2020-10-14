@@ -1190,4 +1190,4 @@ std::string LoadInvalidSerials()
     return str;
 }
 
-#endif //YEP_INVALID_SERIALS_JSON_H
+#endif //PIVX_INVALID_SERIALS_JSON_H

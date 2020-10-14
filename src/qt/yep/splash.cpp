@@ -13,6 +13,7 @@
 #include "util.h"
 #include "version.h"
 #include "guiutil.h"
+#include <QMovie>
 
 #ifdef ENABLE_WALLET
 #include "wallet/wallet.h"
@@ -20,7 +21,7 @@
 
 #include <QCloseEvent>
 #include <QDesktopWidget>
-#include <QMovie>
+#include <QScreen>
 
 #include <iostream>
 
@@ -28,7 +29,7 @@ Splash::Splash(Qt::WindowFlags f, const NetworkStyle* networkStyle) :
     QWidget(0, f), ui(new Ui::Splash)
 {
     ui->setupUi(this);
-    QString titleText = tr("YEP COIN");
+    QString titleText = tr("YEP Core");
     QString titleAddText = networkStyle->getTitleAddText();
     setWindowTitle(titleText + " " + titleAddText);
 
@@ -51,14 +52,13 @@ Splash::Splash(Qt::WindowFlags f, const NetworkStyle* networkStyle) :
     });
 
     movie->start();
-
     ui->lblVersion->setText(QString("v") + QString::fromStdString(FormatVersionFriendly()));
 
     // Resize window and move to center of desktop, disallow resizing
     QRect r(QPoint(), size());
     resize(r.size());
     setFixedSize(r.size());
-    move(QApplication::desktop()->screenGeometry().center() - r.center());
+    move(QGuiApplication::primaryScreen()->geometry().center() - r.center());
 
     subscribeToCoreSignals();
 }

@@ -115,7 +115,7 @@ background-color:transparent;
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>120</width>
+           <width>100</width>
            <height>640</height>
           </rect>
          </property>
@@ -162,12 +162,13 @@ background-color:transparent;
            <widget class="QToolButton" name="btnDashboard">
             <property name="minimumSize">
              <size>
-              <width>120</width>
+              <width>100</width>
               <height>80</height>
              </size>
             </property>
             <property name="text">
-             <string/>
+             <string>HOME
+</string>
             </property>
             <property name="iconSize">
              <size>
@@ -190,12 +191,13 @@ background-color:transparent;
            <widget class="QToolButton" name="btnSend">
             <property name="minimumSize">
              <size>
-              <width>120</width>
+              <width>100</width>
               <height>80</height>
              </size>
             </property>
             <property name="text">
-             <string/>
+             <string>SEND
+</string>
             </property>
             <property name="iconSize">
              <size>
@@ -215,12 +217,13 @@ background-color:transparent;
            <widget class="QToolButton" name="btnReceive">
             <property name="minimumSize">
              <size>
-              <width>120</width>
+              <width>100</width>
               <height>80</height>
              </size>
             </property>
             <property name="text">
-             <string/>
+             <string>RECEIVE
+</string>
             </property>
             <property name="checkable">
              <bool>true</bool>
@@ -234,12 +237,13 @@ background-color:transparent;
            <widget class="QToolButton" name="btnAddress">
             <property name="minimumSize">
              <size>
-              <width>120</width>
+              <width>100</width>
               <height>80</height>
              </size>
             </property>
             <property name="text">
-             <string/>
+             <string>CONTACTS
+</string>
             </property>
             <property name="iconSize">
              <size>
@@ -259,12 +263,13 @@ background-color:transparent;
            <widget class="QToolButton" name="btnMaster">
             <property name="minimumSize">
              <size>
-              <width>120</width>
+              <width>100</width>
               <height>80</height>
              </size>
             </property>
             <property name="text">
-             <string/>
+             <string>MASTER
+NODES</string>
             </property>
             <property name="iconSize">
              <size>
@@ -284,12 +289,13 @@ background-color:transparent;
            <widget class="QToolButton" name="btnColdStaking">
             <property name="minimumSize">
              <size>
-              <width>120</width>
+              <width>100</width>
               <height>80</height>
              </size>
             </property>
             <property name="text">
-             <string/>
+             <string>COLD
+STAKING</string>
             </property>
             <property name="iconSize">
              <size>
@@ -309,12 +315,13 @@ background-color:transparent;
            <widget class="QToolButton" name="btnSettings">
             <property name="minimumSize">
              <size>
-              <width>120</width>
+              <width>100</width>
               <height>80</height>
              </size>
             </property>
             <property name="text">
-             <string/>
+             <string>SETTINGS
+</string>
             </property>
             <property name="iconSize">
              <size>

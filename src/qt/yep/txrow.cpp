@@ -16,41 +16,48 @@ TxRow::TxRow(QWidget *parent) :
     ui->setupUi(this);
 }
 
-void TxRow::init(bool isLightTheme) {
+void TxRow::init(bool isLightTheme)
+{
     setConfirmStatus(true);
     updateStatus(isLightTheme, false, false);
 }
 
-void TxRow::setConfirmStatus(bool isConfirm){
-    if(isConfirm){
+void TxRow::setConfirmStatus(bool isConfirm)
+{
+    if (isConfirm) {
         setCssProperty(ui->lblAddress, "text-list-body1");
         setCssProperty(ui->lblDate, "text-list-caption");
-    }else{
+    } else {
         setCssProperty(ui->lblAddress, "text-list-body-unconfirmed");
         setCssProperty(ui->lblDate,"text-list-caption-unconfirmed");
     }
 }
 
-void TxRow::updateStatus(bool isLightTheme, bool isHover, bool isSelected){
-    if(isLightTheme)
+void TxRow::updateStatus(bool isLightTheme, bool isHover, bool isSelected)
+{
+    if (isLightTheme)
         ui->lblDivisory->setStyleSheet("background-color:#bababa");
     else
         ui->lblDivisory->setStyleSheet("background-color:#40ffffff");
 }
 
-void TxRow::setDate(QDateTime date){
+void TxRow::setDate(QDateTime date)
+{
     ui->lblDate->setText(GUIUtil::dateTimeStr(date));
 }
 
-void TxRow::setLabel(QString str){
+void TxRow::setLabel(QString str)
+{
     ui->lblAddress->setText(str);
 }
 
-void TxRow::setAmount(QString str){
+void TxRow::setAmount(QString str)
+{
     ui->lblAmount->setText(str);
 }
 
-void TxRow::setType(bool isLightTheme, int type, bool isConfirmed){
+void TxRow::setType(bool isLightTheme, int type, bool isConfirmed)
+{
     QString path;
     QString css;
     bool sameIcon = false;
@@ -66,7 +73,6 @@ void TxRow::setType(bool isLightTheme, int type, bool isConfirmed){
             path = "://ic-transaction-staked";
             css = "text-list-amount-receive";
             break;
-        case TransactionRecord::RecvWithObfuscation:
         case TransactionRecord::RecvWithAddress:
         case TransactionRecord::RecvFromOther:
         case TransactionRecord::RecvFromZerocoinSpend:
@@ -76,7 +82,7 @@ void TxRow::setType(bool isLightTheme, int type, bool isConfirmed){
         case TransactionRecord::SendToAddress:
         case TransactionRecord::SendToOther:
         case TransactionRecord::ZerocoinSpend:
-        case TransactionRecord::ZerocoinSpend_Change_zYEP:
+        case TransactionRecord::ZerocoinSpend_Change_zYep:
         case TransactionRecord::ZerocoinSpend_FromMe:
             path = "://ic-transaction-sent";
             css = "text-list-amount-send";
@@ -122,13 +128,14 @@ void TxRow::setType(bool isLightTheme, int type, bool isConfirmed){
         css = "text-list-amount-unconfirmed";
         path += "-inactive";
         setConfirmStatus(false);
-    }else{
+    } else {
         setConfirmStatus(true);
     }
     setCssProperty(ui->lblAmount, css, true);
     ui->icon->setIcon(QIcon(path));
 }
 
-TxRow::~TxRow(){
+TxRow::~TxRow()
+{
     delete ui;
 }

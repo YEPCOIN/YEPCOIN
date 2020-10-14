@@ -44,4 +44,4 @@ namespace AddressBook {
 
 }
 
-#endif //YEP_ADDRESSBOOK_H
+#endif //PIVX_ADDRESSBOOK_H

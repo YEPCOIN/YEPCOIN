@@ -7,23 +7,24 @@
 #define YEP_ZYEPTRACKER_H
 
 #include "zerocoin.h"
-#include "witness.h"
 #include "sync.h"
 #include <list>
 
 class CDeterministicMint;
 class CzYEPWallet;
+class CWallet;
 
 class CzYEPTracker
 {
 private:
     bool fInitialized;
-    std::string strWalletFile;
+    /* Parent wallet */
+    CWallet* wallet{nullptr};
     std::map<uint256, CMintMeta> mapSerialHashes;
     std::map<uint256, uint256> mapPendingSpends; //serialhash, txid of spend
     bool UpdateStatusInternal(const std::set<uint256>& setMempool, CMintMeta& mint);
 public:
-    CzYEPTracker(std::string strWalletFile);
+    CzYEPTracker(CWallet* parent);
     ~CzYEPTracker();
     void Add(const CDeterministicMint& dMint, bool isNew = false, bool isArchived = false, CzYEPWallet* zYEPWallet = NULL);
     void Add(const CZerocoinMint& mint, bool isNew = false, bool isArchived = false);
@@ -52,4 +53,4 @@ public:
     void Clear();
 };
 
-#endif //YEP_ZYEPTRACKER_H
+#endif //PIVX_ZPIVTRACKER_H

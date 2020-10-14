@@ -26,7 +26,7 @@ SettingsNetworkWidget::SettingsNetworkWidget(YEPGUI* _window, QWidget *parent) :
     setCssBtnPrimary(ui->pushButtonSave);
     setCssBtnSecondary(ui->pushButtonReset);
 
-    connect(ui->pushButtonSave, SIGNAL(clicked()), parent, SLOT(onSaveOptionsClicked()));
+    connect(ui->pushButtonSave, &QPushButton::clicked, [this] { Q_EMIT saveSettings(); });
 }
 
 void SettingsNetworkWidget::setMapper(QDataWidgetMapper *mapper){

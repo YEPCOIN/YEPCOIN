@@ -1,6 +1,5 @@
 // Copyright (c) 2012-2017 The Bitcoin Core developers
 // Copyright (c) 2016-2019 The PIVX developers
-// Copyright (c) 2020 The YEP developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -11,10 +10,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both yepd and yep-qt, to make it harder for attackers to
+ * for both pivxd and pivx-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("YEP");
+const std::string CLIENT_NAME("YEP Core");
 
 /**
  * Client version number
@@ -97,8 +96,8 @@ std::string FormatVersionFriendly()
     return FormatVersion(CLIENT_VERSION);
 }
 
-/** 
- * Format the subversion field according to BIP 14 spec (https://github.com/bitcoin/bips/blob/master/bip-0014.mediawiki) 
+/**
+ * Format the subversion field according to BIP 14 spec (https://github.com/bitcoin/bips/blob/master/bip-0014.mediawiki)
  */
 std::string FormatSubVersion(const std::string& name, int nClientVersion, const std::vector<std::string>& comments)
 {

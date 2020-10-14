@@ -6,8 +6,8 @@
         <translation>Dialog</translation>
     </message>
     <message>
-        <source>My Address</source>
-        <translation>My Address</translation>
+        <source>New Address</source>
+        <translation>New Address</translation>
     </message>
     <message>
         <source>Address</source>
@@ -22,8 +22,8 @@
         <translation>CANCEL</translation>
     </message>
     <message>
-        <source>OK</source>
-        <translation>OK</translation>
+        <source>SAVE</source>
+        <translation>SAVE</translation>
     </message>
 </context>
 <context>
@@ -33,16 +33,8 @@
         <translation>Dialog</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>CANCEL</source>
         <translation>CANCEL</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
     <message>
         <source>Edit Contact</source>
@@ -53,8 +45,8 @@
         <translation>Set a label for the selected address</translation>
     </message>
     <message>
-        <source>Enter a name for the address (e.g Exchange)</source>
-        <translation>Enter a name for the address (e.g Exchange)</translation>
+        <source>Enter a label for the address (e.g. Exchange)</source>
+        <translation>Enter a label for the address (e.g. Exchange)</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -196,6 +188,10 @@
         <translation>Date</translation>
     </message>
     <message>
+        <source>Type</source>
+        <translation>Type</translation>
+    </message>
+    <message>
         <source>(no label)</source>
         <translation>(no label)</translation>
     </message>
@@ -207,28 +203,12 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>Send</source>
-        <translation>Send</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>N/A</source>
-        <translation>N/A</translation>
-    </message>
-    <message>
         <source>Contact name</source>
         <translation>Contact name</translation>
     </message>
     <message>
         <source>Enter address</source>
         <translation>Enter address</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
     <message>
         <source>Contacts</source>
@@ -243,16 +223,16 @@
         <translation>No contacts yet</translation>
     </message>
     <message>
-        <source>e.g. John Doe</source>
-        <translation>e.g. John Doe</translation>
-    </message>
-    <message>
-        <source>Enter YEP address</source>
-        <translation>Enter YEP address</translation>
-    </message>
-    <message>
         <source>SAVE</source>
         <translation>SAVE</translation>
+    </message>
+    <message>
+        <source>Add new contact</source>
+        <translation>Add new contact</translation>
+    </message>
+    <message>
+        <source>Generate a new address to receive tokens.</source>
+        <translation>Generate a new address to receive tokens.</translation>
     </message>
     <message>
         <source>Invalid Contact Address</source>
@@ -368,6 +348,14 @@ for staking</translation>
         <translation>Confirm wallet encryption</translation>
     </message>
     <message>
+        <source>WARNING</source>
+        <translation>WARNING</translation>
+    </message>
+    <message>
+        <source>If you encrypt your wallet and lose your passphrase, you will</source>
+        <translation>If you encrypt your wallet and lose your passphrase, you will</translation>
+    </message>
+    <message>
         <source>ENCRYPT</source>
         <translation>ENCRYPT</translation>
     </message>
@@ -384,12 +372,20 @@ for staking</translation>
         <translation>Are you sure you wish to encrypt your wallet?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR YEP&lt;/b&gt;!</source>
-        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR YEP&lt;/b&gt;!</translation>
-    </message>
-    <message>
         <source>Wallet encrypted</source>
         <translation>Wallet encrypted</translation>
+    </message>
+    <message>
+        <source>WARNING:</source>
+        <translation>WARNING:</translation>
+    </message>
+    <message>
+        <source>The caps lock key is on!</source>
+        <translation>The caps lock key is on!</translation>
+    </message>
+    <message>
+        <source>Passphrases do not match!</source>
+        <translation>Passphrases do not match!</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -412,6 +408,10 @@ for staking</translation>
         <translation>The supplied passphrases do not match.</translation>
     </message>
     <message>
+        <source>LOSE ALL OF YOUR COINS</source>
+        <translation>LOSE ALL OF YOUR COINS</translation>
+    </message>
+    <message>
         <source>Wallet unlock failed</source>
         <translation>Wallet unlock failed</translation>
     </message>
@@ -427,10 +427,6 @@ for staking</translation>
         <source>Wallet passphrase was successfully changed.</source>
         <translation>Wallet passphrase was successfully changed.</translation>
     </message>
-    <message>
-        <source>Warning: The Caps Lock key is on!</source>
-        <translation>Warning: The Caps Lock key is on!</translation>
-    </message>
 </context>
 <context>
     <name>BanTableModel</name>
@@ -441,37 +437,6 @@ for staking</translation>
     <message>
         <source>Banned Until</source>
         <translation>Banned Until</translation>
-    </message>
-</context>
-<context>
-    <name>BlockExplorer</name>
-    <message>
-        <source>Blockchain Explorer</source>
-        <translation>Blockchain Explorer</translation>
-    </message>
-    <message>
-        <source>Back</source>
-        <translation>Back</translation>
-    </message>
-    <message>
-        <source>Forward</source>
-        <translation>Forward</translation>
-    </message>
-    <message>
-        <source>Address / Block / Transaction</source>
-        <translation>Address / Block / Transaction</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Search</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (yep.conf).</source>
-        <translation>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (yep.conf).</translation>
     </message>
 </context>
 <context>
@@ -507,10 +472,6 @@ for staking</translation>
         <source>Total: %1 (IPv4: %2 / IPv6: %3 / Tor: %4 / Unknown: %5)</source>
         <translation>Total: %1 (IPv4: %2 / IPv6: %3 / Tor: %4 / Unknown: %5)</translation>
     </message>
-    <message>
-        <source>Network Alert</source>
-        <translation>Network Alert</translation>
-    </message>
 </context>
 <context>
     <name>CoinControlDialog</name>
@@ -529,6 +490,10 @@ for staking</translation>
     <message>
         <source>Coin Selection</source>
         <translation>Coin Selection</translation>
+    </message>
+    <message>
+        <source>Select YEP Outputs to Spend</source>
+        <translation>Select YEP Outputs to Spend</translation>
     </message>
     <message>
         <source>Dust:</source>
@@ -553,14 +518,6 @@ for staking</translation>
     <message>
         <source>Amount</source>
         <translation>Amount</translation>
-    </message>
-    <message>
-        <source>Transaction Details</source>
-        <translation>Transaction Details</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>PushButton</translation>
     </message>
     <message>
         <source>0.00 YEP</source>
@@ -631,40 +588,40 @@ for staking</translation>
         <translation>Unlock unspent</translation>
     </message>
     <message>
-        <source>Copy quantity</source>
-        <translation>Copy quantity</translation>
-    </message>
-    <message>
-        <source>Copy fee</source>
-        <translation>Copy fee</translation>
-    </message>
-    <message>
-        <source>Copy after fee</source>
-        <translation>Copy after fee</translation>
-    </message>
-    <message>
-        <source>Copy bytes</source>
-        <translation>Copy bytes</translation>
-    </message>
-    <message>
-        <source>Copy priority</source>
-        <translation>Copy priority</translation>
-    </message>
-    <message>
-        <source>Copy dust</source>
-        <translation>Copy dust</translation>
-    </message>
-    <message>
-        <source>Copy change</source>
-        <translation>Copy change</translation>
-    </message>
-    <message>
         <source>Unselect all</source>
         <translation>Unselect all</translation>
     </message>
     <message>
         <source>Please switch to "List mode" to use this function.</source>
         <translation>Please switch to "List mode" to use this function.</translation>
+    </message>
+    <message>
+        <source>Quantity Copied</source>
+        <translation>Quantity Copied</translation>
+    </message>
+    <message>
+        <source>Amount Copied</source>
+        <translation>Amount Copied</translation>
+    </message>
+    <message>
+        <source>Fee Copied</source>
+        <translation>Fee Copied</translation>
+    </message>
+    <message>
+        <source>After Fee Copied</source>
+        <translation>After Fee Copied</translation>
+    </message>
+    <message>
+        <source>Bytes Copied</source>
+        <translation>Bytes Copied</translation>
+    </message>
+    <message>
+        <source>Dust Copied</source>
+        <translation>Dust Copied</translation>
+    </message>
+    <message>
+        <source>Change Copied</source>
+        <translation>Change Copied</translation>
     </message>
     <message>
         <source>highest</source>
@@ -715,6 +672,18 @@ for staking</translation>
         <translation>yes</translation>
     </message>
     <message>
+        <source>Can vary +/- %1 u%2 per input.</source>
+        <translation>Can vary +/- %1 u%2 per input.</translation>
+    </message>
+    <message>
+        <source>delegated to %1 for cold staking</source>
+        <translation>delegated to %1 for cold staking</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>Select All</translation>
+    </message>
+    <message>
         <source>no</source>
         <translation>no</translation>
     </message>
@@ -743,10 +712,6 @@ for staking</translation>
         <translation>This label turns red, if any recipient receives an amount smaller than %1.</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 uyep per input.</source>
-        <translation>Can vary +/- %1 uyep per input.</translation>
-    </message>
-    <message>
         <source>(no label)</source>
         <translation>(no label)</translation>
     </message>
@@ -760,101 +725,10 @@ for staking</translation>
     </message>
 </context>
 <context>
-    <name>CoinControlYEPWidget</name>
-    <message>
-        <source>Dialog</source>
-        <translation>Dialog</translation>
-    </message>
-    <message>
-        <source>Transaction Details</source>
-        <translation>Transaction Details</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>PushButton</translation>
-    </message>
-    <message>
-        <source>YEP:</source>
-        <translation>YEP:</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>Quantity:</source>
-        <translation>Quantity:</translation>
-    </message>
-    <message>
-        <source>Fee:</source>
-        <translation>Fee:</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation>Amount</translation>
-    </message>
-    <message>
-        <source>Label</source>
-        <translation>Label</translation>
-    </message>
-    <message>
-        <source>Address</source>
-        <translation>Address</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>Type</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation>Date</translation>
-    </message>
-    <message>
-        <source>Confirmations</source>
-        <translation>Confirmations</translation>
-    </message>
-    <message>
-        <source>CheckBox</source>
-        <translation>CheckBox</translation>
-    </message>
-    <message>
-        <source>Bytes:</source>
-        <translation>Bytes:</translation>
-    </message>
-    <message>
-        <source>Dust:</source>
-        <translation>Dust:</translation>
-    </message>
-    <message>
-        <source>Change:</source>
-        <translation>Change:</translation>
-    </message>
-    <message>
-        <source>After Fee: </source>
-        <translation>After Fee: </translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>CANCEL</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-</context>
-<context>
     <name>ColdStakingWidget</name>
     <message>
         <source>Form</source>
         <translation>Form</translation>
-    </message>
-    <message>
-        <source>Title</source>
-        <translation>Title</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
     </message>
     <message>
         <source>Owner address (optional, if empty a new address will be created)</source>
@@ -863,14 +737,6 @@ for staking</translation>
     <message>
         <source>Total Staking:</source>
         <translation>Total Staking:</translation>
-    </message>
-    <message>
-        <source>List of delegated balance by address</source>
-        <translation>List of delegated balance by address</translation>
-    </message>
-    <message>
-        <source>No balance delegated</source>
-        <translation>No balance delegated</translation>
     </message>
     <message>
         <source>Cold Staking</source>
@@ -935,8 +801,38 @@ stake on your behalf, while you keep the keys securely offline.</translation>
         <translation>No contacts available, you can go to the contacts screen and add some there!</translation>
     </message>
     <message>
+        <source>Cannot send delegation, wallet locked</source>
+        <translation>Cannot send delegation, wallet locked</translation>
+    </message>
+    <message>
         <source>Cold staking is networkely disabled</source>
         <translation>Cold staking is networkely disabled</translation>
+    </message>
+    <message>
+        <source>Coin Control</source>
+        <translation>Coin Control</translation>
+    </message>
+    <message>
+        <source>Select %1 outputs to delegate.</source>
+        <translation>Select %1 outputs to delegate.</translation>
+    </message>
+    <message>
+        <source>Create Cold Staking Address</source>
+        <translation>Create Cold Staking Address</translation>
+    </message>
+    <message>
+        <source>Creates an address to receive delegated coins
+and stake them on their owner's behalf.</source>
+        <translation>Creates an address to receive delegated coins
+and stake them on their owner's behalf.</translation>
+    </message>
+    <message>
+        <source>My Cold Staking Addresses</source>
+        <translation>My Cold Staking Addresses</translation>
+    </message>
+    <message>
+        <source>List your own cold staking addresses.</source>
+        <translation>List your own cold staking addresses.</translation>
     </message>
     <message>
         <source>Invalid entry</source>
@@ -983,8 +879,12 @@ Do you wish to proceed?</translation>
         <translation>Coins delegated</translation>
     </message>
     <message>
-        <source>You don't have any YEP to select.</source>
-        <translation>You don't have any YEP to select.</translation>
+        <source>You don't have any %1 to select.</source>
+        <translation>You don't have any %1 to select.</translation>
+    </message>
+    <message>
+        <source>Cannot perform operation, wallet locked</source>
+        <translation>Cannot perform operation, wallet locked</translation>
     </message>
     <message>
         <source>URI copied to clipboard</source>
@@ -1067,14 +967,6 @@ address</translation>
         <source>Form</source>
         <translation>Form</translation>
     </message>
-    <message>
-        <source>Bob Allen</source>
-        <translation>Bob Allen</translation>
-    </message>
-    <message>
-        <source>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</source>
-        <translation>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</translation>
-    </message>
 </context>
 <context>
     <name>DashboardWidget</name>
@@ -1087,36 +979,20 @@ address</translation>
         <translation>Transactions</translation>
     </message>
     <message>
-        <source>You can see here the history of your account</source>
-        <translation>You can see here the history of your account</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Warning</translation>
-    </message>
-    <message>
-        <source>No transactions</source>
-        <translation>No transactions</translation>
-    </message>
-    <message>
         <source>Staking Rewards</source>
         <translation>Staking Rewards</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
     </message>
     <message>
         <source>Staking statistics</source>
         <translation>Staking statistics</translation>
     </message>
     <message>
-        <source>YEP</source>
-        <translation>YEP</translation>
+        <source>View your account's history</source>
+        <translation>View your account's history</translation>
     </message>
     <message>
-        <source>zYEP</source>
-        <translation>zYEP</translation>
+        <source>How to get YEP</source>
+        <translation>How to get YEP</translation>
     </message>
     <message>
         <source>Sort by</source>
@@ -1139,60 +1015,8 @@ address</translation>
         <translation>Filter by</translation>
     </message>
     <message>
-        <source>LabelText</source>
-        <translation>LabelText</translation>
-    </message>
-    <message>
-        <source>You can view your account's history</source>
-        <translation>You can view your account's history</translation>
-    </message>
-    <message>
         <source>Amount of YEP and zYEP staked.</source>
         <translation>Amount of YEP and zYEP staked.</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>All</translation>
-    </message>
-    <message>
-        <source>Received</source>
-        <translation>Received</translation>
-    </message>
-    <message>
-        <source>Sent</source>
-        <translation>Sent</translation>
-    </message>
-    <message>
-        <source>Mined</source>
-        <translation>Mined</translation>
-    </message>
-    <message>
-        <source>Minted</source>
-        <translation>Minted</translation>
-    </message>
-    <message>
-        <source>MN reward</source>
-        <translation>MN reward</translation>
-    </message>
-    <message>
-        <source>To yourself</source>
-        <translation>To yourself</translation>
-    </message>
-    <message>
-        <source>Cold stakes</source>
-        <translation>Cold stakes</translation>
-    </message>
-    <message>
-        <source>Hot stakes</source>
-        <translation>Hot stakes</translation>
-    </message>
-    <message>
-        <source>Delegated</source>
-        <translation>Delegated</translation>
-    </message>
-    <message>
-        <source>Delegations</source>
-        <translation>Delegations</translation>
     </message>
     <message>
         <source>Please wait until the wallet is fully synced to see your correct balance</source>
@@ -1201,10 +1025,6 @@ address</translation>
     <message>
         <source>No transactions yet</source>
         <translation>No transactions yet</translation>
-    </message>
-    <message>
-        <source>How to get YEP or zYEP</source>
-        <translation>How to get YEP or zYEP</translation>
     </message>
     <message>
         <source>You can verify the staking activity in the status bar at the top right of the wallet.
@@ -1244,79 +1064,12 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>Form</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>Transaction Details</translation>
-    </message>
-    <message>
-        <source>Text Label</source>
-        <translation>Text Label</translation>
+        <source>OK</source>
+        <translation>OK</translation>
     </message>
     <message>
         <source>CANCEL</source>
         <translation>CANCEL</translation>
-    </message>
-    <message>
-        <source>SAVE</source>
-        <translation>SAVE</translation>
-    </message>
-</context>
-<context>
-    <name>DenomGenerationDialog</name>
-    <message>
-        <source>Form</source>
-        <translation>Form</translation>
-    </message>
-    <message>
-        <source>Transaction Details</source>
-        <translation>Transaction Details</translation>
-    </message>
-    <message>
-        <source>This will unlock your wallet fully, so that anyone with access to it can spend until the wallet is closed or locked again.</source>
-        <translation>This will unlock your wallet fully, so that anyone with access to it can spend until the wallet is closed or locked again.</translation>
-    </message>
-    <message>
-        <source>5000</source>
-        <translation>5000</translation>
-    </message>
-    <message>
-        <source>100</source>
-        <translation>100</translation>
-    </message>
-    <message>
-        <source>10</source>
-        <translation>10</translation>
-    </message>
-    <message>
-        <source>1000</source>
-        <translation>1000</translation>
-    </message>
-    <message>
-        <source>50</source>
-        <translation>50</translation>
-    </message>
-    <message>
-        <source>500</source>
-        <translation>500</translation>
-    </message>
-    <message>
-        <source>5</source>
-        <translation>5</translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation>1</translation>
-    </message>
-    <message>
-        <source>Select All</source>
-        <translation>Select All</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>CANCEL</translation>
-    </message>
-    <message>
-        <source>SAVE</source>
-        <translation>SAVE</translation>
     </message>
 </context>
 <context>
@@ -1405,65 +1158,22 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
 </context>
 <context>
-    <name>GovernancePage</name>
-    <message>
-        <source>Form</source>
-        <translation>Form</translation>
-    </message>
-    <message>
-        <source>GOVERNANCE</source>
-        <translation>GOVERNANCE</translation>
-    </message>
-    <message>
-        <source>Update Proposals</source>
-        <translation>Update Proposals</translation>
-    </message>
-    <message>
-        <source>Next super block:</source>
-        <translation>Next super block:</translation>
-    </message>
-    <message>
-        <source>0</source>
-        <translation>0</translation>
-    </message>
-    <message>
-        <source>Blocks to next super block:</source>
-        <translation>Blocks to next super block:</translation>
-    </message>
-    <message>
-        <source>Days to budget payout (estimate):</source>
-        <translation>Days to budget payout (estimate):</translation>
-    </message>
-    <message>
-        <source>Allotted budget:</source>
-        <translation>Allotted budget:</translation>
-    </message>
-    <message>
-        <source>Budget left:</source>
-        <translation>Budget left:</translation>
-    </message>
-    <message>
-        <source>Masternodes count:</source>
-        <translation>Masternodes count:</translation>
-    </message>
-</context>
-<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
         <translation>version</translation>
     </message>
     <message>
-        <source>YEP</source>
-        <translation>YEP</translation>
+        <source>YEP Core</source>
+        <translation>YEP Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About YEP</source>
-        <translation>About YEP</translation>
+        <source>About YEP Core</source>
+        <translation>About YEP Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1490,6 +1200,10 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>Show splash screen on startup (default: %u)</translation>
     </message>
     <message>
+        <source>Hide QT staking charts on startup (default: %u)</source>
+        <translation>Hide QT staking charts on startup (default: %u)</translation>
+    </message>
+    <message>
         <source>Set language, for example "de_DE" (default: system locale)</source>
         <translation>Set language, for example "de_DE" (default: system locale)</translation>
     </message>
@@ -1513,16 +1227,16 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>Welcome</translation>
     </message>
     <message>
-        <source>Welcome to YEP.</source>
-        <translation>Welcome to YEP.</translation>
+        <source>Welcome to YEP Core.</source>
+        <translation>Welcome to YEP Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where YEP will store its data.</source>
-        <translation>As this is the first time the program is launched, you can choose where YEP will store its data.</translation>
+        <source>As this is the first time the program is launched, you can choose where YEP Core will store its data.</source>
+        <translation>As this is the first time the program is launched, you can choose where YEP Core will store its data.</translation>
     </message>
     <message>
-        <source>YEP will download and store a copy of the YEP block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>YEP will download and store a copy of the YEP block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</translation>
+        <source>YEP Core will download and store a copy of the YEP block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>YEP Core will download and store a copy of the YEP block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1541,8 +1255,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>OK</translation>
     </message>
     <message>
-        <source>YEP</source>
-        <translation>YEP</translation>
+        <source>YEP Core</source>
+        <translation>YEP Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1606,16 +1320,12 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>Form</translation>
     </message>
     <message>
-        <source>user_masternode</source>
-        <translation>user_masternode</translation>
+        <source>Collateral tx not found</source>
+        <translation>Collateral tx not found</translation>
     </message>
     <message>
-        <source>Address: 88.26.164.88:16742</source>
-        <translation>Address: 88.26.164.88:16742</translation>
-    </message>
-    <message>
-        <source>Jan. 19, 2019</source>
-        <translation>Jan. 19, 2019</translation>
+        <source>Status: %1</source>
+        <translation>Status: %1</translation>
     </message>
 </context>
 <context>
@@ -1653,6 +1363,10 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>Create New Masternode Controller</translation>
     </message>
     <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a YEP Masternode you must dedicate 20,000 YEP (the unit of YEP) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a YEP Masternode you must dedicate 20,000 YEP (the unit of YEP) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
         <source>Set Masternode Name</source>
         <translation>Set Masternode Name</translation>
     </message>
@@ -1663,10 +1377,6 @@ It will start automatically as soon as the wallet has enough confirmations on an
     <message>
         <source>Enter port</source>
         <translation>Enter port</translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a YEP Masternode you must dedicate 20,000 YEP (the unit of YEP) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a YEP Masternode you must dedicate 20,000 YEP (the unit of YEP) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Make sure you have this amount of coins.</source>
@@ -1685,18 +1395,6 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>Enter IP address</translation>
     </message>
     <message>
-        <source>CANCEL</source>
-        <translation>CANCEL</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <source>e.g user_masternode</source>
-        <translation>e.g user_masternode</translation>
-    </message>
-    <message>
         <source>NEXT</source>
         <translation>NEXT</translation>
     </message>
@@ -1713,8 +1411,12 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>IP or port cannot be empty</translation>
     </message>
     <message>
-        <source>Invalid port number</source>
-        <translation>Invalid port number</translation>
+        <source>Invalid IP address</source>
+        <translation>Invalid IP address</translation>
+    </message>
+    <message>
+        <source>Unknown error</source>
+        <translation>Unknown error</translation>
     </message>
     <message>
         <source>Prepare master node failed.
@@ -1731,6 +1433,10 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>Invalid collateral output index</translation>
     </message>
     <message>
+        <source>Master node created! Wait %1 confirmations before starting it.</source>
+        <translation>Master node created! Wait %1 confirmations before starting it.</translation>
+    </message>
+    <message>
         <source>Cannot send collateral transaction.
 
 %1</source>
@@ -1739,16 +1445,16 @@ It will start automatically as soon as the wallet has enough confirmations on an
 %1</translation>
     </message>
     <message>
+        <source>walletModel not set</source>
+        <translation>walletModel not set</translation>
+    </message>
+    <message>
         <source>Invalid masternode.conf file</source>
         <translation>Invalid masternode.conf file</translation>
     </message>
     <message>
         <source>Error parsing masternode.conf file</source>
         <translation>Error parsing masternode.conf file</translation>
-    </message>
-    <message>
-        <source>Master node created!</source>
-        <translation>Master node created!</translation>
     </message>
     <message>
         <source>masternode.conf file doesn't exists</source>
@@ -1760,14 +1466,6 @@ It will start automatically as soon as the wallet has enough confirmations on an
     <message>
         <source>Form</source>
         <translation>Form</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>N/A</source>
-        <translation>N/A</translation>
     </message>
     <message>
         <source>Start All</source>
@@ -1822,18 +1520,30 @@ and vote on the treasury system receiving a periodic reward.</translation>
 </translation>
     </message>
     <message>
-        <source>Cannot start masternode, the collateral transaction has not been accepted by the network.
-Please wait few more minutes.</source>
-        <translation>Cannot start masternode, the collateral transaction has not been accepted by the network.
-Please wait few more minutes.</translation>
+        <source>Cannot edit masternode, wallet locked</source>
+        <translation>Cannot edit masternode, wallet locked</translation>
+    </message>
+    <message>
+        <source>Cannot start masternode, the collateral transaction has not been confirmed by the network yet.
+Please wait few more minutes (masternode collaterals require %1 confirmations).</source>
+        <translation>Cannot start masternode, the collateral transaction has not been confirmed by the network yet.
+Please wait few more minutes (masternode collaterals require %1 confirmations).</translation>
     </message>
     <message>
         <source>Background task is being executed, please wait</source>
         <translation>Background task is being executed, please wait</translation>
     </message>
     <message>
-        <source>Cannot perform Mastenodes start</source>
-        <translation>Cannot perform Mastenodes start</translation>
+        <source>Start ALL masternodes failed</source>
+        <translation>Start ALL masternodes failed</translation>
+    </message>
+    <message>
+        <source>Wallet unlock cancelled</source>
+        <translation>Wallet unlock cancelled</translation>
+    </message>
+    <message>
+        <source>Cannot perform Masternodes start</source>
+        <translation>Cannot perform Masternodes start</translation>
     </message>
     <message>
         <source>%1 Masternodes failed to start, %2 started</source>
@@ -1844,8 +1554,36 @@ Please wait few more minutes.</translation>
         <translation>All Masternodes started!</translation>
     </message>
     <message>
+        <source>Cannot show Masternode information, wallet locked</source>
+        <translation>Cannot show Masternode information, wallet locked</translation>
+    </message>
+    <message>
+        <source>Masternode data copied to the clipboard.</source>
+        <translation>Masternode data copied to the clipboard.</translation>
+    </message>
+    <message>
+        <source>Not enough balance to create a masternode, 20,000 %1 required.</source>
+        <translation>Not enough balance to create a masternode, 20,000 %1 required.</translation>
+    </message>
+    <message>
         <source>Remote Masternode Data</source>
         <translation>Remote Masternode Data</translation>
+    </message>
+    <message>
+        <source>What is a Masternode?</source>
+        <translation>What is a Masternode?</translation>
+    </message>
+    <message>
+        <source>FAQ explaining what Masternodes are</source>
+        <translation>FAQ explaining what Masternodes are</translation>
+    </message>
+    <message>
+        <source>What is a Controller?</source>
+        <translation>What is a Controller?</translation>
+    </message>
+    <message>
+        <source>FAQ explaining what is a Masternode Controller</source>
+        <translation>FAQ explaining what is a Masternode Controller</translation>
     </message>
     <message>
         <source>You are just about to export the required data to run a Masternode
@@ -1864,10 +1602,6 @@ You will only have to paste the data in the yep.conf file
 of your remote server and start it, then start the Masternode using
 this controller wallet (select the Masternode in the list and press "start").
 </translation>
-    </message>
-    <message>
-        <source>Masternode exported!, check your clipboard</source>
-        <translation>Masternode exported!, check your clipboard</translation>
     </message>
     <message>
         <source>Delete Masternode</source>
@@ -1896,8 +1630,8 @@ Are you sure?</translation>
         <translation>masternode.conf file doesn't exists</translation>
     </message>
     <message>
-        <source>Not enough balance to create a masternode, 20,000 YEP required.</source>
-        <translation>Not enough balance to create a masternode, 20,000 YEP required.</translation>
+        <source>Cannot create Masternode controller, wallet locked</source>
+        <translation>Cannot create Masternode controller, wallet locked</translation>
     </message>
     <message>
         <source>Error creating masternode</source>
@@ -1919,16 +1653,8 @@ Are you sure?</translation>
         <translation>Public Key:</translation>
     </message>
     <message>
-        <source>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</source>
-        <translation>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</translation>
-    </message>
-    <message>
         <source>Address: </source>
         <translation>Address: </translation>
-    </message>
-    <message>
-        <source>127.0.0.2:43223</source>
-        <translation>127.0.0.2:43223</translation>
     </message>
     <message>
         <source>Collaterall tx id:</source>
@@ -1947,12 +1673,16 @@ Are you sure?</translation>
         <translation>Status:</translation>
     </message>
     <message>
-        <source>MISSING</source>
-        <translation>MISSING</translation>
-    </message>
-    <message>
         <source>Export data to run the Masternode on a remote server</source>
         <translation>Export data to run the Masternode on a remote server</translation>
+    </message>
+    <message>
+        <source>Masternode public key copied</source>
+        <translation>Masternode public key copied</translation>
+    </message>
+    <message>
+        <source>Collateral tx id copied</source>
+        <translation>Collateral tx id copied</translation>
     </message>
 </context>
 <context>
@@ -1961,24 +1691,54 @@ Are you sure?</translation>
         <source>Form</source>
         <translation>Form</translation>
     </message>
-    <message>
-        <source>Savings</source>
-        <translation>Savings</translation>
-    </message>
-    <message>
-        <source>Jan. 19, 2019</source>
-        <translation>Jan. 19, 2019</translation>
-    </message>
-    <message>
-        <source>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</source>
-        <translation>DN6i46dytMPVhV1JMGZFuQBh7BZZ6nNLox</translation>
-    </message>
 </context>
 <context>
     <name>NavMenuWidget</name>
     <message>
         <source>Form</source>
         <translation>Form</translation>
+    </message>
+    <message>
+        <source>HOME
+</source>
+        <translation>HOME
+</translation>
+    </message>
+    <message>
+        <source>SEND
+</source>
+        <translation>SEND
+</translation>
+    </message>
+    <message>
+        <source>RECEIVE
+</source>
+        <translation>RECEIVE
+</translation>
+    </message>
+    <message>
+        <source>CONTACTS
+</source>
+        <translation>CONTACTS
+</translation>
+    </message>
+    <message>
+        <source>MASTER
+NODES</source>
+        <translation>MASTER
+NODES</translation>
+    </message>
+    <message>
+        <source>COLD
+STAKING</source>
+        <translation>COLD
+STAKING</translation>
+    </message>
+    <message>
+        <source>SETTINGS
+</source>
+        <translation>SETTINGS
+</translation>
     </message>
     <message>
         <source>V 1.0.0</source>
@@ -2037,10 +1797,6 @@ Are you sure?</translation>
     <message>
         <source>Form</source>
         <translation>Form</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
     </message>
 </context>
 <context>
@@ -2135,9 +1891,9 @@ Are you sure?</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/yep-project/yep-project-translations</source>
+https://www.transifex.com/pivx-project/pivx-project-translations</source>
         <translation>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/yep-project/yep-project-translations</translation>
+https://www.transifex.com/pivx-project/pivx-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -2327,8 +2083,8 @@ https://www.transifex.com/yep-project/yep-project-translations</translation>
 <context>
     <name>YEPGUI</name>
     <message>
-        <source>YEP</source>
-        <translation>YEP</translation>
+        <source>YEP Core</source>
+        <translation>YEP Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2355,8 +2111,8 @@ https://www.transifex.com/yep-project/yep-project-translations</translation>
         <translation>Quit application</translation>
     </message>
     <message>
-        <source>YEP client</source>
-        <translation>YEP client</translation>
+        <source>YEP Core client</source>
+        <translation>YEP Core client</translation>
     </message>
     <message>
         <source>Error</source>
@@ -2397,17 +2153,6 @@ Amount: %2
 Type: %3
 Address: %4
 </translation>
-    </message>
-    <message>
-        <source>A fatal error occurred. YEP can no longer continue safely and will quit.</source>
-        <translation>A fatal error occurred. YEP can no longer continue safely and will quit.</translation>
-    </message>
-</context>
-<context>
-    <name>PWidget</name>
-    <message>
-        <source>Wallet locked, you need to unlock it to perform this action</source>
-        <translation>Wallet locked, you need to unlock it to perform this action</translation>
     </message>
 </context>
 <context>
@@ -2515,74 +2260,9 @@ Address: %4
         <source>Ping Time</source>
         <translation>Ping Time</translation>
     </message>
-</context>
-<context>
-    <name>ProposalFrame</name>
     <message>
-        <source>Open proposal page in browser</source>
-        <translation>Open proposal page in browser</translation>
-    </message>
-    <message>
-        <source> remaining payment(s).</source>
-        <translation> remaining payment(s).</translation>
-    </message>
-    <message>
-        <source>Yes:</source>
-        <translation>Yes:</translation>
-    </message>
-    <message>
-        <source>Abstain:</source>
-        <translation>Abstain:</translation>
-    </message>
-    <message>
-        <source>No:</source>
-        <translation>No:</translation>
-    </message>
-    <message>
-        <source>A proposal URL can be used for phishing, scams and computer viruses. Open this link only if you trust the following URL.
-</source>
-        <translation>A proposal URL can be used for phishing, scams and computer viruses. Open this link only if you trust the following URL.
-</translation>
-    </message>
-    <message>
-        <source>Open link</source>
-        <translation>Open link</translation>
-    </message>
-    <message>
-        <source>Copy link</source>
-        <translation>Copy link</translation>
-    </message>
-    <message>
-        <source>Wallet Locked</source>
-        <translation>Wallet Locked</translation>
-    </message>
-    <message>
-        <source>You must unlock your wallet to vote.</source>
-        <translation>You must unlock your wallet to vote.</translation>
-    </message>
-    <message>
-        <source>Do you want to vote %1 on</source>
-        <translation>Do you want to vote %1 on</translation>
-    </message>
-    <message>
-        <source>using all your masternodes?</source>
-        <translation>using all your masternodes?</translation>
-    </message>
-    <message>
-        <source>Proposal Hash:</source>
-        <translation>Proposal Hash:</translation>
-    </message>
-    <message>
-        <source>Proposal URL:</source>
-        <translation>Proposal URL:</translation>
-    </message>
-    <message>
-        <source>Confirm Vote</source>
-        <translation>Confirm Vote</translation>
-    </message>
-    <message>
-        <source>Vote Results</source>
-        <translation>Vote Results</translation>
+        <source>NodeID</source>
+        <translation>NodeID</translation>
     </message>
 </context>
 <context>
@@ -2620,10 +2300,6 @@ Address: %4
         <translation>BLOOM</translation>
     </message>
     <message>
-        <source>ZK_BLOOM</source>
-        <translation>ZK_BLOOM</translation>
-    </message>
-    <message>
         <source>UNKNOWN</source>
         <translation>UNKNOWN</translation>
     </message>
@@ -2640,8 +2316,12 @@ Address: %4
         <translation>%1 ms</translation>
     </message>
     <message>
-        <source>YEP</source>
-        <translation>YEP</translation>
+        <source>A fatal error occurred. YEP can no longer continue safely and will quit.</source>
+        <translation>A fatal error occurred. YEP can no longer continue safely and will quit.</translation>
+    </message>
+    <message>
+        <source>YEP Core</source>
+        <translation>YEP Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" does not exist.</source>
@@ -2660,8 +2340,172 @@ Address: %4
         <translation>Error reading masternode configuration file: %1</translation>
     </message>
     <message>
-        <source>YEP didn't yet exit safely...</source>
-        <translation>YEP didn't yet exit safely...</translation>
+        <source>YEP Core didn't yet exit safely...</source>
+        <translation>YEP Core didn't yet exit safely...</translation>
+    </message>
+    <message>
+        <source>Contact</source>
+        <translation>Contact</translation>
+    </message>
+    <message>
+        <source>Receiving</source>
+        <translation>Receiving</translation>
+    </message>
+    <message>
+        <source>Delegator</source>
+        <translation>Delegator</translation>
+    </message>
+    <message>
+        <source>Delegable</source>
+        <translation>Delegable</translation>
+    </message>
+    <message>
+        <source>Cold Staking</source>
+        <translation>Cold Staking</translation>
+    </message>
+    <message>
+        <source>Cold Staking Contact</source>
+        <translation>Cold Staking Contact</translation>
+    </message>
+    <message>
+        <source>Hidden</source>
+        <translation>Hidden</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Unknown</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>All</translation>
+    </message>
+    <message>
+        <source>Contacts</source>
+        <translation>Contacts</translation>
+    </message>
+    <message>
+        <source>Staking Contacts</source>
+        <translation>Staking Contacts</translation>
+    </message>
+    <message>
+        <source>Date desc</source>
+        <translation>Date desc</translation>
+    </message>
+    <message>
+        <source>Date asc</source>
+        <translation>Date asc</translation>
+    </message>
+    <message>
+        <source>Amount desc</source>
+        <translation>Amount desc</translation>
+    </message>
+    <message>
+        <source>Amount asc</source>
+        <translation>Amount asc</translation>
+    </message>
+    <message>
+        <source>Received</source>
+        <translation>Received</translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation>Sent</translation>
+    </message>
+    <message>
+        <source>Mined</source>
+        <translation>Mined</translation>
+    </message>
+    <message>
+        <source>Minted</source>
+        <translation>Minted</translation>
+    </message>
+    <message>
+        <source>MN reward</source>
+        <translation>MN reward</translation>
+    </message>
+    <message>
+        <source>To yourself</source>
+        <translation>To yourself</translation>
+    </message>
+    <message>
+        <source>Cold stakes</source>
+        <translation>Cold stakes</translation>
+    </message>
+    <message>
+        <source>Hot stakes</source>
+        <translation>Hot stakes</translation>
+    </message>
+    <message>
+        <source>Delegated</source>
+        <translation>Delegated</translation>
+    </message>
+    <message>
+        <source>Delegations</source>
+        <translation>Delegations</translation>
+    </message>
+    <message>
+        <source>by Label</source>
+        <translation>by Label</translation>
+    </message>
+    <message>
+        <source>by Address</source>
+        <translation>by Address</translation>
+    </message>
+    <message>
+        <source>by Date</source>
+        <translation>by Date</translation>
+    </message>
+    <message>
+        <source>Jan</source>
+        <translation>Jan</translation>
+    </message>
+    <message>
+        <source>Feb</source>
+        <translation>Feb</translation>
+    </message>
+    <message>
+        <source>Mar</source>
+        <translation>Mar</translation>
+    </message>
+    <message>
+        <source>Apr</source>
+        <translation>Apr</translation>
+    </message>
+    <message>
+        <source>May</source>
+        <translation>May</translation>
+    </message>
+    <message>
+        <source>Jun</source>
+        <translation>Jun</translation>
+    </message>
+    <message>
+        <source>Jul</source>
+        <translation>Jul</translation>
+    </message>
+    <message>
+        <source>Aug</source>
+        <translation>Aug</translation>
+    </message>
+    <message>
+        <source>Sep</source>
+        <translation>Sep</translation>
+    </message>
+    <message>
+        <source>Oct</source>
+        <translation>Oct</translation>
+    </message>
+    <message>
+        <source>Nov</source>
+        <translation>Nov</translation>
+    </message>
+    <message>
+        <source>Dec</source>
+        <translation>Dec</translation>
+    </message>
+    <message>
+        <source>Address with no label</source>
+        <translation>Address with no label</translation>
     </message>
 </context>
 <context>
@@ -3078,20 +2922,16 @@ Address: %4
         <translation>Dialog</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>Transaction Details</translation>
+        <source>My Address</source>
+        <translation>My Address</translation>
     </message>
     <message>
-        <source>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </source>
-        <translation>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </translation>
+        <source>COPY</source>
+        <translation>COPY</translation>
     </message>
     <message>
         <source>CANCEL</source>
         <translation>CANCEL</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -3101,12 +2941,12 @@ Address: %4
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>No address</source>
         <translation>No address</translation>
+    </message>
+    <message>
+        <source>Scan the QR code or copy the address to receive YEP</source>
+        <translation>Scan the QR code or copy the address to receive YEP</translation>
     </message>
     <message>
         <source>Add Label</source>
@@ -3125,12 +2965,20 @@ Address: %4
         <translation>Receive</translation>
     </message>
     <message>
-        <source>Scan the QR code or copy the address to receive YEP.</source>
-        <translation>Scan the QR code or copy the address to receive YEP.</translation>
+        <source>My Addresses</source>
+        <translation>My Addresses</translation>
     </message>
     <message>
-        <source>No address </source>
-        <translation>No address </translation>
+        <source>List your own addresses</source>
+        <translation>List your own addresses</translation>
+    </message>
+    <message>
+        <source>Create Request</source>
+        <translation>Create Request</translation>
+    </message>
+    <message>
+        <source>Request payment with a fixed amount</source>
+        <translation>Request payment with a fixed amount</translation>
     </message>
     <message>
         <source>No available address, try unlocking the wallet</source>
@@ -3157,12 +3005,20 @@ Address: %4
         <translation>Error storing address label</translation>
     </message>
     <message>
+        <source>Cannot create new address, wallet locked</source>
+        <translation>Cannot create new address, wallet locked</translation>
+    </message>
+    <message>
         <source>New address created</source>
         <translation>New address created</translation>
     </message>
     <message>
         <source>Address copied</source>
         <translation>Address copied</translation>
+    </message>
+    <message>
+        <source>Cannot perform operation, wallet locked</source>
+        <translation>Cannot perform operation, wallet locked</translation>
     </message>
     <message>
         <source>URI copied to clipboard</source>
@@ -3215,14 +3071,6 @@ Address: %4
         <translation>Dialog</translation>
     </message>
     <message>
-        <source>New Request Payment</source>
-        <translation>New Request Payment</translation>
-    </message>
-    <message>
-        <source>Lorem ipsum dolor sit amet, consectur cling elit, sed do </source>
-        <translation>Lorem ipsum dolor sit amet, consectur cling elit, sed do </translation>
-    </message>
-    <message>
         <source>Amount</source>
         <translation>Amount</translation>
     </message>
@@ -3231,8 +3079,8 @@ Address: %4
         <translation>YEP</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
+        <source>Instead of sharing only a YEP address, you can create a payment request, bundling up more information</source>
+        <translation>Instead of sharing only a YEP address, you can create a payment request, bundling up more information</translation>
     </message>
     <message>
         <source>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </source>
@@ -3251,10 +3099,6 @@ Address: %4
         <translation>CANCEL</translation>
     </message>
     <message>
-        <source>REQUEST</source>
-        <translation>REQUEST</translation>
-    </message>
-    <message>
         <source>Label</source>
         <translation>Label</translation>
     </message>
@@ -3265,10 +3109,6 @@ Address: %4
     <message>
         <source>New Payment Request</source>
         <translation>New Payment Request</translation>
-    </message>
-    <message>
-        <source>Instead of sharing only a YEP address, you can create a payment request, bundling up more information.</source>
-        <translation>Instead of sharing only a YEP address, you can create a payment request, bundling up more information.</translation>
     </message>
     <message>
         <source>Enter a label for the address</source>
@@ -3298,6 +3138,22 @@ Address: %4
         <source>Amount (optional)</source>
         <translation>Amount (optional)</translation>
     </message>
+    <message>
+        <source>Address label cannot be empty</source>
+        <translation>Address label cannot be empty</translation>
+    </message>
+    <message>
+        <source>Invalid amount</source>
+        <translation>Invalid amount</translation>
+    </message>
+    <message>
+        <source>Request for </source>
+        <translation>Request for </translation>
+    </message>
+    <message>
+        <source>Cold Staking Address Generated</source>
+        <translation>Cold Staking Address Generated</translation>
+    </message>
 </context>
 <context>
     <name>SendChangeAddressDialog</name>
@@ -3306,20 +3162,8 @@ Address: %4
         <translation>Dialog</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>Transaction Details</translation>
-    </message>
-    <message>
-        <source>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</source>
-        <translation>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</translation>
-    </message>
-    <message>
         <source>CANCEL</source>
         <translation>CANCEL</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
     <message>
         <source>Custom Change Address</source>
@@ -3329,6 +3173,22 @@ Address: %4
         <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" YEP address</source>
         <translation>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" YEP address</translation>
     </message>
+    <message>
+        <source>SAVE</source>
+        <translation>SAVE</translation>
+    </message>
+    <message>
+        <source>RESET</source>
+        <translation>RESET</translation>
+    </message>
+    <message>
+        <source>Invalid address</source>
+        <translation>Invalid address</translation>
+    </message>
+    <message>
+        <source>Cannot use cold staking addresses for change</source>
+        <translation>Cannot use cold staking addresses for change</translation>
+    </message>
 </context>
 <context>
     <name>SendCustomFeeDialog</name>
@@ -3337,44 +3197,32 @@ Address: %4
         <translation>Form</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>Transaction Details</translation>
+        <source>Recommended</source>
+        <translation>Recommended</translation>
     </message>
     <message>
-        <source>Customize the transaction fee at your to your liking, depending on the fee value your transaction will be included or not in the blockchain.</source>
-        <translation>Customize the transaction fee at your to your liking, depending on the fee value your transaction will be included or not in the blockchain.</translation>
-    </message>
-    <message>
-        <source>Recomended</source>
-        <translation>Recomended</translation>
+        <source>YEP/kilobyte</source>
+        <translation>YEP/kilobyte</translation>
     </message>
     <message>
         <source>0.00 KB</source>
         <translation>0.00 KB</translation>
     </message>
     <message>
-        <source>Custom</source>
-        <translation>Custom</translation>
+        <source>Customize the transaction fee, depending on the fee value your transaction might be included faster in the blockchain</source>
+        <translation>Customize the transaction fee, depending on the fee value your transaction might be included faster in the blockchain</translation>
     </message>
     <message>
-        <source>Per kilobyte</source>
-        <translation>Per kilobyte</translation>
+        <source>Custom</source>
+        <translation>Custom</translation>
     </message>
     <message>
         <source>CANCEL</source>
         <translation>CANCEL</translation>
     </message>
     <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
         <source>Customize Fee</source>
         <translation>Customize Fee</translation>
-    </message>
-    <message>
-        <source>Customize the transaction fee, depending on the fee value your transaction will be included or not in the blockchain.</source>
-        <translation>Customize the transaction fee, depending on the fee value your transaction will be included or not in the blockchain.</translation>
     </message>
     <message>
         <source>Normal</source>
@@ -3392,6 +3240,14 @@ Address: %4
         <source>SAVE</source>
         <translation>SAVE</translation>
     </message>
+    <message>
+        <source>Fee too high. Must be below: %1</source>
+        <translation>Fee too high. Must be below: %1</translation>
+    </message>
+    <message>
+        <source>Fee too low. Must be at least: %1</source>
+        <translation>Fee too low. Must be at least: %1</translation>
+    </message>
 </context>
 <context>
     <name>SendMultiRow</name>
@@ -3400,12 +3256,12 @@ Address: %4
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>Enter address</source>
         <translation>Enter address</translation>
+    </message>
+    <message>
+        <source>Address label (optional)</source>
+        <translation>Address label (optional)</translation>
     </message>
     <message>
         <source>Enter label</source>
@@ -3415,60 +3271,20 @@ Address: %4
 <context>
     <name>SendWidget</name>
     <message>
-        <source>Send</source>
-        <translation>Send</translation>
-    </message>
-    <message>
-        <source>You can transfer public coins (YEP) or private coins (zYEP)</source>
-        <translation>You can transfer public coins (YEP) or private coins (zYEP)</translation>
-    </message>
-    <message>
-        <source>Select coin type to spend</source>
-        <translation>Select coin type to spend</translation>
-    </message>
-    <message>
-        <source>YEP address or contact label</source>
-        <translation>YEP address or contact label</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation>Amount</translation>
-    </message>
-    <message>
-        <source>Customize fee</source>
-        <translation>Customize fee</translation>
-    </message>
-    <message>
-        <source>Clear all</source>
-        <translation>Clear all</translation>
-    </message>
-    <message>
-        <source>Add recipient</source>
-        <translation>Add recipient</translation>
-    </message>
-    <message>
-        <source>Reset to default</source>
-        <translation>Reset to default</translation>
-    </message>
-    <message>
-        <source>Total to send</source>
-        <translation>Total to send</translation>
-    </message>
-    <message>
-        <source>Send YEP</source>
-        <translation>Send YEP</translation>
-    </message>
-    <message>
-        <source>Send zYEP</source>
-        <translation>Send zYEP</translation>
-    </message>
-    <message>
         <source>Total remaining from the selected UTXO</source>
         <translation>Total remaining from the selected UTXO</translation>
     </message>
     <message>
-        <source>Total remaining</source>
-        <translation>Total remaining</translation>
+        <source>Warning!</source>
+        <translation>Warning!</translation>
+    </message>
+    <message>
+        <source>The change address doesn't belong to this wallet.
+
+Do you want to continue?</source>
+        <translation>The change address doesn't belong to this wallet.
+
+Do you want to continue?</translation>
     </message>
     <message>
         <source>Customize Fee</source>
@@ -3481,6 +3297,10 @@ Address: %4
     <message>
         <source>Invalid entry, previous entries must be valid before add a new one</source>
         <translation>Invalid entry, previous entries must be valid before add a new one</translation>
+    </message>
+    <message>
+        <source>Possibly spend coins delegated for cold-staking (currently available: %1</source>
+        <translation>Possibly spend coins delegated for cold-staking (currently available: %1</translation>
     </message>
     <message>
         <source>Invalid entry</source>
@@ -3511,60 +3331,8 @@ These coins will no longer be cold-staked.</translation>
         <translation>Transaction sent</translation>
     </message>
     <message>
-        <source>Spend Zerocoin</source>
-        <translation>Spend Zerocoin</translation>
-    </message>
-    <message>
-        <source>zYEP is currently undergoing maintenance.</source>
-        <translation>zYEP is currently undergoing maintenance.</translation>
-    </message>
-    <message>
-        <source>Coin control mint not found</source>
-        <translation>Coin control mint not found</translation>
-    </message>
-    <message>
-        <source>Sending %1 to address %2
-</source>
-        <translation>Sending %1 to address %2
-</translation>
-    </message>
-    <message>
-        <source>Sending %1 to addresses:
-%2</source>
-        <translation>Sending %1 to addresses:
-%2</translation>
-    </message>
-    <message>
-        <source>zYEP transaction sent!</source>
-        <translation>zYEP transaction sent!</translation>
-    </message>
-    <message>
-        <source>Version 1 zYEP require a security level of 100 to successfully spend.</source>
-        <translation>Version 1 zYEP require a security level of 100 to successfully spend.</translation>
-    </message>
-    <message>
-        <source>Too much inputs (</source>
-        <translation>Too much inputs (</translation>
-    </message>
-    <message>
-        <source>) needed.
-Maximum allowed: </source>
-        <translation>) needed.
-Maximum allowed: </translation>
-    </message>
-    <message>
-        <source>
-Either mint higher denominations (so fewer inputs are needed) or reduce the amount to spend.</source>
-        <translation>
-Either mint higher denominations (so fewer inputs are needed) or reduce the amount to spend.</translation>
-    </message>
-    <message>
         <source>Address label update failed for address: %1</source>
         <translation>Address label update failed for address: %1</translation>
-    </message>
-    <message>
-        <source>Invalid change address</source>
-        <translation>Invalid change address</translation>
     </message>
     <message>
         <source>Invalid URI</source>
@@ -3579,12 +3347,36 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Custom Fee %1</translation>
     </message>
     <message>
-        <source>You don't have any YEP to select.</source>
-        <translation>You don't have any YEP to select.</translation>
+        <source>Coin Control</source>
+        <translation>Coin Control</translation>
     </message>
     <message>
-        <source>You don't have any zYEP in your balance to select.</source>
-        <translation>You don't have any zYEP in your balance to select.</translation>
+        <source>Select the source of the coins</source>
+        <translation>Select the source of the coins</translation>
+    </message>
+    <message>
+        <source>Change Address</source>
+        <translation>Change Address</translation>
+    </message>
+    <message>
+        <source>Customize the change address</source>
+        <translation>Customize the change address</translation>
+    </message>
+    <message>
+        <source>Open URI</source>
+        <translation>Open URI</translation>
+    </message>
+    <message>
+        <source>Parse a payment request</source>
+        <translation>Parse a payment request</translation>
+    </message>
+    <message>
+        <source>Unlocked remaining</source>
+        <translation>Unlocked remaining</translation>
+    </message>
+    <message>
+        <source>You don't have any %1 to select.</source>
+        <translation>You don't have any %1 to select.</translation>
     </message>
     <message>
         <source>No contacts available, you can go to the contacts screen and add some there!</source>
@@ -3630,22 +3422,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>Backup Wallet </source>
-        <translation>Backup Wallet </translation>
-    </message>
-    <message>
         <source>Change Wallet Passphrase</source>
         <translation>Change Wallet Passphrase</translation>
-    </message>
-    <message>
-        <source>This will decrypt the whole wallet data and encrypt it back with the new passphrase.
-Remember to write it down and store it safely, otherwise you might lose access to your funds.</source>
-        <translation>This will decrypt the whole wallet data and encrypt it back with the new passphrase.
-Remember to write it down and store it safely, otherwise you might lose access to your funds.</translation>
     </message>
     <message>
         <source>Where</source>
@@ -3653,17 +3431,19 @@ Remember to write it down and store it safely, otherwise you might lose access t
     </message>
     <message>
         <source>Keep your wallet safe by doing regular backups and storing your backup file externally.
-This option creates a wallet.dat file that can be used to recover your whole balance (transactions and addresses) on another device.</source>
+This option creates a wallet.dat file that can be used to recover your whole balance (transactions and addresses) on another device</source>
         <translation>Keep your wallet safe by doing regular backups and storing your backup file externally.
-This option creates a wallet.dat file that can be used to recover your whole balance (transactions and addresses) on another device.</translation>
+This option creates a wallet.dat file that can be used to recover your whole balance (transactions and addresses) on another device</translation>
     </message>
     <message>
         <source>Select folder...</source>
         <translation>Select folder...</translation>
     </message>
     <message>
-        <source>Backup</source>
-        <translation>Backup</translation>
+        <source>This will decrypt the whole wallet data and encrypt it back with the new passphrase.
+Remember to write it down and store it safely, otherwise you might lose access to your funds</source>
+        <translation>This will decrypt the whole wallet data and encrypt it back with the new passphrase.
+Remember to write it down and store it safely, otherwise you might lose access to your funds</translation>
     </message>
     <message>
         <source>Change Passphrase</source>
@@ -3697,28 +3477,18 @@ This option creates a wallet.dat file that can be used to recover your whole bal
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>PushButton</translation>
-    </message>
-    <message>
-        <source>Decrypt Address Result</source>
-        <translation>Decrypt Address Result</translation>
-    </message>
-    <message>
         <source>Import Address</source>
         <translation>Import Address</translation>
     </message>
     <message>
-        <source>Clear</source>
-        <translation>Clear</translation>
-    </message>
-    <message>
         <source>BIP38 Tool</source>
         <translation>BIP38 Tool</translation>
+    </message>
+    <message>
+        <source>Encrypt your YEP addresses (key pair actually) using BIP38 encryption.
+Using this mechanism you can share your keys without middle-man risk, only need to store your passphrase safely</source>
+        <translation>Encrypt your YEP addresses (key pair actually) using BIP38 encryption.
+Using this mechanism you can share your keys without middle-man risk, only need to store your passphrase safely</translation>
     </message>
     <message>
         <source>Encrypt</source>
@@ -3739,10 +3509,6 @@ This option creates a wallet.dat file that can be used to recover your whole bal
     <message>
         <source>Passphrase</source>
         <translation>Passphrase</translation>
-    </message>
-    <message>
-        <source>Enter a passphrase </source>
-        <translation>Enter a passphrase </translation>
     </message>
     <message>
         <source>Decrypted address result</source>
@@ -3779,6 +3545,10 @@ This option creates a wallet.dat file that can be used to recover your whole bal
     <message>
         <source>CLEAR ALL</source>
         <translation>CLEAR ALL</translation>
+    </message>
+    <message>
+        <source>Enter a passphrase</source>
+        <translation>Enter a passphrase</translation>
     </message>
     <message>
         <source>CLEAR</source>
@@ -3849,8 +3619,8 @@ This option creates a wallet.dat file that can be used to recover your whole bal
         <translation>Error adding key to the wallet</translation>
     </message>
     <message>
-        <source>Successfully added yepate key to the wallet</source>
-        <translation>Successfully added yepate key to the wallet</translation>
+        <source>Successfully added private key to the wallet</source>
+        <translation>Successfully added private key to the wallet</translation>
     </message>
 </context>
 <context>
@@ -3858,10 +3628,6 @@ This option creates a wallet.dat file that can be used to recover your whole bal
     <message>
         <source>Form</source>
         <translation>Form</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
     </message>
     <message>
         <source>Console</source>
@@ -3872,12 +3638,16 @@ This option creates a wallet.dat file that can be used to recover your whole bal
         <translation>Console input</translation>
     </message>
     <message>
-        <source>Command Line Options </source>
-        <translation>Command Line Options </translation>
-    </message>
-    <message>
         <source>Open Debug File</source>
         <translation>Open Debug File</translation>
+    </message>
+    <message>
+        <source>Command Line Options</source>
+        <translation>Command Line Options</translation>
+    </message>
+    <message>
+        <source>Clear history</source>
+        <translation>Clear history</translation>
     </message>
     <message>
         <source>Cannot open debug file.
@@ -3909,8 +3679,8 @@ Verify that you have installed a predetermined text editor.</translation>
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
+        <source>Hide stake charts in the dashboard</source>
+        <translation>Hide stake charts in the dashboard</translation>
     </message>
     <message>
         <source>Reset to default</source>
@@ -3962,18 +3732,113 @@ Verify that you have installed a predetermined text editor.</translation>
     </message>
 </context>
 <context>
-    <name>SettingsFaqWidget</name>
+    <name>SettingsExportCSV</name>
     <message>
         <source>Form</source>
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
+        <source>Export Accounting</source>
+        <translation>Export Accounting</translation>
     </message>
     <message>
-        <source>PushButton</source>
-        <translation>PushButton</translation>
+        <source>Export your wallet's accounting data to a csv file.</source>
+        <translation>Export your wallet's accounting data to a csv file.</translation>
+    </message>
+    <message>
+        <source>Where</source>
+        <translation>Where</translation>
+    </message>
+    <message>
+        <source>Select folder...</source>
+        <translation>Select folder...</translation>
+    </message>
+    <message>
+        <source>Export Address Book</source>
+        <translation>Export Address Book</translation>
+    </message>
+    <message>
+        <source>Export CSV</source>
+        <translation>Export CSV</translation>
+    </message>
+    <message>
+        <source>Export Address List</source>
+        <translation>Export Address List</translation>
+    </message>
+    <message>
+        <source>YEP_tx_csv_export(*.csv)</source>
+        <translation>YEP_tx_csv_export(*.csv)</translation>
+    </message>
+    <message>
+        <source>YEP_addresses_csv_export(*.csv)</source>
+        <translation>YEP_addresses_csv_export(*.csv)</translation>
+    </message>
+    <message>
+        <source>Please select a folder to export the csv file first.</source>
+        <translation>Please select a folder to export the csv file first.</translation>
+    </message>
+    <message>
+        <source>Confirmed</source>
+        <translation>Confirmed</translation>
+    </message>
+    <message>
+        <source>Watch-only</source>
+        <translation>Watch-only</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Date</translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation>Type</translation>
+    </message>
+    <message>
+        <source>Label</source>
+        <translation>Label</translation>
+    </message>
+    <message>
+        <source>Address</source>
+        <translation>Address</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Exporting Successful
+The transaction history was successfully saved to %1.</source>
+        <translation>Exporting Successful
+The transaction history was successfully saved to %1.</translation>
+    </message>
+    <message>
+        <source>Exporting Failed
+There was an error trying to save the transaction history to %1.</source>
+        <translation>Exporting Failed
+There was an error trying to save the transaction history to %1.</translation>
+    </message>
+    <message>
+        <source>No available addresses to export under the selected filter</source>
+        <translation>No available addresses to export under the selected filter</translation>
+    </message>
+    <message>
+        <source>Exporting Successful
+The address book was successfully saved to %1.</source>
+        <translation>Exporting Successful
+The address book was successfully saved to %1.</translation>
+    </message>
+    <message>
+        <source>Exporting Failed
+There was an error trying to save the address list to %1. Please try again.</source>
+        <translation>Exporting Failed
+There was an error trying to save the address list to %1. Please try again.</translation>
+    </message>
+</context>
+<context>
+    <name>SettingsFaqWidget</name>
+    <message>
+        <source>Form</source>
+        <translation>Form</translation>
     </message>
     <message>
         <source>1) What is YEP?</source>
@@ -3984,38 +3849,8 @@ Verify that you have installed a predetermined text editor.</translation>
         <translation>2) Why are my YEP unspendable?</translation>
     </message>
     <message>
-        <source>3) YEP privacy? What is Zerocoin (zYEP)?</source>
-        <translation>3) YEP privacy? What is Zerocoin (zYEP)?</translation>
-    </message>
-    <message>
-        <source>4) Why are my zYEP unspendable?</source>
-        <translation>4) Why are my zYEP unspendable?</translation>
-    </message>
-    <message>
-        <source>5) Why did my wallet convert the balance
-    into zYEP automatically?</source>
-        <translation>5) Why did my wallet convert the balance
-    into zYEP automatically?</translation>
-    </message>
-    <message>
-        <source>6) How do I receive YEP/zYEP?</source>
-        <translation>6) How do I receive YEP/zYEP?</translation>
-    </message>
-    <message>
-        <source>7) How do I stake YEP/zYEP?</source>
-        <translation>7) How do I stake YEP/zYEP?</translation>
-    </message>
-    <message>
-        <source>8) Where I should go if I need support?</source>
-        <translation>8) Where I should go if I need support?</translation>
-    </message>
-    <message>
-        <source>9) What is a Masternode?</source>
-        <translation>9) What is a Masternode?</translation>
-    </message>
-    <message>
-        <source>10) What is a Masternode Controller?</source>
-        <translation>10) What is a Masternode Controller?</translation>
+        <source>https://PIVX.org/</source>
+        <translation>https://PIVX.org/</translation>
     </message>
     <message>
         <source>1</source>
@@ -4088,192 +3923,50 @@ Verify that you have installed a predetermined text editor.</translation>
         <translation>3</translation>
     </message>
     <message>
-        <source>YEP privacy? What is Zerocoin (zYEP)?</source>
-        <translation>YEP privacy? What is Zerocoin (zYEP)?</translation>
+        <source>How do I stake YEP?</source>
+        <translation>How do I stake YEP?</translation>
     </message>
     <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           zYEP is an optional privacy-centric method of coin mixing on the
-                           YEP blockchain. Basically all your transactions cannot be tracked
-                           on to any block explorer. You can read more about the technicals in the
-                           &lt;a style='color: #707070' href='https://yepcoin.io/zyep/'&gt;
-                           "YEP Zerocoin (zYEP) Technical Paper"&lt;/a&gt;.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           zYEP is an optional privacy-centric method of coin mixing on the
-                           YEP blockchain. Basically all your transactions cannot be tracked
-                           on to any block explorer. You can read more about the technicals in the
-                           &lt;a style='color: #707070' href='https://yepcoin.io/zyep/'&gt;
-                           "YEP Zerocoin (zYEP) Technical Paper"&lt;/a&gt;.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;ol style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"&gt;&lt;li align="justify" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Make sure your wallet is completely synchronized and you are using the latest release. &lt;/li&gt;&lt;li align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;You must have a balance of YEP with a minimum of 600 confirmations. &lt;/li&gt;&lt;li align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Your wallet must stay online and be unlocked for staking purposes. &lt;/li&gt;&lt;li align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Once all those steps are followed staking should be enabled. &lt;/li&gt;&lt;li align="justify" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;You can see the status of staking in the wallet by mousing over the package icon in the row on the top left of the wallet interface. There package will be lit up and will state &amp;quot;Staking Enabled&amp;quot; to indicate it is staking. Using the command line interface (yep-cli); the command &lt;span style=" font-style:italic;"&gt;getstakingstatus&lt;/span&gt; will confirm that staking is active. &lt;/li&gt;&lt;/ol&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;ol style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"&gt;&lt;li align="justify" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Make sure your wallet is completely synchronized and you are using the latest release. &lt;/li&gt;&lt;li align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;You must have a balance of YEP with a minimum of 600 confirmations. &lt;/li&gt;&lt;li align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Your wallet must stay online and be unlocked for staking purposes. &lt;/li&gt;&lt;li align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Once all those steps are followed staking should be enabled. &lt;/li&gt;&lt;li align="justify" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;You can see the status of staking in the wallet by mousing over the package icon in the row on the top left of the wallet interface. There package will be lit up and will state &amp;quot;Staking Enabled&amp;quot; to indicate it is staking. Using the command line interface (yep-cli); the command &lt;span style=" font-style:italic;"&gt;getstakingstatus&lt;/span&gt; will confirm that staking is active. &lt;/li&gt;&lt;/ol&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>4</source>
         <translation>4</translation>
     </message>
     <message>
-        <source>Why are my zYEP unspendable?</source>
-        <translation>Why are my zYEP unspendable?</translation>
-    </message>
-    <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           After minting, zYEP will require 20 confirmations as well as 1
-                           additional mint of the same denomination on the network to
-                           become eligible for spending.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           After minting, zYEP will require 20 confirmations as well as 1
-                           additional mint of the same denomination on the network to
-                           become eligible for spending.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </translation>
-    </message>
-    <message>
         <source>5</source>
         <translation>5</translation>
-    </message>
-    <message>
-        <source>Why did my wallet convert the balance into zYEP automatically?</source>
-        <translation>Why did my wallet convert the balance into zYEP automatically?</translation>
-    </message>
-    <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           By default the YEP wallet will convert 10% of your entire YEP
-                           balance to zYEP to assist the network. If you do not wish to
-                           stake zYEP or take advantage of the privacy benefit it brings,
-                           you can disable the automatic minting in your YEP wallet by
-                           going to Settings-&gt;Options and deselecting “Enable zYEP Automint”.
-                           If you are not making use of the YEP-QT or GUI you can simply open
-                           your yep.conf file and add &lt;i&gt;enablezeromint=0&lt;/i&gt; Without the quotation
-                           marks and restart your wallet to disable automint.&lt;/p&gt;
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           You can read more about zYEP in the
-                           &lt;a style='color: #707070' href='https://yepcoin.io/zyep/'&gt; "YEP Zerocoin (zYEP) Technical Paper"&lt;/a&gt;.
-                           If you would like to keep and stake your zYEP, please read the "How do I stake"
-                           section of the FAQ below.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           By default the YEP wallet will convert 10% of your entire YEP
-                           balance to zYEP to assist the network. If you do not wish to
-                           stake zYEP or take advantage of the privacy benefit it brings,
-                           you can disable the automatic minting in your YEP wallet by
-                           going to Settings-&gt;Options and deselecting “Enable zYEP Automint”.
-                           If you are not making use of the YEP-QT or GUI you can simply open
-                           your yep.conf file and add &lt;i&gt;enablezeromint=0&lt;/i&gt; Without the quotation
-                           marks and restart your wallet to disable automint.&lt;/p&gt;
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           You can read more about zYEP in the
-                           &lt;a style='color: #707070' href='https://yepcoin.io/zyep/'&gt; "YEP Zerocoin (zYEP) Technical Paper"&lt;/a&gt;.
-                           If you would like to keep and stake your zYEP, please read the "How do I stake"
-                           section of the FAQ below.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </translation>
     </message>
     <message>
         <source>6</source>
         <translation>6</translation>
     </message>
     <message>
-        <source>How do I receive YEP/zYEP?</source>
-        <translation>How do I receive YEP/zYEP?</translation>
-    </message>
-    <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           zYEP can be spent and sent to any YEP address. The receiver will
-                           receive standard YEP but the origin of the YEP is anonymized by the zYEP Protocol.
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           If you want more zYEP you will need to mint your balance in the “Privacy” tab.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           zYEP can be spent and sent to any YEP address. The receiver will
-                           receive standard YEP but the origin of the YEP is anonymized by the zYEP Protocol.
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           If you want more zYEP you will need to mint your balance in the “Privacy” tab.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </translation>
-    </message>
-    <message>
-        <source>7</source>
-        <translation>7</translation>
-    </message>
-    <message>
-        <source>How do I stake YEP/zYEP?</source>
-        <translation>How do I stake YEP/zYEP?</translation>
-    </message>
-    <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           To Stake YEP:
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           &lt;ol&gt;&lt;li&gt;
-                           Make sure your wallet is completely synchronized and you are using the latest release.
-                           &lt;li&gt;
-                           You must have a balance of YEP with a minimum of 600 confirmations.
-                           &lt;li&gt;
-                           Your wallet must stay online and be unlocked for staking purposes.
-                           &lt;li&gt;
-                           Once all those steps are followed staking should be enabled.
-                           &lt;li&gt;
-                           You can see the status of staking in the wallet by mousing over the package icon in the row on the top left of the wallet interface. There package will be lit up and will state "Staking Enabled" to indicate it is staking.  Using the command line interface (yep-cli); the command &lt;i&gt;getstakingstatus&lt;/i&gt; will confirm that staking is active.
-                           &lt;/li&gt;&lt;/ol&gt;
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           To Stake zYEP:
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           &lt;ol&gt;&lt;li&gt;
-                           Make sure your wallet is completely synchronized and you are using the latest release.
-                           &lt;li&gt;
-                           Your newly minted or existing zYEP balance must have a minimum of 200 confirmations.
-                           &lt;li&gt;
-                           Your wallet must stay online and be unlocked for anonymization and staking purposes.
-                           Staking should now be enabled.
-                           &lt;/li&gt;&lt;/ol&gt;
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           To Stake YEP:
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           &lt;ol&gt;&lt;li&gt;
-                           Make sure your wallet is completely synchronized and you are using the latest release.
-                           &lt;li&gt;
-                           You must have a balance of YEP with a minimum of 600 confirmations.
-                           &lt;li&gt;
-                           Your wallet must stay online and be unlocked for staking purposes.
-                           &lt;li&gt;
-                           Once all those steps are followed staking should be enabled.
-                           &lt;li&gt;
-                           You can see the status of staking in the wallet by mousing over the package icon in the row on the top left of the wallet interface. There package will be lit up and will state "Staking Enabled" to indicate it is staking.  Using the command line interface (yep-cli); the command &lt;i&gt;getstakingstatus&lt;/i&gt; will confirm that staking is active.
-                           &lt;/li&gt;&lt;/ol&gt;
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           To Stake zYEP:
-                           &lt;/p&gt;&lt;p align="justify"&gt;
-                           &lt;ol&gt;&lt;li&gt;
-                           Make sure your wallet is completely synchronized and you are using the latest release.
-                           &lt;li&gt;
-                           Your newly minted or existing zYEP balance must have a minimum of 200 confirmations.
-                           &lt;li&gt;
-                           Your wallet must stay online and be unlocked for anonymization and staking purposes.
-                           Staking should now be enabled.
-                           &lt;/li&gt;&lt;/ol&gt;
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </translation>
-    </message>
-    <message>
         <source>Where should I go if I need support?</source>
         <translation>Where should I go if I need support?</translation>
+    </message>
+    <message>
+        <source>
+                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
+                           We have support channels in most of our official chat groups, for example
+                           &lt;a style='color: #b088ff' href='https://discord.www.yepcoin.io'&gt;
+                           #support in our Discord&lt;/a&gt;.
+                           If you prefer to submit a ticket, You can do so at
+                           &lt;a style='color: #b088ff' href='https://YEP.freshdesk.com'&gt;
+                           our Freshdesk support site&lt;/a&gt;.
+                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                         </source>
+        <translation>
+                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
+                           We have support channels in most of our official chat groups, for example
+                           &lt;a style='color: #b088ff' href='https://discord.www.yepcoin.io'&gt;
+                           #support in our Discord&lt;/a&gt;.
+                           If you prefer to submit a ticket, You can do so at
+                           &lt;a style='color: #b088ff' href='https://YEP.freshdesk.com'&gt;
+                           our Freshdesk support site&lt;/a&gt;.
+                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                         </translation>
     </message>
     <message>
         <source>What is a Masternode?</source>
@@ -4288,39 +3981,9 @@ Verify that you have installed a predetermined text editor.</translation>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;A Masternode Controller wallet is where the 20,000 YEP collateral can reside during a Controller-Remote masternode setup. It is a wallet that can activate the remote masternode wallet(s) and allows you to keep your collateral coins offline while the remote masternode remains online. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>8</source>
-        <translation>8</translation>
-    </message>
-    <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           We have support channels in most of our official chat groups, for example
-                           &lt;a style='color: #707070' href='https://discord.yepcoin.io'&gt;
-                           #support in our Discord&lt;/a&gt;.
-                           If you prefer to submit a ticket, One can be
-                           &lt;a style='color: #707070' href='https://YEP.freshdesk.com'&gt;
-                           our Freshdesk support site&lt;/a&gt;.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </source>
-        <translation>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           We have support channels in most of our official chat groups, for example
-                           &lt;a style='color: #707070' href='https://discord.yepcoin.io'&gt;
-                           #support in our Discord&lt;/a&gt;.
-                           If you prefer to submit a ticket, One can be
-                           &lt;a style='color: #707070' href='https://YEP.freshdesk.com'&gt;
-                           our Freshdesk support site&lt;/a&gt;.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </translation>
-    </message>
-    <message>
-        <source>9</source>
-        <translation>9</translation>
-    </message>
-    <message>
-        <source>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           A masternode is a computer running a full node YEP wallet with a
+                           A masternode is a computer running a full node YEP core wallet with a
                            requirement of 20,000 YEP secured collateral to provide extra services
                            to the network and in return, receive a portion of the block reward
                            regularly.  These services include:
@@ -4362,7 +4025,7 @@ Verify that you have installed a predetermined text editor.</translation>
                          </source>
         <translation>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           A masternode is a computer running a full node YEP wallet with a
+                           A masternode is a computer running a full node YEP core wallet with a
                            requirement of 20,000 YEP secured collateral to provide extra services
                            to the network and in return, receive a portion of the block reward
                            regularly.  These services include:
@@ -4402,14 +4065,26 @@ Verify that you have installed a predetermined text editor.</translation>
                            &lt;/ul&gt;
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </translation>
-    </message>
-    <message>
-        <source>10</source>
-        <translation>10</translation>
     </message>
     <message>
         <source>Frequently Asked Questions</source>
         <translation>Frequently Asked Questions</translation>
+    </message>
+    <message>
+        <source>3) How do I stake YEP?</source>
+        <translation>3) How do I stake YEP?</translation>
+    </message>
+    <message>
+        <source>4) Where I should go if I need support?</source>
+        <translation>4) Where I should go if I need support?</translation>
+    </message>
+    <message>
+        <source>5) What is a Masternode?</source>
+        <translation>5) What is a Masternode?</translation>
+    </message>
+    <message>
+        <source>6) What is a Masternode Controller?</source>
+        <translation>6) What is a Masternode Controller?</translation>
     </message>
     <message>
         <source>You can read more here</source>
@@ -4427,10 +4102,6 @@ Verify that you have installed a predetermined text editor.</translation>
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>Network Monitor</source>
         <translation>Network Monitor</translation>
     </message>
@@ -4443,16 +4114,48 @@ Verify that you have installed a predetermined text editor.</translation>
         <translation>General</translation>
     </message>
     <message>
-        <source>Client Version: </source>
-        <translation>Client Version: </translation>
+        <source>Client Version:</source>
+        <translation>Client Version:</translation>
+    </message>
+    <message>
+        <source>BerkeleyDB version:</source>
+        <translation>BerkeleyDB version:</translation>
+    </message>
+    <message>
+        <source>Datadir:</source>
+        <translation>Datadir:</translation>
+    </message>
+    <message>
+        <source>Startup time:</source>
+        <translation>Startup time:</translation>
+    </message>
+    <message>
+        <source>Connections:</source>
+        <translation>Connections:</translation>
+    </message>
+    <message>
+        <source>Number of Masternodes:</source>
+        <translation>Number of Masternodes:</translation>
+    </message>
+    <message>
+        <source>Current number of blocks:</source>
+        <translation>Current number of blocks:</translation>
+    </message>
+    <message>
+        <source>Last block time:</source>
+        <translation>Last block time:</translation>
+    </message>
+    <message>
+        <source>Last block hash:</source>
+        <translation>Last block hash:</translation>
+    </message>
+    <message>
+        <source>Current number of transactions:</source>
+        <translation>Current number of transactions:</translation>
     </message>
     <message>
         <source>User Agent:</source>
         <translation>User Agent:</translation>
-    </message>
-    <message>
-        <source>Datadir: </source>
-        <translation>Datadir: </translation>
     </message>
     <message>
         <source>Network</source>
@@ -4469,30 +4172,6 @@ Verify that you have installed a predetermined text editor.</translation>
     <message>
         <source>Memory Pool</source>
         <translation>Memory Pool</translation>
-    </message>
-    <message>
-        <source>BerkeleyDB version:</source>
-        <translation>BerkeleyDB version:</translation>
-    </message>
-    <message>
-        <source>Startup time:  </source>
-        <translation>Startup time:  </translation>
-    </message>
-    <message>
-        <source>Connections:</source>
-        <translation>Connections:</translation>
-    </message>
-    <message>
-        <source>Current number of blocks:</source>
-        <translation>Current number of blocks:</translation>
-    </message>
-    <message>
-        <source>Last block time:</source>
-        <translation>Last block time:</translation>
-    </message>
-    <message>
-        <source>Current number of transactions:</source>
-        <translation>Current number of transactions:</translation>
     </message>
     <message>
         <source>Main</source>
@@ -4534,20 +4213,12 @@ Verify that you have installed a predetermined text editor.</translation>
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>Window</source>
         <translation>Window</translation>
     </message>
     <message>
         <source>Customize the application window options</source>
         <translation>Customize the application window options</translation>
-    </message>
-    <message>
-        <source>CheckBox</source>
-        <translation>CheckBox</translation>
     </message>
     <message>
         <source>Reset to default</source>
@@ -4564,6 +4235,10 @@ Verify that you have installed a predetermined text editor.</translation>
     <message>
         <source>Main</source>
         <translation>Main</translation>
+    </message>
+    <message>
+        <source>Customize the main application options</source>
+        <translation>Customize the main application options</translation>
     </message>
     <message>
         <source>Size of database cache</source>
@@ -4694,12 +4369,20 @@ Are you sure?
         <translation>CLEAR ALL</translation>
     </message>
     <message>
+        <source>Cannot perform operation, wallet locked</source>
+        <translation>Cannot perform operation, wallet locked</translation>
+    </message>
+    <message>
         <source>Clear succeed</source>
         <translation>Clear succeed</translation>
     </message>
     <message>
         <source>Clear all failed, could not locate address in wallet file</source>
         <translation>Clear all failed, could not locate address in wallet file</translation>
+    </message>
+    <message>
+        <source>Cannot add multisend recipient, wallet locked</source>
+        <translation>Cannot add multisend recipient, wallet locked</translation>
     </message>
     <message>
         <source>The entered address: %1 is invalid.
@@ -4757,14 +4440,6 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation>Clear</translation>
-    </message>
-    <message>
         <source>Sign/Verify Message</source>
         <translation>Sign/Verify Message</translation>
     </message>
@@ -4775,6 +4450,10 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     <message>
         <source>Verify</source>
         <translation>Verify</translation>
+    </message>
+    <message>
+        <source>Write message here...</source>
+        <translation>Write message here...</translation>
     </message>
     <message>
         <source>Select mode</source>
@@ -4791,10 +4470,6 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     <message>
         <source>Enter address</source>
         <translation>Enter address</translation>
-    </message>
-    <message>
-        <source>Write message</source>
-        <translation>Write message</translation>
     </message>
     <message>
         <source>Signature</source>
@@ -4880,18 +4555,6 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>CheckBox</source>
-        <translation>CheckBox</translation>
-    </message>
-    <message>
-        <source>RadioButton</source>
-        <translation>RadioButton</translation>
-    </message>
-    <message>
         <source>Reset to default</source>
         <translation>Reset to default</translation>
     </message>
@@ -4908,8 +4571,8 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Customize the internal wallet options</translation>
     </message>
     <message>
-        <source>Stake split threshold:</source>
-        <translation>Stake split threshold:</translation>
+        <source>Stake split threshold</source>
+        <translation>Stake split threshold</translation>
     </message>
     <message>
         <source>Spend unconfirmed change</source>
@@ -4924,16 +4587,24 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Customize the node network options</translation>
     </message>
     <message>
-        <source>Proxy IP:</source>
-        <translation>Proxy IP:</translation>
+        <source>Connect through SOCKS5 proxy (default proxy)</source>
+        <translation>Connect through SOCKS5 proxy (default proxy)</translation>
+    </message>
+    <message>
+        <source>Proxy IP</source>
+        <translation>Proxy IP</translation>
+    </message>
+    <message>
+        <source>Port</source>
+        <translation>Port</translation>
+    </message>
+    <message>
+        <source>Enter port</source>
+        <translation>Enter port</translation>
     </message>
     <message>
         <source>Enter proxy IP</source>
         <translation>Enter proxy IP</translation>
-    </message>
-    <message>
-        <source>Port:</source>
-        <translation>Port:</translation>
     </message>
     <message>
         <source>Map port using UPnP</source>
@@ -4942,10 +4613,6 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     <message>
         <source>Allow incoming connections</source>
         <translation>Allow incoming connections</translation>
-    </message>
-    <message>
-        <source>Connect through SOCKS5 proxy (default proxy):</source>
-        <translation>Connect through SOCKS5 proxy (default proxy):</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -4963,60 +4630,48 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>Wallet Repair</source>
         <translation>Wallet Repair</translation>
-    </message>
-    <message>
-        <source>The buttons below will restart the wallet with command-line options to repair this wallet, fix issues with corrupt blockchain files or missing/obsolete transactions.</source>
-        <translation>The buttons below will restart the wallet with command-line options to repair this wallet, fix issues with corrupt blockchain files or missing/obsolete transactions.</translation>
-    </message>
-    <message>
-        <source>Attempt to recover private keys from a corrupt wallet.dat.</source>
-        <translation>Attempt to recover private keys from a corrupt wallet.dat.</translation>
-    </message>
-    <message>
-        <source>Rescan the blockchain for missing wallet transactions.</source>
-        <translation>Rescan the blockchain for missing wallet transactions.</translation>
-    </message>
-    <message>
-        <source>Recover transactions from blockchain (keep-meta-data, e.g. account owner).</source>
-        <translation>Recover transactions from blockchain (keep-meta-data, e.g. account owner).</translation>
-    </message>
-    <message>
-        <source>Recover transactions from blockchain (drop meta-data).</source>
-        <translation>Recover transactions from blockchain (drop meta-data).</translation>
     </message>
     <message>
         <source>Upgrade wallet to latest format on startup. (Note: this is NOT an update of the wallet itself)</source>
         <translation>Upgrade wallet to latest format on startup. (Note: this is NOT an update of the wallet itself)</translation>
     </message>
     <message>
-        <source>Rebuild blockchain index from current blk000???.dat files.</source>
-        <translation>Rebuild blockchain index from current blk000???.dat files.</translation>
-    </message>
-    <message>
-        <source>Deletes all local blockchain folders so the wallet synchronizes from scratch.</source>
-        <translation>Deletes all local blockchain folders so the wallet synchronizes from scratch.</translation>
+        <source>The buttons below will restart the wallet with command-line options to repair this wallet, fix issues with corrupt blockchain files or missing/obsolete transactions</source>
+        <translation>The buttons below will restart the wallet with command-line options to repair this wallet, fix issues with corrupt blockchain files or missing/obsolete transactions</translation>
     </message>
     <message>
         <source>Salvage wallet</source>
         <translation>Salvage wallet</translation>
     </message>
     <message>
+        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
+        <translation>Attempt to recover private keys from a corrupt wallet.dat</translation>
+    </message>
+    <message>
         <source>Rescan blockchain file</source>
         <translation>Rescan blockchain file</translation>
+    </message>
+    <message>
+        <source>Rescan the blockchain for missing wallet transactions</source>
+        <translation>Rescan the blockchain for missing wallet transactions</translation>
     </message>
     <message>
         <source>Recover transactions 1</source>
         <translation>Recover transactions 1</translation>
     </message>
     <message>
+        <source>Recover transactions from blockchain (keep-meta-data, e.g. account owner)</source>
+        <translation>Recover transactions from blockchain (keep-meta-data, e.g. account owner)</translation>
+    </message>
+    <message>
         <source>Recover transactions 2</source>
         <translation>Recover transactions 2</translation>
+    </message>
+    <message>
+        <source>Recover transactions from blockchain (drop meta-data)</source>
+        <translation>Recover transactions from blockchain (drop meta-data)</translation>
     </message>
     <message>
         <source>Upgrade wallet format</source>
@@ -5027,8 +4682,16 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Rebuild index</translation>
     </message>
     <message>
-        <source>Delete local blockchain </source>
-        <translation>Delete local blockchain </translation>
+        <source>Rebuild blockchain index from current blk000???.dat files</source>
+        <translation>Rebuild blockchain index from current blk000???.dat files</translation>
+    </message>
+    <message>
+        <source>Delete local blockchain</source>
+        <translation>Delete local blockchain</translation>
+    </message>
+    <message>
+        <source>Deletes all local blockchain folders so the wallet synchronizes from scratch</source>
+        <translation>Deletes all local blockchain folders so the wallet synchronizes from scratch</translation>
     </message>
     <message>
         <source>This will delete your local blockchain folders and the wallet will synchronize the complete Blockchain from scratch.&lt;br /&gt;&lt;br /&gt;</source>
@@ -5058,10 +4721,6 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>Wallet Data</source>
         <translation>Wallet Data</translation>
     </message>
@@ -5072,6 +4731,10 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     <message>
         <source>Multisend</source>
         <translation>Multisend</translation>
+    </message>
+    <message>
+        <source>Export Accounting</source>
+        <translation>Export Accounting</translation>
     </message>
     <message>
         <source>Tools</source>
@@ -5142,6 +4805,10 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Client will be shutdown, do you want to proceed?</translation>
     </message>
     <message>
+        <source>Stake Split too low, it shall be either &gt;= %1 or equal to 0 (to disable stake splitting)</source>
+        <translation>Stake Split too low, it shall be either &gt;= %1 or equal to 0 (to disable stake splitting)</translation>
+    </message>
+    <message>
         <source>Restart required</source>
         <translation>Restart required</translation>
     </message>
@@ -5189,8 +4856,8 @@ Are you sure?
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>YEP is shutting down...</source>
-        <translation>YEP is shutting down...</translation>
+        <source>YEP Core is shutting down...</source>
+        <translation>YEP Core is shutting down...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -5219,32 +4886,12 @@ Are you sure?
         <translation>Loading…</translation>
     </message>
     <message>
-        <source>YEP</source>
-        <translation>YEP</translation>
+        <source>YEP Core</source>
+        <translation>YEP Core</translation>
     </message>
 </context>
 <context>
     <name>SplashScreen</name>
-    <message>
-        <source>YEP</source>
-        <translation>YEP</translation>
-    </message>
-    <message>
-        <source>Version %1</source>
-        <translation>Version %1</translation>
-    </message>
-    <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>The Bitcoin Core developers</translation>
-    </message>
-    <message>
-        <source>The Dash Core developers</source>
-        <translation>The Dash Core developers</translation>
-    </message>
-    <message>
-        <source>The YEP developers</source>
-        <translation>The YEP developers</translation>
-    </message>
     <message>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
@@ -5280,14 +4927,6 @@ Are you sure?
         <translation>Form</translation>
     </message>
     <message>
-        <source>480.0685 YEP</source>
-        <translation>480.0685 YEP</translation>
-    </message>
-    <message>
-        <source>1,000 zYEP</source>
-        <translation>1,000 zYEP</translation>
-    </message>
-    <message>
         <source>Available</source>
         <translation>Available</translation>
     </message>
@@ -5296,24 +4935,8 @@ Are you sure?
         <translation>Pending</translation>
     </message>
     <message>
-        <source>6.943 YEP</source>
-        <translation>6.943 YEP</translation>
-    </message>
-    <message>
         <source>Immature</source>
         <translation>Immature</translation>
-    </message>
-    <message>
-        <source>10 YEP</source>
-        <translation>10 YEP</translation>
-    </message>
-    <message>
-        <source>60 zYEP</source>
-        <translation>60 zYEP</translation>
-    </message>
-    <message>
-        <source>10 zYEP</source>
-        <translation>10 zYEP</translation>
     </message>
     <message>
         <source>Wallet Unlocked for staking</source>
@@ -5328,14 +4951,6 @@ Are you sure?
         <translation>Address Copied</translation>
     </message>
     <message>
-        <source>Automint enabled</source>
-        <translation>Automint enabled</translation>
-    </message>
-    <message>
-        <source>Automint disabled</source>
-        <translation>Automint disabled</translation>
-    </message>
-    <message>
         <source>Staking active</source>
         <translation>Staking active</translation>
     </message>
@@ -5348,8 +4963,8 @@ Are you sure?
         <translation><numerusform>%n active connection(s)</numerusform><numerusform>%n active connection(s)</numerusform></translation>
     </message>
     <message>
-        <source>Synchronized</source>
-        <translation>Synchronized</translation>
+        <source>Synchronized - Block: %1</source>
+        <translation>Synchronized - Block: %1</translation>
     </message>
     <message numerus="yes">
         <source>%n hour(s)</source>
@@ -5372,8 +4987,136 @@ Are you sure?
         <translation><numerusform>%n year</numerusform><numerusform>%n years</numerusform></translation>
     </message>
     <message>
+        <source>Wallet Upgrade</source>
+        <translation>Wallet Upgrade</translation>
+    </message>
+    <message>
+        <source>Upgrading to HD wallet will improve
+the wallet's reliability and security.
+
+
+NOTE: after the upgrade, a new
+backup will be created.
+</source>
+        <translation>Upgrading to HD wallet will improve
+the wallet's reliability and security.
+
+
+NOTE: after the upgrade, a new
+backup will be created.
+</translation>
+    </message>
+    <message>
+        <source>Upgrade Wallet</source>
+        <translation>Upgrade Wallet</translation>
+    </message>
+    <message>
+        <source>Wallet unlock cancelled</source>
+        <translation>Wallet unlock cancelled</translation>
+    </message>
+    <message>
+        <source>Tor Active: %1</source>
+        <translation>Tor Active: %1</translation>
+    </message>
+    <message>
+        <source>Tor Disabled</source>
+        <translation>Tor Disabled</translation>
+    </message>
+    <message>
+        <source>FAQ</source>
+        <translation>FAQ</translation>
+    </message>
+    <message>
+        <source>Upgrade to HD Wallet</source>
+        <translation>Upgrade to HD Wallet</translation>
+    </message>
+    <message>
+        <source>No Connection</source>
+        <translation>No Connection</translation>
+    </message>
+    <message>
+        <source>Staking Disabled</source>
+        <translation>Staking Disabled</translation>
+    </message>
+    <message>
+        <source>Cold Staking Disabled</source>
+        <translation>Cold Staking Disabled</translation>
+    </message>
+    <message>
+        <source> %54 Synchronizing..</source>
+        <translation> %54 Synchronizing..</translation>
+    </message>
+    <message>
+        <source>Light Theme</source>
+        <translation>Light Theme</translation>
+    </message>
+    <message>
+        <source>Dark Theme</source>
+        <translation>Dark Theme</translation>
+    </message>
+    <message>
+        <source>Wallet Locked </source>
+        <translation>Wallet Locked </translation>
+    </message>
+    <message>
+        <source>Wallet Locked</source>
+        <translation>Wallet Locked</translation>
+    </message>
+    <message>
+        <source>Wallet Unlocked</source>
+        <translation>Wallet Unlocked</translation>
+    </message>
+    <message>
+        <source>Wallet Unencrypted</source>
+        <translation>Wallet Unencrypted</translation>
+    </message>
+    <message>
         <source>Available (Locked included)</source>
         <translation>Available (Locked included)</translation>
+    </message>
+    <message>
+        <source>The wallet has been successfully upgraded to HD.</source>
+        <translation>The wallet has been successfully upgraded to HD.</translation>
+    </message>
+    <message>
+        <source>It is advised to make a backup.</source>
+        <translation>It is advised to make a backup.</translation>
+    </message>
+    <message>
+        <source>Do you wish to backup now?</source>
+        <translation>Do you wish to backup now?</translation>
+    </message>
+    <message>
+        <source>Backup Wallet</source>
+        <translation>Backup Wallet</translation>
+    </message>
+    <message>
+        <source>Wallet Data (*.dat)</source>
+        <translation>Wallet Data (*.dat)</translation>
+    </message>
+    <message>
+        <source>Backup created</source>
+        <translation>Backup created</translation>
+    </message>
+    <message>
+        <source>Backup creation failed</source>
+        <translation>Backup creation failed</translation>
+    </message>
+    <message>
+        <source>no file selected</source>
+        <translation>no file selected</translation>
+    </message>
+    <message>
+        <source>Wallet upgraded successfully, but no backup created.</source>
+        <translation>Wallet upgraded successfully, but no backup created.</translation>
+    </message>
+    <message>
+        <source>WARNING: remember to make a copy of your wallet file!</source>
+        <translation>WARNING: remember to make a copy of your wallet file!</translation>
+    </message>
+    <message>
+        <source>Upgrade Wallet Error</source>
+        <translation>Upgrade Wallet Error</translation>
     </message>
 </context>
 <context>
@@ -5381,189 +5124,6 @@ Are you sure?
     <message>
         <source>KB/s</source>
         <translation>KB/s</translation>
-    </message>
-</context>
-<context>
-    <name>TransactionDesc</name>
-    <message numerus="yes">
-        <source>Open for %n more block(s)</source>
-        <translation><numerusform>Open for %n more block</numerusform><numerusform>Open for %n more blocks</numerusform></translation>
-    </message>
-    <message>
-        <source>Open until %1</source>
-        <translation>Open until %1</translation>
-    </message>
-    <message>
-        <source>conflicted</source>
-        <translation>conflicted</translation>
-    </message>
-    <message>
-        <source>%1/offline</source>
-        <translation>%1/offline</translation>
-    </message>
-    <message>
-        <source>%1/unconfirmed</source>
-        <translation>%1/unconfirmed</translation>
-    </message>
-    <message>
-        <source>%1 confirmations</source>
-        <translation>%1 confirmations</translation>
-    </message>
-    <message>
-        <source>%1/offline (verified via SwiftX)</source>
-        <translation>%1/offline (verified via SwiftX)</translation>
-    </message>
-    <message>
-        <source>%1/confirmed (verified via SwiftX)</source>
-        <translation>%1/confirmed (verified via SwiftX)</translation>
-    </message>
-    <message>
-        <source>%1 confirmations (verified via SwiftX)</source>
-        <translation>%1 confirmations (verified via SwiftX)</translation>
-    </message>
-    <message>
-        <source>%1/offline (SwiftX verification in progress - %2 of %3 signatures)</source>
-        <translation>%1/offline (SwiftX verification in progress - %2 of %3 signatures)</translation>
-    </message>
-    <message>
-        <source>%1/confirmed (SwiftX verification in progress - %2 of %3 signatures )</source>
-        <translation>%1/confirmed (SwiftX verification in progress - %2 of %3 signatures )</translation>
-    </message>
-    <message>
-        <source>%1 confirmations (SwiftX verification in progress - %2 of %3 signatures)</source>
-        <translation>%1 confirmations (SwiftX verification in progress - %2 of %3 signatures)</translation>
-    </message>
-    <message>
-        <source>%1/offline (SwiftX verification failed)</source>
-        <translation>%1/offline (SwiftX verification failed)</translation>
-    </message>
-    <message>
-        <source>%1/confirmed (SwiftX verification failed)</source>
-        <translation>%1/confirmed (SwiftX verification failed)</translation>
-    </message>
-    <message>
-        <source>Status</source>
-        <translation>Status</translation>
-    </message>
-    <message>
-        <source>, has not been successfully broadcast yet</source>
-        <translation>, has not been successfully broadcast yet</translation>
-    </message>
-    <message numerus="yes">
-        <source>, broadcast through %n node(s)</source>
-        <translation><numerusform>, broadcast through %n node</numerusform><numerusform>, broadcast through %n nodes</numerusform></translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation>Date</translation>
-    </message>
-    <message>
-        <source>Source</source>
-        <translation>Source</translation>
-    </message>
-    <message>
-        <source>Generated</source>
-        <translation>Generated</translation>
-    </message>
-    <message>
-        <source>From</source>
-        <translation>From</translation>
-    </message>
-    <message>
-        <source>unknown</source>
-        <translation>unknown</translation>
-    </message>
-    <message>
-        <source>To</source>
-        <translation>To</translation>
-    </message>
-    <message>
-        <source>own address</source>
-        <translation>own address</translation>
-    </message>
-    <message>
-        <source>watch-only</source>
-        <translation>watch-only</translation>
-    </message>
-    <message>
-        <source>label</source>
-        <translation>label</translation>
-    </message>
-    <message>
-        <source>Credit</source>
-        <translation>Credit</translation>
-    </message>
-    <message numerus="yes">
-        <source>matures in %n more block(s)</source>
-        <translation><numerusform>matures in %n more block</numerusform><numerusform>matures in %n more blocks</numerusform></translation>
-    </message>
-    <message>
-        <source>not accepted</source>
-        <translation>not accepted</translation>
-    </message>
-    <message>
-        <source>Debit</source>
-        <translation>Debit</translation>
-    </message>
-    <message>
-        <source>Total debit</source>
-        <translation>Total debit</translation>
-    </message>
-    <message>
-        <source>Total credit</source>
-        <translation>Total credit</translation>
-    </message>
-    <message>
-        <source>Transaction fee</source>
-        <translation>Transaction fee</translation>
-    </message>
-    <message>
-        <source>Net amount</source>
-        <translation>Net amount</translation>
-    </message>
-    <message>
-        <source>Message</source>
-        <translation>Message</translation>
-    </message>
-    <message>
-        <source>Comment</source>
-        <translation>Comment</translation>
-    </message>
-    <message>
-        <source>Transaction ID</source>
-        <translation>Transaction ID</translation>
-    </message>
-    <message>
-        <source>Output index</source>
-        <translation>Output index</translation>
-    </message>
-    <message>
-        <source>Merchant</source>
-        <translation>Merchant</translation>
-    </message>
-    <message>
-        <source>Debug information</source>
-        <translation>Debug information</translation>
-    </message>
-    <message>
-        <source>Transaction</source>
-        <translation>Transaction</translation>
-    </message>
-    <message>
-        <source>Inputs</source>
-        <translation>Inputs</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation>Amount</translation>
-    </message>
-    <message>
-        <source>true</source>
-        <translation>true</translation>
-    </message>
-    <message>
-        <source>false</source>
-        <translation>false</translation>
     </message>
 </context>
 <context>
@@ -5589,10 +5149,6 @@ Are you sure?
         <translation>Open until %1</translation>
     </message>
     <message>
-        <source>Offline</source>
-        <translation>Offline</translation>
-    </message>
-    <message>
         <source>Unconfirmed</source>
         <translation>Unconfirmed</translation>
     </message>
@@ -5613,10 +5169,6 @@ Are you sure?
         <translation>Immature (%1 confirmations, will be available after %2)</translation>
     </message>
     <message>
-        <source>This block was not received by any other nodes and will probably not be accepted!</source>
-        <translation>This block was not received by any other nodes and will probably not be accepted!</translation>
-    </message>
-    <message>
         <source>Received with</source>
         <translation>Received with</translation>
     </message>
@@ -5629,60 +5181,24 @@ Are you sure?
         <translation>Received from</translation>
     </message>
     <message>
-        <source>Received via Obfuscation</source>
-        <translation>Received via Obfuscation</translation>
+        <source>%1 Stake</source>
+        <translation>%1 Stake</translation>
     </message>
     <message>
-        <source>YEP Stake</source>
-        <translation>YEP Stake</translation>
+        <source>z%1 Stake</source>
+        <translation>z%1 Stake</translation>
     </message>
     <message>
-        <source>zYEP Stake</source>
-        <translation>zYEP Stake</translation>
+        <source>%1 Cold Stake</source>
+        <translation>%1 Cold Stake</translation>
     </message>
     <message>
-        <source>YEP Cold Stake</source>
-        <translation>YEP Cold Stake</translation>
+        <source>%1 Stake on behalf of</source>
+        <translation>%1 Stake on behalf of</translation>
     </message>
     <message>
         <source>Stake delegation</source>
         <translation>Stake delegation</translation>
-    </message>
-    <message>
-        <source>Obfuscation Denominate</source>
-        <translation>Obfuscation Denominate</translation>
-    </message>
-    <message>
-        <source>Obfuscation Collateral Payment</source>
-        <translation>Obfuscation Collateral Payment</translation>
-    </message>
-    <message>
-        <source>Obfuscation Make Collateral Inputs</source>
-        <translation>Obfuscation Make Collateral Inputs</translation>
-    </message>
-    <message>
-        <source>Obfuscation Create Denominations</source>
-        <translation>Obfuscation Create Denominations</translation>
-    </message>
-    <message>
-        <source>Converted YEP to zYEP</source>
-        <translation>Converted YEP to zYEP</translation>
-    </message>
-    <message>
-        <source>Spent zYEP</source>
-        <translation>Spent zYEP</translation>
-    </message>
-    <message>
-        <source>Received YEP from zYEP</source>
-        <translation>Received YEP from zYEP</translation>
-    </message>
-    <message>
-        <source>Minted Change as zYEP from zYEP Spend</source>
-        <translation>Minted Change as zYEP from zYEP Spend</translation>
-    </message>
-    <message>
-        <source>Converted zYEP to YEP</source>
-        <translation>Converted zYEP to YEP</translation>
     </message>
     <message>
         <source>Sent to</source>
@@ -5697,16 +5213,32 @@ Are you sure?
         <translation>Payment to yourself</translation>
     </message>
     <message>
-        <source>YEP Stake on behalf of</source>
-        <translation>YEP Stake on behalf of</translation>
+        <source>Stake delegation spent by</source>
+        <translation>Stake delegation spent by</translation>
     </message>
     <message>
         <source>Mined</source>
         <translation>Mined</translation>
     </message>
     <message>
-        <source>Obfuscated</source>
-        <translation>Obfuscated</translation>
+        <source>Converted %1 to z%1</source>
+        <translation>Converted %1 to z%1</translation>
+    </message>
+    <message>
+        <source>Spent z%1</source>
+        <translation>Spent z%1</translation>
+    </message>
+    <message>
+        <source>Received %1 from z%1</source>
+        <translation>Received %1 from z%1</translation>
+    </message>
+    <message>
+        <source>Minted Change as z%1 from z%1 Spend</source>
+        <translation>Minted Change as z%1 from z%1 Spend</translation>
+    </message>
+    <message>
+        <source>Converted z%1 to %1</source>
+        <translation>Converted z%1 to %1</translation>
     </message>
     <message>
         <source>watch-only</source>
@@ -5760,36 +5292,8 @@ Are you sure?
         <translation>Transaction Details</translation>
     </message>
     <message>
-        <source>ID:</source>
-        <translation>ID:</translation>
-    </message>
-    <message>
-        <source>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</source>
-        <translation>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</translation>
-    </message>
-    <message>
-        <source>Sending to: </source>
-        <translation>Sending to: </translation>
-    </message>
-    <message>
-        <source>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </source>
-        <translation>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </translation>
-    </message>
-    <message>
         <source>Total amount</source>
         <translation>Total amount</translation>
-    </message>
-    <message>
-        <source>2 YEP</source>
-        <translation>2 YEP</translation>
-    </message>
-    <message>
-        <source>Coin inputs:</source>
-        <translation>Coin inputs:</translation>
-    </message>
-    <message>
-        <source>1 Inputs</source>
-        <translation>1 Inputs</translation>
     </message>
     <message>
         <source>Previous Transaction</source>
@@ -5800,52 +5304,52 @@ Are you sure?
         <translation>Output Index</translation>
     </message>
     <message>
-        <source>Fee:</source>
-        <translation>Fee:</translation>
-    </message>
-    <message>
-        <source>0.0001 YEP</source>
-        <translation>0.0001 YEP</translation>
-    </message>
-    <message>
-        <source>Change address:</source>
-        <translation>Change address:</translation>
-    </message>
-    <message>
         <source>D7VFR83SQbie…BhjcWJtcfip5krte2Z </source>
         <translation>D7VFR83SQbie…BhjcWJtcfip5krte2Z </translation>
-    </message>
-    <message>
-        <source>Confirmations:</source>
-        <translation>Confirmations:</translation>
-    </message>
-    <message>
-        <source>12</source>
-        <translation>12</translation>
-    </message>
-    <message>
-        <source>Size:</source>
-        <translation>Size:</translation>
-    </message>
-    <message>
-        <source>2 kB</source>
-        <translation>2 kB</translation>
-    </message>
-    <message>
-        <source>Date:</source>
-        <translation>Date:</translation>
     </message>
     <message>
         <source>May 25, 2017</source>
         <translation>May 25, 2017</translation>
     </message>
     <message>
-        <source>Status:</source>
-        <translation>Status:</translation>
+        <source>ID</source>
+        <translation>ID</translation>
+    </message>
+    <message>
+        <source>Sending to</source>
+        <translation>Sending to</translation>
+    </message>
+    <message>
+        <source>Coin inputs</source>
+        <translation>Coin inputs</translation>
+    </message>
+    <message>
+        <source>Fee</source>
+        <translation>Fee</translation>
+    </message>
+    <message>
+        <source>Size</source>
+        <translation>Size</translation>
+    </message>
+    <message>
+        <source>Change address</source>
+        <translation>Change address</translation>
     </message>
     <message>
         <source>Spendable</source>
         <translation>Spendable</translation>
+    </message>
+    <message>
+        <source>Confirmations</source>
+        <translation>Confirmations</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Status</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Date</translation>
     </message>
     <message>
         <source>TextLabel</source>
@@ -5872,6 +5376,10 @@ Are you sure?
         <translation>ID copied</translation>
     </message>
     <message>
+        <source>Delegating to</source>
+        <translation>Delegating to</translation>
+    </message>
+    <message>
         <source>Unknown</source>
         <translation>Unknown</translation>
     </message>
@@ -5882,18 +5390,6 @@ Are you sure?
         <source>Form</source>
         <translation>Form</translation>
     </message>
-    <message>
-        <source>Received from Bob</source>
-        <translation>Received from Bob</translation>
-    </message>
-    <message>
-        <source>18/05/18</source>
-        <translation>18/05/18</translation>
-    </message>
-    <message>
-        <source>+0.000585 YEP</source>
-        <translation>+0.000585 YEP</translation>
-    </message>
 </context>
 <context>
     <name>WalletModel</name>
@@ -5902,31 +5398,20 @@ Are you sure?
         <translation>Send Coins</translation>
     </message>
     <message>
-        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 YEP.</source>
-        <translation>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 YEP.</translation>
-    </message>
-</context>
-<context>
-    <name>WalletPasswordDialog</name>
-    <message>
-        <source>Dialog</source>
-        <translation>Dialog</translation>
+        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 %2.</source>
+        <translation>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 %2.</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
+        <source>Transaction creation failed!
+%1</source>
+        <translation>Transaction creation failed!
+%1</translation>
     </message>
     <message>
-        <source>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</source>
-        <translation>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>CANCEL</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
+        <source>The size of the transaction is too big.
+Select fewer inputs with coin control.</source>
+        <translation>The size of the transaction is too big.
+Select fewer inputs with coin control.</translation>
     </message>
 </context>
 <context>
@@ -5969,9 +5454,9 @@ Are you sure?
     </message>
     <message>
         <source>Welcome to
-YEP Wallet</source>
+YEP Core Wallet</source>
         <translation>Welcome to
-YEP Wallet</translation>
+YEP Core Wallet</translation>
     </message>
     <message>
         <source>YEP is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
@@ -5999,53 +5484,14 @@ YEP Wallet</translation>
     </message>
 </context>
 <context>
-    <name>ZYEPControlDialog</name>
-    <message>
-        <source>Select zYEP to Spend</source>
-        <translation>Select zYEP to Spend</translation>
-    </message>
-    <message>
-        <source>Coin Control</source>
-        <translation>Coin Control</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>PushButton</translation>
-    </message>
-    <message>
-        <source>zYEP</source>
-        <translation>zYEP</translation>
-    </message>
-    <message>
-        <source>0.00 </source>
-        <translation>0.00 </translation>
-    </message>
-    <message>
-        <source>Quantity:</source>
-        <translation>Quantity:</translation>
-    </message>
-    <message>
-        <source>Is Spendable</source>
-        <translation>Is Spendable</translation>
-    </message>
-    <message>
-        <source>0</source>
-        <translation>0</translation>
-    </message>
-    <message>
-        <source>Select/Deselect All</source>
-        <translation>Select/Deselect All</translation>
-    </message>
-    <message>
-        <source>Select zYEP Denominations to Spend</source>
-        <translation>Select zYEP Denominations to Spend</translation>
-    </message>
-</context>
-<context>
-    <name>YEP</name>
+    <name>yep-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</translation>
+    </message>
+    <message>
+        <source>Accept connections from outside (default: %u if no -proxy or -connect/-noconnect)</source>
+        <translation>Accept connections from outside (default: %u if no -proxy or -connect/-noconnect)</translation>
     </message>
     <message>
         <source>Allow JSON-RPC connections from specified source. Valid for &lt;ip&gt; are a single IP (e.g. 1.2.3.4), a network/netmask (e.g. 1.2.3.4/255.255.255.0) or a network/CIDR (e.g. 1.2.3.4/24). This option can be specified multiple times</source>
@@ -6064,12 +5510,20 @@ YEP Wallet</translation>
         <translation>Bind to given address to listen for JSON-RPC connections. Use [host]:port notation for IPv6. This option can be specified multiple times (default: bind to all interfaces)</translation>
     </message>
     <message>
-        <source>Calculated accumulator checkpoint is not what is recorded by block index</source>
-        <translation>Calculated accumulator checkpoint is not what is recorded by block index</translation>
+        <source>Cannot find the Sapling parameters in the following directory:
+%s
+Please run 'sapling-fetch-params' or './util/fetch-params.sh' and then restart.</source>
+        <translation>Cannot find the Sapling parameters in the following directory:
+%s
+Please run 'sapling-fetch-params' or './util/fetch-params.sh' and then restart.</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. YEP is probably already running.</source>
-        <translation>Cannot obtain a lock on data directory %s. YEP is probably already running.</translation>
+        <source>Cannot obtain a lock on data directory %s. YEP Core is probably already running.</source>
+        <translation>Cannot obtain a lock on data directory %s. YEP Core is probably already running.</translation>
+    </message>
+    <message>
+        <source>Cannot upgrade to Sapling wallet (already running Sapling support). Version: %d</source>
+        <translation>Cannot upgrade to Sapling wallet (already running Sapling support). Version: %d</translation>
     </message>
     <message>
         <source>Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)</source>
@@ -6096,24 +5550,8 @@ YEP Wallet</translation>
         <translation>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</translation>
     </message>
     <message>
-        <source>Enable automatic Zerocoin minting from specific addresses (0-1, default: %u)</source>
-        <translation>Enable automatic Zerocoin minting from specific addresses (0-1, default: %u)</translation>
-    </message>
-    <message>
-        <source>Enable automatic wallet backups triggered after each zYEP minting (0-1, default: %u)</source>
-        <translation>Enable automatic wallet backups triggered after each zYEP minting (0-1, default: %u)</translation>
-    </message>
-    <message>
         <source>Enable cold staking functionality (0-1, default: %u). Disabled if staking=0</source>
         <translation>Enable cold staking functionality (0-1, default: %u). Disabled if staking=0</translation>
-    </message>
-    <message>
-        <source>Enable or disable staking functionality for YEP inputs (0-1, default: %u)</source>
-        <translation>Enable or disable staking functionality for YEP inputs (0-1, default: %u)</translation>
-    </message>
-    <message>
-        <source>Enable or disable staking functionality for zYEP inputs (0-1, default: %u)</source>
-        <translation>Enable or disable staking functionality for zYEP inputs (0-1, default: %u)</translation>
     </message>
     <message>
         <source>Enable spork administration functionality with the appropriate private key.</source>
@@ -6136,6 +5574,10 @@ YEP Wallet</translation>
         <translation>Error: Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</translation>
     </message>
     <message>
+        <source>Exclude debugging information for a category. Can be used in conjunction with -debug=1 to output debug logs for all categories except one or more specified categories.</source>
+        <translation>Exclude debugging information for a category. Can be used in conjunction with -debug=1 to output debug logs for all categories except one or more specified categories.</translation>
+    </message>
+    <message>
         <source>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</source>
         <translation>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</translation>
     </message>
@@ -6146,14 +5588,6 @@ YEP Wallet</translation>
     <message>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
         <translation>Execute command when the best block changes (%s in cmd is replaced by block hash)</translation>
-    </message>
-    <message>
-        <source>Fees (in YEP/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Fees (in YEP/Kb) smaller than this are considered zero fee for relaying (default: %s)</translation>
-    </message>
-    <message>
-        <source>Fees (in YEP/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Fees (in YEP/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -6174,10 +5608,6 @@ YEP Wallet</translation>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s' (must be at least the minrelay fee of %s to prevent stuck transactions)</source>
         <translation>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s' (must be at least the minrelay fee of %s to prevent stuck transactions)</translation>
-    </message>
-    <message>
-        <source>Keep the specified amount available for spending at all times (default: 0)</source>
-        <translation>Keep the specified amount available for spending at all times (default: 0)</translation>
     </message>
     <message>
         <source>Log transaction priority and fee per kB when mining blocks (default: %u)</source>
@@ -6208,16 +5638,8 @@ YEP Wallet</translation>
         <translation>Number of seconds to keep misbehaving peers from reconnecting (default: %u)</translation>
     </message>
     <message>
-        <source>Obfuscation uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
-        <translation>Obfuscation uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</translation>
-    </message>
-    <message>
         <source>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</source>
         <translation>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</translation>
-    </message>
-    <message>
-        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
-        <translation>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</translation>
     </message>
     <message>
         <source>Randomize credentials for every proxy connection. This enables Tor stream isolation (default: %u)</source>
@@ -6264,20 +5686,8 @@ YEP Wallet</translation>
         <translation>Total length of network version string (%i) exceeds maximum length (%i). Reduce the number or size of uacomments.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. YEP is probably already running.</source>
-        <translation>Unable to bind to %s on this computer. YEP is probably already running.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough Obfuscation denominated funds for this transaction.</source>
-        <translation>Unable to locate enough Obfuscation denominated funds for this transaction.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 20000 YEP.</source>
-        <translation>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 20000 YEP.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 20000 YEP.</source>
-        <translation>Unable to locate enough funds for this transaction that are not equal 20000 YEP.</translation>
+        <source>Unable to bind to %s on this computer. YEP Core is probably already running.</source>
+        <translation>Unable to bind to %s on this computer. YEP Core is probably already running.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -6292,12 +5702,8 @@ YEP Wallet</translation>
         <translation>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</translation>
     </message>
     <message>
-        <source>Warning: Peers are being disconnected due time differences. Please check that your computer's date and time are correct! If your clock is wrong YEP will not work properly.</source>
-        <translation>Warning: Peers are being disconnected due time differences. Please check that your computer's date and time are correct! If your clock is wrong YEP will not work properly.</translation>
-    </message>
-    <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong YEP will not work properly.</source>
-        <translation>Warning: Please check that your computer's date and time are correct! If your clock is wrong YEP will not work properly.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong YEP Core will not work properly.</source>
+        <translation>Warning: Please check that your computer's date and time are correct! If your clock is wrong YEP Core will not work properly.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -6306,14 +5712,6 @@ YEP Wallet</translation>
     <message>
         <source>Warning: We do not appear to fully agree with our peers! You may need to upgrade, or other nodes may need to upgrade.</source>
         <translation>Warning: We do not appear to fully agree with our peers! You may need to upgrade, or other nodes may need to upgrade.</translation>
-    </message>
-    <message>
-        <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
-        <translation>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</translation>
-    </message>
-    <message>
-        <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
-        <translation>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</translation>
     </message>
     <message>
         <source>Whitelist peers connecting from the given netmask or IP address. Can be specified multiple times.</source>
@@ -6328,28 +5726,12 @@ YEP Wallet</translation>
         <translation>You must specify a masternodeprivkey in the configuration. Please see documentation for help.</translation>
     </message>
     <message>
-        <source>(16740 could be used only on mainnet)</source>
-        <translation>(16740 could be used only on mainnet)</translation>
-    </message>
-    <message>
         <source>(default: %s)</source>
         <translation>(default: %s)</translation>
     </message>
     <message>
-        <source>(default: 1)</source>
-        <translation>(default: 1)</translation>
-    </message>
-    <message>
-        <source>(must be 16740 for mainnet)</source>
-        <translation>(must be 16740 for mainnet)</translation>
-    </message>
-    <message>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Accept command line and JSON-RPC commands</translation>
-    </message>
-    <message>
-        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
-        <translation>Accept connections from outside (default: 1 if no -proxy or -connect)</translation>
     </message>
     <message>
         <source>Accept public REST requests (default: %u)</source>
@@ -6360,14 +5742,6 @@ YEP Wallet</translation>
         <translation>Add a node to connect to and attempt to keep the connection open</translation>
     </message>
     <message>
-        <source>Adding Wrapped Serials supply...</source>
-        <translation>Adding Wrapped Serials supply...</translation>
-    </message>
-    <message>
-        <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
-        <translation>Allow DNS lookups for -addnode, -seednode and -connect</translation>
-    </message>
-    <message>
         <source>Always query for peer addresses via DNS lookup (default: %u)</source>
         <translation>Always query for peer addresses via DNS lookup (default: %u)</translation>
     </message>
@@ -6376,44 +5750,12 @@ YEP Wallet</translation>
         <translation>Append comment to the user agent string</translation>
     </message>
     <message>
-        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
-        <translation>Attempt to recover private keys from a corrupt wallet.dat</translation>
-    </message>
-    <message>
         <source>Automatically create Tor hidden service (default: %d)</source>
         <translation>Automatically create Tor hidden service (default: %d)</translation>
     </message>
     <message>
         <source>Block creation options:</source>
         <translation>Block creation options:</translation>
-    </message>
-    <message>
-        <source>Calculating missing accumulators...</source>
-        <translation>Calculating missing accumulators...</translation>
-    </message>
-    <message>
-        <source>Cannot downgrade wallet</source>
-        <translation>Cannot downgrade wallet</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -bind address: '%s'</source>
-        <translation>Cannot resolve -bind address: '%s'</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -externalip address: '%s'</source>
-        <translation>Cannot resolve -externalip address: '%s'</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -whitebind address: '%s'</source>
-        <translation>Cannot resolve -whitebind address: '%s'</translation>
-    </message>
-    <message>
-        <source>CoinSpend: failed check</source>
-        <translation>CoinSpend: failed check</translation>
-    </message>
-    <message>
-        <source>Connect only to the specified node(s)</source>
-        <translation>Connect only to the specified node(s)</translation>
     </message>
     <message>
         <source>Connect through SOCKS5 proxy</source>
@@ -6436,8 +5778,8 @@ YEP Wallet</translation>
         <translation>Copyright (C) 2014-%i The Dash Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The YEP Developers</source>
-        <translation>Copyright (C) 2015-%i The YEP Developers</translation>
+        <source>Copyright (C) 2015-%i The YEP Core Developers</source>
+        <translation>Copyright (C) 2015-%i The YEP Core Developers</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -6446,10 +5788,6 @@ YEP Wallet</translation>
     <message>
         <source>Could not parse masternode.conf</source>
         <translation>Could not parse masternode.conf</translation>
-    </message>
-    <message>
-        <source>Couldn't generate the accumulator witness</source>
-        <translation>Couldn't generate the accumulator witness</translation>
     </message>
     <message>
         <source>Debugging/Testing options:</source>
@@ -6462,10 +5800,6 @@ YEP Wallet</translation>
     <message>
         <source>Disable OS notifications for incoming transactions (default: %u)</source>
         <translation>Disable OS notifications for incoming transactions (default: %u)</translation>
-    </message>
-    <message>
-        <source>Disable safemode, override a real safe mode event (default: %u)</source>
-        <translation>Disable safemode, override a real safe mode event (default: %u)</translation>
     </message>
     <message>
         <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
@@ -6482,10 +5816,6 @@ YEP Wallet</translation>
     <message>
         <source>Done loading</source>
         <translation>Done loading</translation>
-    </message>
-    <message>
-        <source>Enable automatic Zerocoin minting (0-1, default: %u)</source>
-        <translation>Enable automatic Zerocoin minting (0-1, default: %u)</translation>
     </message>
     <message>
         <source>Enable publish hash transaction (locked via SwiftX) in &lt;address&gt;</source>
@@ -6510,18 +5840,6 @@ YEP Wallet</translation>
     <message>
         <source>Error loading block database</source>
         <translation>Error loading block database</translation>
-    </message>
-    <message>
-        <source>Error loading wallet.dat</source>
-        <translation>Error loading wallet.dat</translation>
-    </message>
-    <message>
-        <source>Error loading wallet.dat: Wallet corrupted</source>
-        <translation>Error loading wallet.dat: Wallet corrupted</translation>
-    </message>
-    <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of YEP</source>
-        <translation>Error loading wallet.dat: Wallet requires newer version of YEP</translation>
     </message>
     <message>
         <source>Error opening block database</source>
@@ -6556,24 +5874,12 @@ YEP Wallet</translation>
         <translation>Error: Wallet locked, unable to create transaction!</translation>
     </message>
     <message>
-        <source>Failed to calculate accumulator checkpoint</source>
-        <translation>Failed to calculate accumulator checkpoint</translation>
-    </message>
-    <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Failed to listen on any port. Use -listen=0 if you want this.</translation>
     </message>
     <message>
         <source>Failed to parse host:port string</source>
         <translation>Failed to parse host:port string</translation>
-    </message>
-    <message>
-        <source>Failed to read block</source>
-        <translation>Failed to read block</translation>
-    </message>
-    <message>
-        <source>Fee (in YEP/kB) to add to transactions you send (default: %s)</source>
-        <translation>Fee (in YEP/kB) to add to transactions you send (default: %s)</translation>
     </message>
     <message>
         <source>Force safe mode (default: %u)</source>
@@ -6612,8 +5918,8 @@ YEP Wallet</translation>
         <translation>Information</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. YEP is shutting down.</source>
-        <translation>Initialization sanity check failed. YEP is shutting down.</translation>
+        <source>Initialization sanity check failed. YEP Core is shutting down.</source>
+        <translation>Initialization sanity check failed. YEP Core is shutting down.</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
@@ -6628,28 +5934,8 @@ YEP Wallet</translation>
         <translation>Invalid -onion address or hostname: '%s'</translation>
     </message>
     <message>
-        <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -minrelaytxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Invalid amount for -minrelaytxfee=&lt;amount&gt;: '%s'</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -mintxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Invalid amount for -mintxfee=&lt;amount&gt;: '%s'</translation>
-    </message>
-    <message>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s' (must be at least %s)</source>
         <translation>Invalid amount for -paytxfee=&lt;amount&gt;: '%s' (must be at least %s)</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Invalid amount for -paytxfee=&lt;amount&gt;: '%s'</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
-        <translation>Invalid amount for -reservebalance=&lt;amount&gt;</translation>
     </message>
     <message>
         <source>Invalid amount</source>
@@ -6664,28 +5950,8 @@ YEP Wallet</translation>
         <translation>Invalid netmask specified in -whitelist: '%s'</translation>
     </message>
     <message>
-        <source>Invalid port detected in masternode.conf</source>
-        <translation>Invalid port detected in masternode.conf</translation>
-    </message>
-    <message>
-        <source>Percentage of automatically minted Zerocoin  (1-100, default: %u)</source>
-        <translation>Percentage of automatically minted Zerocoin  (1-100, default: %u)</translation>
-    </message>
-    <message>
         <source>Recalculating YEP supply...</source>
         <translation>Recalculating YEP supply...</translation>
-    </message>
-    <message>
-        <source>Recalculating minted ZYEP...</source>
-        <translation>Recalculating minted ZYEP...</translation>
-    </message>
-    <message>
-        <source>Recalculating spent ZYEP...</source>
-        <translation>Recalculating spent ZYEP...</translation>
-    </message>
-    <message>
-        <source>Reindex the YEP and zYEP money supply statistics</source>
-        <translation>Reindex the YEP and zYEP money supply statistics</translation>
     </message>
     <message>
         <source>Reindexing zerocoin database...</source>
@@ -6700,8 +5966,12 @@ YEP Wallet</translation>
         <translation>Selected coins value is less than payment target</translation>
     </message>
     <message>
-        <source>Support the zerocoin light node protocol (default: %u)</source>
-        <translation>Support the zerocoin light node protocol (default: %u)</translation>
+        <source>Shutdown requested over the txs scan. Exiting.</source>
+        <translation>Shutdown requested over the txs scan. Exiting.</translation>
+    </message>
+    <message>
+        <source>Specify zk params directory (default: %s)</source>
+        <translation>Specify zk params directory (default: %s)</translation>
     </message>
     <message>
         <source>SwiftX options:</source>
@@ -6712,36 +5982,12 @@ YEP Wallet</translation>
         <translation>This is a pre-release test build - use at your own risk - do not use for staking or merchant applications!</translation>
     </message>
     <message>
-        <source> mints deleted
-</source>
-        <translation> mints deleted
-</translation>
-    </message>
-    <message>
-        <source> mints updated, </source>
-        <translation> mints updated, </translation>
-    </message>
-    <message>
-        <source> unconfirmed transactions removed
-</source>
-        <translation> unconfirmed transactions removed
-</translation>
-    </message>
-    <message>
         <source>Disable all YEP specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
         <translation>Disable all YEP specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</translation>
     </message>
     <message>
         <source>Enable SwiftX, show confirmations for locked transactions (bool, default: %s)</source>
         <translation>Enable SwiftX, show confirmations for locked transactions (bool, default: %s)</translation>
-    </message>
-    <message>
-        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</translation>
-    </message>
-    <message>
-        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</translation>
     </message>
     <message>
         <source>Error: Unsupported argument -checklevel found. Checklevel must be level 4.</source>
@@ -6760,14 +6006,6 @@ YEP Wallet</translation>
         <translation>In rare cases, a spend with 7 coins exceeds our maximum allowable transaction size, please retry spend using 6 or less coins</translation>
     </message>
     <message>
-        <source>Preferred Denomination for automatically minted Zerocoin  (1/5/10/50/100/500/1000/5000), 0 for no preference. default: %u)</source>
-        <translation>Preferred Denomination for automatically minted Zerocoin  (1/5/10/50/100/500/1000/5000), 0 for no preference. default: %u)</translation>
-    </message>
-    <message>
-        <source>Specify custom backup path to add a copy of any automatic zYEP backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</source>
-        <translation>Specify custom backup path to add a copy of any automatic zYEP backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</translation>
-    </message>
-    <message>
         <source>Specify custom backup path to add a copy of any wallet backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup.</source>
         <translation>Specify custom backup path to add a copy of any wallet backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup.</translation>
     </message>
@@ -6776,20 +6014,36 @@ YEP Wallet</translation>
         <translation>SwiftX requires inputs with at least 6 confirmations, you might need to wait a few minutes and try again.</translation>
     </message>
     <message>
+        <source>Warning: error reading %s! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
+        <translation>Warning: error reading %s! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</translation>
+    </message>
+    <message>
+        <source>Warning: wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
+        <translation>Warning: wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</translation>
+    </message>
+    <message>
+        <source>%s corrupt, salvage failed</source>
+        <translation>%s corrupt, salvage failed</translation>
+    </message>
+    <message>
         <source>&lt;category&gt; can be:</source>
         <translation>&lt;category&gt; can be:</translation>
+    </message>
+    <message>
+        <source>Allow DNS lookups for -addnode, -seednode and -connect (default: %u)</source>
+        <translation>Allow DNS lookups for -addnode, -seednode and -connect (default: %u)</translation>
     </message>
     <message>
         <source>Attempt to force blockchain corruption recovery</source>
         <translation>Attempt to force blockchain corruption recovery</translation>
     </message>
     <message>
-        <source>Cannot create public spend input</source>
-        <translation>Cannot create public spend input</translation>
+        <source>Attempt to recover private keys from a corrupt wallet file</source>
+        <translation>Attempt to recover private keys from a corrupt wallet file</translation>
     </message>
     <message>
-        <source>CoinSpend: Accumulator witness does not verify</source>
-        <translation>CoinSpend: Accumulator witness does not verify</translation>
+        <source>Cannot create public spend input</source>
+        <translation>Cannot create public spend input</translation>
     </message>
     <message>
         <source>Display the stake modifier calculations in the debug.log file.</source>
@@ -6828,14 +6082,6 @@ YEP Wallet</translation>
         <translation>Error: No valid utxo!</translation>
     </message>
     <message>
-        <source>Failed to create mint</source>
-        <translation>Failed to create mint</translation>
-    </message>
-    <message>
-        <source>Failed to find Zerocoins in wallet.dat</source>
-        <translation>Failed to find Zerocoins in wallet.dat</translation>
-    </message>
-    <message>
         <source>Failed to parse public spend</source>
         <translation>Failed to parse public spend</translation>
     </message>
@@ -6852,12 +6098,12 @@ YEP Wallet</translation>
         <translation>Failed to write coin serial number into wallet</translation>
     </message>
     <message>
-        <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
-        <translation>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</translation>
+        <source>Invalid amount for -%s=&lt;amount&gt;: '%s'</source>
+        <translation>Invalid amount for -%s=&lt;amount&gt;: '%s'</translation>
     </message>
     <message>
-        <source>Limit size of signature cache to &lt;n&gt; entries (default: %u)</source>
-        <translation>Limit size of signature cache to &lt;n&gt; entries (default: %u)</translation>
+        <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
+        <translation>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</translation>
     </message>
     <message>
         <source>Line: %d</source>
@@ -6874,6 +6120,10 @@ YEP Wallet</translation>
     <message>
         <source>Loading addresses...</source>
         <translation>Loading addresses...</translation>
+    </message>
+    <message>
+        <source>Loading banlist...</source>
+        <translation>Loading banlist...</translation>
     </message>
     <message>
         <source>Loading block index...</source>
@@ -6896,10 +6146,6 @@ YEP Wallet</translation>
         <translation>Loading sporks...</translation>
     </message>
     <message>
-        <source>Loading wallet... (%3.2f %%)</source>
-        <translation>Loading wallet... (%3.2f %%)</translation>
-    </message>
-    <message>
         <source>Loading wallet...</source>
         <translation>Loading wallet...</translation>
     </message>
@@ -6914,6 +6160,10 @@ YEP Wallet</translation>
     <message>
         <source>Lookup(): Invalid -proxy address or hostname: '%s'</source>
         <translation>Lookup(): Invalid -proxy address or hostname: '%s'</translation>
+    </message>
+    <message>
+        <source>MNs synchronization pending...</source>
+        <translation>MNs synchronization pending...</translation>
     </message>
     <message>
         <source>Maintain at most &lt;n&gt; connections to peers (default: %u)</source>
@@ -6948,12 +6198,12 @@ YEP Wallet</translation>
         <translation>Not enough file descriptors available.</translation>
     </message>
     <message>
-        <source>Number of automatic wallet backups (default: 10)</source>
-        <translation>Number of automatic wallet backups (default: 10)</translation>
-    </message>
-    <message>
         <source>Number of custom location backups to retain (default: %d)</source>
         <translation>Number of custom location backups to retain (default: %d)</translation>
+    </message>
+    <message>
+        <source>On first run, create a legacy wallet instead of a HD wallet</source>
+        <translation>On first run, create a legacy wallet instead of a HD wallet</translation>
     </message>
     <message>
         <source>Only accept block chain matching built-in checkpoints (default: %u)</source>
@@ -6970,6 +6220,10 @@ YEP Wallet</translation>
     <message>
         <source>Password for JSON-RPC connections</source>
         <translation>Password for JSON-RPC connections</translation>
+    </message>
+    <message>
+        <source>Peers are being disconnected due time differences.</source>
+        <translation>Peers are being disconnected due time differences.</translation>
     </message>
     <message>
         <source>Unable to find transaction containing mint %s</source>
@@ -6992,8 +6246,172 @@ YEP Wallet</translation>
         <translation>Preparing for resync...</translation>
     </message>
     <message>
+        <source>Connect only to the specified node(s); -noconnect or -connect=0 alone to disable automatic connections</source>
+        <translation>Connect only to the specified node(s); -noconnect or -connect=0 alone to disable automatic connections</translation>
+    </message>
+    <message>
+        <source>Do not accept transactions if any ancestor would have &lt;n&gt; or more in-mempool descendants (default: %u)</source>
+        <translation>Do not accept transactions if any ancestor would have &lt;n&gt; or more in-mempool descendants (default: %u)</translation>
+    </message>
+    <message>
+        <source>Do not accept transactions if any ancestor would have more than &lt;n&gt; kilobytes of in-mempool descendants (default: %u).</source>
+        <translation>Do not accept transactions if any ancestor would have more than &lt;n&gt; kilobytes of in-mempool descendants (default: %u).</translation>
+    </message>
+    <message>
+        <source>Do not accept transactions if number of in-mempool ancestors is &lt;n&gt; or more (default: %u)</source>
+        <translation>Do not accept transactions if number of in-mempool ancestors is &lt;n&gt; or more (default: %u)</translation>
+    </message>
+    <message>
+        <source>Do not accept transactions whose size with all in-mempool ancestors exceeds &lt;n&gt; kilobytes (default: %u)</source>
+        <translation>Do not accept transactions whose size with all in-mempool ancestors exceeds &lt;n&gt; kilobytes (default: %u)</translation>
+    </message>
+    <message>
+        <source>Do not keep transactions in the mempool longer than &lt;n&gt; hours (default: %u)</source>
+        <translation>Do not keep transactions in the mempool longer than &lt;n&gt; hours (default: %u)</translation>
+    </message>
+    <message>
+        <source>Fees (in %s/Kb) smaller than this are considered zero fee for relaying, mining and transaction creation (default: %s)</source>
+        <translation>Fees (in %s/Kb) smaller than this are considered zero fee for relaying, mining and transaction creation (default: %s)</translation>
+    </message>
+    <message>
+        <source>Fees (in %s/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Fees (in %s/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</translation>
+    </message>
+    <message>
+        <source>Minimum positive amount (in YEP) allowed by GUI and RPC for the stake split threshold (default: %s)</source>
+        <translation>Minimum positive amount (in YEP) allowed by GUI and RPC for the stake split threshold (default: %s)</translation>
+    </message>
+    <message>
+        <source>Please check that your computer's date and time are correct! If your clock is wrong YEP Core will not work properly.</source>
+        <translation>Please check that your computer's date and time are correct! If your clock is wrong YEP Core will not work properly.</translation>
+    </message>
+    <message>
+        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect/-noconnect)</source>
+        <translation>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect/-noconnect)</translation>
+    </message>
+    <message>
+        <source>Specify location of debug log file: this can be an absolute path or a path relative to the data directory (default: %s)</source>
+        <translation>Specify location of debug log file: this can be an absolute path or a path relative to the data directory (default: %s)</translation>
+    </message>
+    <message>
+        <source>WARNING: The transaction has been signed and recorded, so the wallet will try to re-send it. Use 'abandontransaction' to cancel it. (txid: %s)</source>
+        <translation>WARNING: The transaction has been signed and recorded, so the wallet will try to re-send it. Use 'abandontransaction' to cancel it. (txid: %s)</translation>
+    </message>
+    <message>
+        <source>(must be %d for %s-net)</source>
+        <translation>(must be %d for %s-net)</translation>
+    </message>
+    <message>
+        <source>Active Masternode not initialized.</source>
+        <translation>Active Masternode not initialized.</translation>
+    </message>
+    <message>
+        <source>Allows deprecated RPC method(s) to be used</source>
+        <translation>Allows deprecated RPC method(s) to be used</translation>
+    </message>
+    <message>
+        <source>Can't generate a change-address key. Please call keypoolrefill first.</source>
+        <translation>Can't generate a change-address key. Please call keypoolrefill first.</translation>
+    </message>
+    <message>
+        <source>Cannot resolve -%s address: '%s'</source>
+        <translation>Cannot resolve -%s address: '%s'</translation>
+    </message>
+    <message>
+        <source>Change index out of range</source>
+        <translation>Change index out of range</translation>
+    </message>
+    <message>
+        <source>Error loading %s: Wallet corrupted</source>
+        <translation>Error loading %s: Wallet corrupted</translation>
+    </message>
+    <message>
+        <source>Error loading %s: Wallet requires newer version of YEP Core</source>
+        <translation>Error loading %s: Wallet requires newer version of YEP Core</translation>
+    </message>
+    <message>
+        <source>Error loading %s
+</source>
+        <translation>Error loading %s
+</translation>
+    </message>
+    <message>
+        <source>Error upgrading chainstate database</source>
+        <translation>Error upgrading chainstate database</translation>
+    </message>
+    <message>
+        <source>Error: -listen must be true if -masternode is set.</source>
+        <translation>Error: -listen must be true if -masternode is set.</translation>
+    </message>
+    <message>
+        <source>Error: -maxmempool must be at least %d MB</source>
+        <translation>Error: -maxmempool must be at least %d MB</translation>
+    </message>
+    <message>
+        <source>Error: Invalid port %d for running a masternode.</source>
+        <translation>Error: Invalid port %d for running a masternode.</translation>
+    </message>
+    <message>
+        <source>Failed to accept tx in the memory pool (reason: %s)
+</source>
+        <translation>Failed to accept tx in the memory pool (reason: %s)
+</translation>
+    </message>
+    <message>
+        <source>Failed to find Zerocoins in wallet database</source>
+        <translation>Failed to find Zerocoins in wallet database</translation>
+    </message>
+    <message>
+        <source>Fee (in %s/kB) to add to transactions you send (default: %s)</source>
+        <translation>Fee (in %s/kB) to add to transactions you send (default: %s)</translation>
+    </message>
+    <message>
+        <source>Invalid -masternodeaddr address: %s</source>
+        <translation>Invalid -masternodeaddr address: %s</translation>
+    </message>
+    <message>
+        <source>Invalid -masternodeaddr port %d, only %d is supported on %s-net.</source>
+        <translation>Invalid -masternodeaddr port %d, only %d is supported on %s-net.</translation>
+    </message>
+    <message>
+        <source>Invalid port %d detected in masternode.conf</source>
+        <translation>Invalid port %d detected in masternode.conf</translation>
+    </message>
+    <message>
+        <source>Invalid status error.</source>
+        <translation>Invalid status error.</translation>
+    </message>
+    <message>
+        <source>Keep the transaction memory pool below &lt;n&gt; megabytes (default: %u)</source>
+        <translation>Keep the transaction memory pool below &lt;n&gt; megabytes (default: %u)</translation>
+    </message>
+    <message>
+        <source>Keypool ran out, please call keypoolrefill first, or unlock the wallet.</source>
+        <translation>Keypool ran out, please call keypoolrefill first, or unlock the wallet.</translation>
+    </message>
+    <message>
+        <source>Limit size of signature cache to &lt;n&gt; MiB (default: %u)</source>
+        <translation>Limit size of signature cache to &lt;n&gt; MiB (default: %u)</translation>
+    </message>
+    <message>
+        <source>Masternodes are required to run on port %d for %s-net</source>
+        <translation>Masternodes are required to run on port %d for %s-net</translation>
+    </message>
+    <message>
+        <source>Mining/Staking options:</source>
+        <translation>Mining/Staking options:</translation>
+    </message>
+    <message>
         <source>Need destination or change address because change is not exact</source>
         <translation>Need destination or change address because change is not exact</translation>
+    </message>
+    <message>
+        <source>No error</source>
+        <translation>No error</translation>
+    </message>
+    <message>
+        <source>Number of automatic wallet backups (default: %d)</source>
+        <translation>Number of automatic wallet backups (default: %d)</translation>
     </message>
     <message>
         <source>Prepend debug output with timestamp (default: %u)</source>
@@ -7024,12 +6442,8 @@ YEP Wallet</translation>
         <translation>Rebuild block chain index from current blk000??.dat files</translation>
     </message>
     <message>
-        <source>Receive and display P2P network alerts (default: %u)</source>
-        <translation>Receive and display P2P network alerts (default: %u)</translation>
-    </message>
-    <message>
-        <source>Reindex the accumulator database</source>
-        <translation>Reindex the accumulator database</translation>
+        <source>Reindex the %s and z%s money supply statistics</source>
+        <translation>Reindex the %s and z%s money supply statistics</translation>
     </message>
     <message>
         <source>Relay and mine data carrier transactions (default: %u)</source>
@@ -7048,14 +6462,6 @@ YEP Wallet</translation>
         <translation>Rescanning...</translation>
     </message>
     <message>
-        <source>ResetMintZerocoin finished: </source>
-        <translation>ResetMintZerocoin finished: </translation>
-    </message>
-    <message>
-        <source>ResetSpentZerocoin finished: </source>
-        <translation>ResetSpentZerocoin finished: </translation>
-    </message>
-    <message>
         <source>Run a thread to flush wallet periodically (default: %u)</source>
         <translation>Run a thread to flush wallet periodically (default: %u)</translation>
     </message>
@@ -7066,10 +6472,6 @@ YEP Wallet</translation>
     <message>
         <source>Send transactions as zero-fee transactions if possible (default: %u)</source>
         <translation>Send transactions as zero-fee transactions if possible (default: %u)</translation>
-    </message>
-    <message>
-        <source>Session timed out.</source>
-        <translation>Session timed out.</translation>
     </message>
     <message>
         <source>Set database cache size in megabytes (%d to %d, default: %d)</source>
@@ -7116,10 +6518,6 @@ YEP Wallet</translation>
         <translation>Shrink debug.log file on client startup (default: 1 when no -debug)</translation>
     </message>
     <message>
-        <source>Signing timed out.</source>
-        <translation>Signing timed out.</translation>
-    </message>
-    <message>
         <source>Signing transaction failed</source>
         <translation>Signing transaction failed</translation>
     </message>
@@ -7160,10 +6558,6 @@ YEP Wallet</translation>
         <translation>Spend unconfirmed change when sending transactions (default: %u)</translation>
     </message>
     <message>
-        <source>Staking options:</source>
-        <translation>Staking options:</translation>
-    </message>
-    <message>
         <source>Stop running after importing blocks from disk (default: %u)</source>
         <translation>Stop running after importing blocks from disk (default: %u)</translation>
     </message>
@@ -7174,10 +6568,6 @@ YEP Wallet</translation>
     <message>
         <source>Synchronization finished</source>
         <translation>Synchronization finished</translation>
-    </message>
-    <message>
-        <source>Synchronization pending...</source>
-        <translation>Synchronization pending...</translation>
     </message>
     <message>
         <source>Synchronizing budgets...</source>
@@ -7200,12 +6590,8 @@ YEP Wallet</translation>
         <translation>Syncing zYEP wallet...</translation>
     </message>
     <message>
-        <source>The coin spend has been used</source>
-        <translation>The coin spend has been used</translation>
-    </message>
-    <message>
-        <source>The transaction did not verify</source>
-        <translation>The transaction did not verify</translation>
+        <source>The threshold value cannot be less than %s</source>
+        <translation>The threshold value cannot be less than %s</translation>
     </message>
     <message>
         <source>This help message</source>
@@ -7218,6 +6604,14 @@ YEP Wallet</translation>
     <message>
         <source>This is intended for regression testing tools and app development.</source>
         <translation>This is intended for regression testing tools and app development.</translation>
+    </message>
+    <message>
+        <source>This is not a masternode. 'local' option disabled.</source>
+        <translation>This is not a masternode. 'local' option disabled.</translation>
+    </message>
+    <message>
+        <source>This is not a masternode.</source>
+        <translation>This is not a masternode.</translation>
     </message>
     <message>
         <source>Threshold for disconnecting misbehaving peers (default: %u)</source>
@@ -7252,6 +6646,10 @@ YEP Wallet</translation>
         <translation>Transaction amounts must be positive</translation>
     </message>
     <message>
+        <source>Transaction canceled.</source>
+        <translation>Transaction canceled.</translation>
+    </message>
+    <message>
         <source>Transaction too large for fee policy</source>
         <translation>Transaction too large for fee policy</translation>
     </message>
@@ -7268,8 +6666,8 @@ YEP Wallet</translation>
         <translation>Unable to bind to %s on this computer (bind returned error %s)</translation>
     </message>
     <message>
-        <source>Unable to generate initial key</source>
-        <translation>Unable to generate initial key</translation>
+        <source>Unable to generate keys</source>
+        <translation>Unable to generate keys</translation>
     </message>
     <message>
         <source>Unable to sign spork message, wrong key?</source>
@@ -7284,20 +6682,20 @@ YEP Wallet</translation>
         <translation>Unknown network specified in -onlynet: '%s'</translation>
     </message>
     <message>
+        <source>Unsupported logging category %s=%s.</source>
+        <translation>Unsupported logging category %s=%s.</translation>
+    </message>
+    <message>
         <source>Upgrade wallet to latest format</source>
         <translation>Upgrade wallet to latest format</translation>
     </message>
     <message>
+        <source>Upgrading coins database...</source>
+        <translation>Upgrading coins database...</translation>
+    </message>
+    <message>
         <source>Use UPnP to map the listening port (default: %u)</source>
         <translation>Use UPnP to map the listening port (default: %u)</translation>
-    </message>
-    <message>
-        <source>Use UPnP to map the listening port (default: 1 when listening)</source>
-        <translation>Use UPnP to map the listening port (default: 1 when listening)</translation>
-    </message>
-    <message>
-        <source>Use a custom max chain reorganization depth (default: %u)</source>
-        <translation>Use a custom max chain reorganization depth (default: %u)</translation>
     </message>
     <message>
         <source>Use the test network</source>
@@ -7328,8 +6726,12 @@ YEP Wallet</translation>
         <translation>Wallet %s resides outside data directory %s</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart YEP to complete</source>
-        <translation>Wallet needed to be rewritten: restart YEP to complete</translation>
+        <source>Wallet debugging/testing options:</source>
+        <translation>Wallet debugging/testing options:</translation>
+    </message>
+    <message>
+        <source>Wallet needed to be rewritten: restart YEP Core to complete</source>
+        <translation>Wallet needed to be rewritten: restart YEP Core to complete</translation>
     </message>
     <message>
         <source>Wallet options:</source>
@@ -7372,16 +6774,16 @@ YEP Wallet</translation>
         <translation>ZeroMQ notification options:</translation>
     </message>
     <message>
+        <source>Zerocoin minting available only on regtest</source>
+        <translation>Zerocoin minting available only on regtest</translation>
+    </message>
+    <message>
         <source>Zerocoin options:</source>
         <translation>Zerocoin options:</translation>
     </message>
     <message>
         <source>on startup</source>
         <translation>on startup</translation>
-    </message>
-    <message>
-        <source>wallet.dat corrupt, salvage failed</source>
-        <translation>wallet.dat corrupt, salvage failed</translation>
     </message>
 </context>
 <context>
@@ -7395,12 +6797,40 @@ YEP Wallet</translation>
         <translation>Send</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
+        <source>Send public coins (YEP)</source>
+        <translation>Send public coins (YEP)</translation>
     </message>
     <message>
-        <source>PushButton</source>
-        <translation>PushButton</translation>
+        <source>YEP address or contact label</source>
+        <translation>YEP address or contact label</translation>
+    </message>
+    <message>
+        <source>Amount</source>
+        <translation>Amount</translation>
+    </message>
+    <message>
+        <source>Customize fee</source>
+        <translation>Customize fee</translation>
+    </message>
+    <message>
+        <source>Clear all</source>
+        <translation>Clear all</translation>
+    </message>
+    <message>
+        <source>Add recipient</source>
+        <translation>Add recipient</translation>
+    </message>
+    <message>
+        <source>Total to send</source>
+        <translation>Total to send</translation>
+    </message>
+    <message>
+        <source>Reset to default</source>
+        <translation>Reset to default</translation>
+    </message>
+    <message>
+        <source>Include delegated</source>
+        <translation>Include delegated</translation>
     </message>
 </context>
 </TS>

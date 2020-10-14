@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# setup yep account, homedir etc
+# setup pivx account, homedir etc
 
 set -e
 
@@ -9,7 +9,7 @@ BCHOME="/var/lib/yep"
 
 if [ "$1" = "purge" ]; then
 
-	# The yep user is left in place for now - This is to ensure that a new user
+	# The pivx user is left in place for now - This is to ensure that a new user
 	# will not inherit the users UID/GID and inadvertently gain access to wallets etc
 
 	# The homedir is also left intact to ensure that we don't accidentally delete a

@@ -35,4 +35,4 @@ namespace GuiTransactionsUtils {
 }
 
 
-#endif //FURSZY_YEP_GUITRANSACTIONSUTILS_H
+#endif //FURSZY_PIVX_GUITRANSACTIONSUTILS_H

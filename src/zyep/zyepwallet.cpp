@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2019 The PIVX developers
+// Copyright (c) 2017-2020 The PIVX developers
 // Copyright (c) 2020 The YEP developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -13,23 +13,23 @@
 #include "zyepchain.h"
 
 
-CzYEPWallet::CzYEPWallet(std::string strWalletFile)
+CzYEPWallet::CzYEPWallet(CWallet* parent)
 {
-    this->strWalletFile = strWalletFile;
-    CWalletDB walletdb(strWalletFile);
+    this->wallet = parent;
+    CWalletDB walletdb(wallet->strWalletFile);
     bool fRegtest = Params().IsRegTestNet();
 
     uint256 hashSeed;
     bool fFirstRun = !walletdb.ReadCurrentSeedHash(hashSeed);
 
-    //Check for old db version of storing zyep seed
+    //Check for old db version of storing zpiv seed
     if (fFirstRun) {
         uint256 seed;
         if (walletdb.ReadZYEPSeed_deprecated(seed)) {
             //Update to new format, erase old
             seedMaster = seed;
             hashSeed = Hash(seed.begin(), seed.end());
-            if (pwalletMain->AddDeterministicSeed(seed)) {
+            if (wallet->AddDeterministicSeed(seed)) {
                 if (walletdb.EraseZYEPSeed_deprecated()) {
                     LogPrintf("%s: Updated zYEP seed databasing\n", __func__);
                     fFirstRun = false;
@@ -41,8 +41,8 @@ CzYEPWallet::CzYEPWallet(std::string strWalletFile)
     }
 
     //Don't try to do anything if the wallet is locked.
-    if (pwalletMain->IsLocked() || (!fRegtest && fFirstRun)) {
-        seedMaster = 0;
+    if (wallet->IsLocked() || (!fRegtest && fFirstRun)) {
+        seedMaster.SetNull();
         nCountLastUsed = 0;
         this->mintPool = CMintPool();
         return;
@@ -57,7 +57,7 @@ CzYEPWallet::CzYEPWallet(std::string strWalletFile)
         seed = key.GetPrivKey_256();
         seedMaster = seed;
         LogPrintf("%s: first run of zyep wallet detected, new seed generated. Seedhash=%s\n", __func__, Hash(seed.begin(), seed.end()).GetHex());
-    } else if (!pwalletMain->GetDeterministicSeed(hashSeed, seed)) {
+    } else if (!parent->GetDeterministicSeed(hashSeed, seed)) {
         LogPrintf("%s: failed to get deterministic seed for hashseed %s\n", __func__, hashSeed.GetHex());
         return;
     }
@@ -72,11 +72,11 @@ CzYEPWallet::CzYEPWallet(std::string strWalletFile)
 bool CzYEPWallet::SetMasterSeed(const uint256& seedMaster, bool fResetCount)
 {
 
-    CWalletDB walletdb(strWalletFile);
-    if (pwalletMain->IsLocked())
+    CWalletDB walletdb(wallet->strWalletFile);
+    if (wallet->IsLocked())
         return false;
 
-    if (seedMaster != 0 && !pwalletMain->AddDeterministicSeed(seedMaster)) {
+    if (!seedMaster.IsNull() && !wallet->AddDeterministicSeed(seedMaster)) {
         return error("%s: failed to set master seed.", __func__);
     }
 
@@ -96,7 +96,7 @@ bool CzYEPWallet::SetMasterSeed(const uint256& seedMaster, bool fResetCount)
 
 void CzYEPWallet::Lock()
 {
-    seedMaster = 0;
+    seedMaster.SetNull();
 }
 
 void CzYEPWallet::AddToMintPool(const std::pair<uint256, uint32_t>& pMint, bool fVerbose)
@@ -109,7 +109,7 @@ void CzYEPWallet::GenerateMintPool(uint32_t nCountStart, uint32_t nCountEnd)
 {
 
     //Is locked
-    if (seedMaster == 0)
+    if (seedMaster.IsNull())
         return;
 
     uint32_t n = nCountLastUsed + 1;
@@ -150,7 +150,7 @@ void CzYEPWallet::GenerateMintPool(uint32_t nCountStart, uint32_t nCountEnd)
         SeedToZYEP(seedZerocoin, bnValue, bnSerial, bnRandomness, key);
 
         mintPool.Add(bnValue, i);
-        CWalletDB(strWalletFile).WriteMintPoolPair(hashSeed, GetPubCoinHash(bnValue), i);
+        CWalletDB(wallet->strWalletFile).WriteMintPoolPair(hashSeed, GetPubCoinHash(bnValue), i);
         LogPrintf("%s : %s count=%d\n", __func__, bnValue.GetHex().substr(0, 6), i);
     }
 }
@@ -158,7 +158,7 @@ void CzYEPWallet::GenerateMintPool(uint32_t nCountStart, uint32_t nCountEnd)
 // pubcoin hashes are stored to db so that a full accounting of mints belonging to the seed can be tracked without regenerating
 bool CzYEPWallet::LoadMintPoolFromDB()
 {
-    std::map<uint256, std::vector<std::pair<uint256, uint32_t> > > mapMintPool = CWalletDB(strWalletFile).MapMintPool();
+    std::map<uint256, std::vector<std::pair<uint256, uint32_t> > > mapMintPool = CWalletDB(wallet->strWalletFile).MapMintPool();
 
     uint256 hashSeed = Hash(seedMaster.begin(), seedMaster.end());
     for (auto& pair : mapMintPool[hashSeed])
@@ -184,7 +184,6 @@ void CzYEPWallet::SyncWithChain(bool fGenerateMintPool)
 {
     uint32_t nLastCountUsed = 0;
     bool found = true;
-    CWalletDB walletdb(strWalletFile);
 
     std::set<uint256> setAddedTx;
     while (found) {
@@ -204,7 +203,7 @@ void CzYEPWallet::SyncWithChain(bool fGenerateMintPool)
             if (ShutdownRequested())
                 return;
 
-            if (pwalletMain->zyepTracker->HasPubcoinHash(pMint.first)) {
+            if (wallet->zyepTracker->HasPubcoinHash(pMint.first)) {
                 mintPool.Remove(pMint.first);
                 continue;
             }
@@ -233,7 +232,7 @@ void CzYEPWallet::SyncWithChain(bool fGenerateMintPool)
                     if (!out.IsZerocoinMint())
                         continue;
 
-                    libzerocoin::PublicCoin pubcoin(Params().Zerocoin_Params(false));
+                    libzerocoin::PublicCoin pubcoin(Params().GetConsensus().Zerocoin_Params(false));
                     CValidationState state;
                     if (!TxOutToPublicCoin(out, pubcoin, state)) {
                         LogPrintf("%s : failed to get mint from txout for %s!\n", __func__, pMint.first.GetHex());
@@ -262,20 +261,27 @@ void CzYEPWallet::SyncWithChain(bool fGenerateMintPool)
 
                 if (!setAddedTx.count(txHash)) {
                     CBlock block;
-                    CWalletTx wtx(pwalletMain, tx);
-                    if (pindex && ReadBlockFromDisk(block, pindex))
-                        wtx.SetMerkleBranch(block);
+                    CWalletTx wtx(wallet, tx);
+                    if (pindex && ReadBlockFromDisk(block, pindex)) {
+                        int posInBlock;
+                        for (posInBlock = 0; posInBlock < (int)block.vtx.size(); posInBlock++) {
+                            if (wtx.GetHash() == txHash) {
+                                wtx.SetMerkleBranch(pindex, posInBlock);
+                                break;
+                            }
+                        }
+                    }
 
                     //Fill out wtx so that a transaction record can be created
                     wtx.nTimeReceived = pindex->GetBlockTime();
-                    pwalletMain->AddToWallet(wtx, false, &walletdb);
+                    wallet->AddToWallet(wtx);
                     setAddedTx.insert(txHash);
                 }
 
                 SetMintSeen(bnValue, pindex->nHeight, txHash, denomination);
                 nLastCountUsed = std::max(pMint.second, nLastCountUsed);
                 nCountLastUsed = std::max(nLastCountUsed, nCountLastUsed);
-                LogPrint("zero", "%s: updated count to %d\n", __func__, nCountLastUsed);
+                LogPrint(BCLog::LEGACYZC, "%s: updated count to %d\n", __func__, nCountLastUsed);
             }
         }
     }
@@ -317,23 +323,29 @@ bool CzYEPWallet::SetMintSeen(const CBigNum& bnValue, const int& nHeight, const 
     if (IsSerialInBlockchain(hashSerial, nHeightTx, txidSpend, txSpend)) {
         //Find transaction details and make a wallettx and add to wallet
         dMint.SetUsed(true);
-        CWalletTx wtx(pwalletMain, txSpend);
+        CWalletTx wtx(wallet, txSpend);
         CBlockIndex* pindex = chainActive[nHeightTx];
         CBlock block;
-        if (ReadBlockFromDisk(block, pindex))
-            wtx.SetMerkleBranch(block);
+        if (ReadBlockFromDisk(block, pindex)) {
+            int posInBlock;
+            for (posInBlock = 0; posInBlock < (int) block.vtx.size(); posInBlock++) {
+                if (wtx.GetHash() == txidSpend) {
+                    wtx.SetMerkleBranch(pindex, posInBlock);
+                    break;
+                }
+            }
+        }
 
         wtx.nTimeReceived = pindex->nTime;
-        CWalletDB walletdb(strWalletFile);
-        pwalletMain->AddToWallet(wtx, false, &walletdb);
+        wallet->AddToWallet(wtx);
     }
 
-    // Add to zyepTracker which also adds to database
-    pwalletMain->zyepTracker->Add(dMint, true);
+    // Add to zpivTracker which also adds to database
+    wallet->zyepTracker->Add(dMint, true);
 
     //Update the count if it is less than the mint's count
     if (nCountLastUsed < pMint.second) {
-        CWalletDB walletdb(strWalletFile);
+        CWalletDB walletdb(wallet->strWalletFile);
         nCountLastUsed = pMint.second;
         walletdb.WriteZYEPCount(nCountLastUsed);
     }
@@ -347,14 +359,13 @@ bool CzYEPWallet::SetMintSeen(const CBigNum& bnValue, const int& nHeight, const 
 // Check if the value of the commitment meets requirements
 bool IsValidCoinValue(const CBigNum& bnValue)
 {
-    return bnValue >= Params().Zerocoin_Params(false)->accumulatorParams.minCoinValue &&
-    bnValue <= Params().Zerocoin_Params(false)->accumulatorParams.maxCoinValue &&
-    bnValue.isPrime();
+    libzerocoin::ZerocoinParams* params = Params().GetConsensus().Zerocoin_Params(false);
+    return bnValue >= params->accumulatorParams.minCoinValue && bnValue <= params->accumulatorParams.maxCoinValue && bnValue.isPrime();
 }
 
 void CzYEPWallet::SeedToZYEP(const uint512& seedZerocoin, CBigNum& bnValue, CBigNum& bnSerial, CBigNum& bnRandomness, CKey& key)
 {
-    libzerocoin::ZerocoinParams* params = Params().Zerocoin_Params(false);
+    libzerocoin::ZerocoinParams* params = Params().GetConsensus().Zerocoin_Params(false);
 
     //convert state seed into a seed for the private key
     uint256 nSeedPrivKey = seedZerocoin.trim256();
@@ -379,7 +390,7 @@ void CzYEPWallet::SeedToZYEP(const uint512& seedZerocoin, CBigNum& bnValue, CBig
                         params->coinCommitmentGroup.modulus);
 
     CBigNum random;
-    uint256 attempts256 = 0;
+    uint256 attempts256;
     // Iterate on Randomness until a valid commitmentValue is found
     while (true) {
         // Now verify that the commitment is a prime number
@@ -412,7 +423,7 @@ uint512 CzYEPWallet::GetZerocoinSeed(uint32_t n)
 void CzYEPWallet::UpdateCount()
 {
     nCountLastUsed++;
-    CWalletDB walletdb(strWalletFile);
+    CWalletDB walletdb(wallet->strWalletFile);
     walletdb.WriteZYEPCount(nCountLastUsed);
 }
 
@@ -434,7 +445,7 @@ void CzYEPWallet::GenerateMint(const uint32_t& nCount, const libzerocoin::CoinDe
     CBigNum bnRandomness;
     CKey key;
     SeedToZYEP(seedZerocoin, bnValue, bnSerial, bnRandomness, key);
-    coin = libzerocoin::PrivateCoin(Params().Zerocoin_Params(false), denom, bnSerial, bnRandomness);
+    coin = libzerocoin::PrivateCoin(Params().GetConsensus().Zerocoin_Params(false), denom, bnSerial, bnRandomness);
     coin.setPrivKey(key.GetPrivKey());
     coin.setVersion(libzerocoin::PrivateCoin::CURRENT_VERSION);
 
@@ -462,7 +473,7 @@ bool CzYEPWallet::RegenerateMint(const CDeterministicMint& dMint, CZerocoinMint&
     }
 
     //Generate the coin
-    libzerocoin::PrivateCoin coin(Params().Zerocoin_Params(false), dMint.GetDenomination(), false);
+    libzerocoin::PrivateCoin coin(Params().GetConsensus().Zerocoin_Params(false), dMint.GetDenomination(), false);
     CDeterministicMint dMintDummy;
     GenerateMint(dMint.GetCount(), dMint.GetDenomination(), coin, dMintDummy);
 

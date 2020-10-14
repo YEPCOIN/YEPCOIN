@@ -4,11 +4,11 @@ Sample init scripts and service configuration for yepd
 Sample scripts and configuration files for systemd, Upstart and OpenRC
 can be found in the contrib/init folder.
 
-    contrib/init/yepd.service:    systemd service unit configuration
-    contrib/init/yepd.openrc:     OpenRC compatible SysV style init script
-    contrib/init/yepd.openrcconf: OpenRC conf.d file
-    contrib/init/yepd.conf:       Upstart service configuration file
-    contrib/init/yepd.init:       CentOS compatible SysV style init script
+    contrib/init/pivxd.service:    systemd service unit configuration
+    contrib/init/pivxd.openrc:     OpenRC compatible SysV style init script
+    contrib/init/pivxd.openrcconf: OpenRC conf.d file
+    contrib/init/pivxd.conf:       Upstart service configuration file
+    contrib/init/pivxd.init:       CentOS compatible SysV style init script
 
 Service User
 ---------------------------------

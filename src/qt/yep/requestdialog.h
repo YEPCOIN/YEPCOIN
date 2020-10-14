@@ -6,10 +6,11 @@
 #ifndef REQUESTDIALOG_H
 #define REQUESTDIALOG_H
 
-#include <QDialog>
-#include <QPixmap>
-#include "walletmodel.h"
+#include "qt/yep/focuseddialog.h"
 #include "qt/yep/snackbar.h"
+#include "walletmodel.h"
+
+#include <QPixmap>
 
 class WalletModel;
 class YEPGUI;
@@ -18,7 +19,7 @@ namespace Ui {
 class RequestDialog;
 }
 
-class RequestDialog : public QDialog
+class RequestDialog : public FocusedDialog
 {
     Q_OBJECT
 
@@ -31,8 +32,8 @@ public:
     void showEvent(QShowEvent *event) override;
     int res = -1;
 
-private slots:
-    void onNextClicked();
+private Q_SLOTS:
+    void accept() override;
     void onCopyClicked();
     void onCopyUriClicked();
 

@@ -10,10 +10,10 @@
 - verify that getchaintips now returns two chain tips.
 """
 
-from test_framework.test_framework import YEPTestFramework
+from test_framework.test_framework import YepTestFramework
 from test_framework.util import assert_equal
 
-class GetChainTipsTest (YEPTestFramework):
+class GetChainTipsTest (YepTestFramework):
     def set_test_params(self):
         self.num_nodes = 4
 

@@ -12,4 +12,4 @@ public:
     virtual void onError(QString error, int type) = 0;
 };
 
-#endif //YEP_CORE_NEW_GUI_PRUNNABLE_H
+#endif //PIVX_CORE_NEW_GUI_PRUNNABLE_H

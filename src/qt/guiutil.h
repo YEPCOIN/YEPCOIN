@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2013 The Bitcoin developers
-// Copyright (c) 2017-2019 The PIVX developers
+// Copyright (c) 2017-2020 The PIVX developers
 // Copyright (c) 2020 The YEP developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -9,6 +9,7 @@
 
 #include "amount.h"
 #include "askpassphrasedialog.h"
+#include "fs.h"
 
 #include <QEvent>
 #include <QHeaderView>
@@ -19,7 +20,6 @@
 #include <QTableView>
 #include <QTableWidget>
 
-#include <boost/filesystem.hpp>
 
 class QValidatedLineEdit;
 class SendCoinsRecipient;
@@ -33,7 +33,17 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the YEP Qt UI.
+/*
+ * General GUI exception
+ */
+class GUIException : public std::exception
+{
+public:
+    std::string message;
+    GUIException(const std::string &message) : message(message) {}
+};
+
+/** Utility functions used by the PIVX Qt UI.
  */
 namespace GUIUtil
 {
@@ -42,7 +52,7 @@ QString dateTimeStr(const QDateTime& datetime);
 QString dateTimeStrWithSeconds(const QDateTime& date);
 QString dateTimeStr(qint64 nTime);
 
-// Render YEP addresses in monospace font
+// Render PIVX addresses in monospace font
 QFont bitcoinAddressFont();
 
 // Parse string into a CAmount value
@@ -51,9 +61,6 @@ CAmount parseValue(const QString& text, int displayUnit, bool* valid_out = 0);
 // Format an amount
 QString formatBalance(CAmount amount, int nDisplayUnit = 0, bool isZyep = false);
 
-// Request wallet unlock
-bool requestUnlock(WalletModel* walletModel, AskPassphraseDialog::Context context, bool relock);
-
 // Set up widgets for address and amounts
 void setupAddressWidget(QValidatedLineEdit* widget, QWidget* parent);
 void setupAmountWidget(QLineEdit* widget, QWidget* parent);
@@ -61,7 +68,7 @@ void setupAmountWidget(QLineEdit* widget, QWidget* parent);
 // Update the cursor of the widget after a text change
 void updateWidgetTextAndCursorPosition(QLineEdit* widget, const QString& str);
 
-// Parse "yep:" URI into recipient object, return true on successful parsing
+// Parse "pivx:" URI into recipient object, return true on successful parsing
 bool parseBitcoinURI(const QUrl& uri, SendCoinsRecipient* out);
 bool parseBitcoinURI(QString uri, SendCoinsRecipient* out);
 QString formatBitcoinURI(const SendCoinsRecipient& info);
@@ -87,7 +94,7 @@ void copyEntryData(QAbstractItemView* view, int column, int role = Qt::EditRole)
        @param[in] role    Data role to extract from the model
        @see  TransactionView::copyLabel, TransactionView::copyAmount, TransactionView::copyAddress
      */
-QString getEntryData(QAbstractItemView *view, int column, int role);
+QVariant getEntryData(QAbstractItemView *view, int column, int role);
 
 void setClipboard(const QString& str);
 
@@ -121,13 +128,16 @@ QString getOpenFileName(QWidget* parent, const QString& caption, const QString& 
     */
 Qt::ConnectionType blockingGUIThreadConnection();
 
+// Activate, show and raise the widget
+void bringToFront(QWidget* w);
+
 // Determine whether a widget is hidden behind other windows
 bool isObscured(QWidget* w);
 
 // Open debug.log
 bool openDebugLogfile();
 
-// Open yep.conf
+// Open pivx.conf
 bool openConfigfile();
 
 // Open masternode.conf
@@ -191,7 +201,7 @@ private:
     void setViewHeaderResizeMode(int logicalIndex, QHeaderView::ResizeMode resizeMode);
     void resizeColumn(int nColumnIndex, int width);
 
-private slots:
+private Q_SLOTS:
     void on_sectionResized(int logicalIndex, int oldSize, int newSize);
     void on_geometriesChanged();
 };
@@ -226,10 +236,10 @@ QString loadStyleSheet();
 bool isExternal(QString theme);
 
 /* Convert QString to OS specific boost path through UTF-8 */
-boost::filesystem::path qstringToBoostPath(const QString& path);
+fs::path qstringToBoostPath(const QString& path);
 
 /* Convert OS specific boost path to QString through UTF-8 */
-QString boostPathToQString(const boost::filesystem::path& path);
+QString boostPathToQString(const fs::path& path);
 
 /* Convert seconds into a QString with days, hours, mins, secs */
 QString formatDurationStr(int secs);

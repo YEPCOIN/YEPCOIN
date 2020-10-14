@@ -18,4 +18,4 @@ public:
 };
 
 
-#endif //YEP_PAIRRESULT_H
+#endif //PIVX_PAIRRESULT_H

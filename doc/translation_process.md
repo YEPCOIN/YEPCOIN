@@ -1,7 +1,7 @@
 Translations
 ============
 
-The YEP project has been designed to support multiple localisations. This makes adding new phrases, and completely new languages easily achievable. For managing all application translations, YEP makes use of the Transifex online translation management tool.
+The YEP Core project has been designed to support multiple localisations. This makes adding new phrases, and completely new languages easily achievable. For managing all application translations, YEP Core makes use of the Transifex online translation management tool.
 
 ### Helping to translate (using Transifex)
 Transifex is setup to monitor the GitHub repo for updates, and when code containing new translations is found, Transifex will process any changes. It may take several hours after a pull-request has been merged, to appear in the Transifex web interface.
@@ -36,7 +36,7 @@ When an updated source file is merged into the GitHub repo, Transifex will autom
 
 To create the pull-request, use the following commands:
 ```
-git add src/qt/yepstrings.cpp src/qt/locale/yep_en.ts
+git add src/qt/pivxstrings.cpp src/qt/locale/pivx_en.ts
 git commit
 ```
 
@@ -71,11 +71,11 @@ To assist in updating translations, we have created a script to help.
 2. `git add` new translations from `src/qt/locale/`
 3. Update `src/qt/yep_locale.qrc` manually or via
 ```bash
-git ls-files src/qt/locale/*ts|xargs -n1 basename|sed 's/\(yep_\(.*\)\).ts/<file alias="\2">locale\/\1.qm<\/file>/'
+git ls-files src/qt/locale/*ts|xargs -n1 basename|sed 's/\(pivx_\(.*\)\).ts/<file alias="\2">locale\/\1.qm<\/file>/'
 ```
-4. Update `src/Makefile.qt.include` manually or via
+4. Update `src/Makefile.qt_locale.include` manually or via
 ```bash
-git ls-files src/qt/locale/*ts|xargs -n1 basename|sed 's/\(yep_\(.*\)\).ts/  qt\/locale\/\1.ts \\/'
+git ls-files src/qt/locale/*ts|xargs -n1 basename|sed 's/\(pivx_\(.*\)\).ts/  qt\/locale\/\1.ts \\/'
 ```
 
 **Do not directly download translations** one by one from the Transifex website, as we do a few post-processing steps before committing the translations.
@@ -96,7 +96,7 @@ To create a new language template, you will need to edit the languages manifest 
 
 ```xml
 <qresource prefix="/translations">
-    <file alias="en">locale/yep_en.qm</file>
+    <file alias="en">locale/pivx_en.qm</file>
     ...
 </qresource>
 ```
@@ -104,6 +104,6 @@ To create a new language template, you will need to edit the languages manifest 
 **Note:** that the language translation file **must end in `.qm`** (the compiled extension), and not `.ts`.
 
 ### Questions and general assistance
-The YEP translation maintainers include *Fuzzbawls*. You can find them, and others, in the [YEP Discord](https://discord.yepcoin.io).
+The YEP Core translation maintainers include *Fuzzbawls*. You can find them, and others, in the [YEP Discord](https://discord.yep.org).
 
 Announcements will be posted during application pre-releases to notify translators to check for updates.

@@ -6,7 +6,7 @@
 #ifndef YEP_INVALID_H
 #define YEP_INVALID_H
 
-#endif //YEP_INVALID_H
+#endif //PIVX_INVALID_H
 
 #include <libzerocoin/bignum.h>
 #include <univalue/include/univalue.h>

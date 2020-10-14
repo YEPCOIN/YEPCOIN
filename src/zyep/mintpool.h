@@ -1,5 +1,4 @@
 // Copyright (c) 2017-2018 The PIVX developers
-// Copyright (c) 2020 The YEP developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -51,4 +50,4 @@ public:
 };
 
 
-#endif //YEP_MINTPOOL_H
+#endif //PIVX_MINTPOOL_H

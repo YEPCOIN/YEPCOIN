@@ -1,4 +1,4 @@
-YEP
+YEP Core
 =====================
 
 Intro
@@ -13,7 +13,7 @@ Setup
 -----
 Unpack the files into a directory and run yep-qt.exe.
 
-YEP is the original YEP client and it builds the backbone of the network.
+YEP Core is the original YEP client and it builds the backbone of the network.
 However, it downloads and stores the entire history of YEP transactions;
 depending on the speed of your computer and network connection, the synchronization
 process can take anywhere from a few hours to a day or more.

@@ -86,13 +86,13 @@ yepd processes running on the system, so should not be used if any non-test
 yepd processes are being run.**
 
 ```bash
-killall yepd
+killall pivxd
 ```
 
 or
 
 ```bash
-pkill -9 yepd
+pkill -9 pivxd
 ```
 
 
@@ -107,7 +107,7 @@ sure yepd processes are stopped as above):
 
 ```bash
 rm -rf cache
-killall yepd
+killall pivxd
 ```
 
 ##### Test logging
@@ -169,8 +169,8 @@ For instance, to attach to `self.node[1]` during a run:
 use the directory path to get the pid from the pid file:
 
 ```bash
-cat /tmp/user/1000/testo9vsdjo3/node1/regtest/yepd.pid
-gdb /home/example/yepd <pid>
+cat /tmp/user/1000/testo9vsdjo3/node1/regtest/pivxd.pid
+gdb /home/example/pivxd <pid>
 ```
 
 Note: gdb attach step may require `sudo`

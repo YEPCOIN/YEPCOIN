@@ -8,6 +8,8 @@
 
 #include <QDialog>
 
+class YEPGUI;
+
 namespace Ui {
 class SettingsFaqWidget;
 }
@@ -17,25 +19,16 @@ class SettingsFaqWidget : public QDialog
     Q_OBJECT
 
 public:
-    explicit SettingsFaqWidget(QWidget *parent = nullptr);
+    explicit SettingsFaqWidget(YEPGUI *parent = nullptr);
     ~SettingsFaqWidget();
 
     void showEvent(QShowEvent *event) override;
 
-public slots:
+public Q_SLOTS:
    void windowResizeEvent(QResizeEvent* event);
    void setSection(int num);
-private slots:
-    void onFaq1Clicked();
-    void onFaq2Clicked();
-    void onFaq3Clicked();
-    void onFaq4Clicked();
-    void onFaq5Clicked();
-    void onFaq6Clicked();
-    void onFaq7Clicked();
-    void onFaq8Clicked();
-    void onFaq9Clicked();
-    void onFaq10Clicked();
+private Q_SLOTS:
+    void onFaqClicked(const QWidget* const widget);
 private:
     Ui::SettingsFaqWidget *ui;
     int pos = 0;

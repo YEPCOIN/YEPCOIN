@@ -1,11 +1,11 @@
 Sample configuration files for:
 ```
-SystemD: yepd.service
-Upstart: yepd.conf
-OpenRC:  yepd.openrc
-         yepd.openrcconf
-CentOS:  yepd.init
-macOS:    org.yep.yepd.plist
+SystemD: pivxd.service
+Upstart: pivxd.conf
+OpenRC:  pivxd.openrc
+         pivxd.openrcconf
+CentOS:  pivxd.init
+macOS:    org.pivx.pivxd.plist
 ```
 have been made available to assist packagers in creating node packages here.
 

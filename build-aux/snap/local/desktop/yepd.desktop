@@ -2,10 +2,10 @@
 
 [Desktop Entry]
 Encoding=UTF-8
-Name=YEP Daemon SNAP
+Name=YEP Core Daemon SNAP
 Comment=main
 GenericName=YEP Digital Currency Daemon Client main network
-Exec=YEP.daemon %u
+Exec=yep-core.daemon %u
 Terminal=true
 Type=Application
 Icon=${SNAP}/share/pixmaps/yep.png

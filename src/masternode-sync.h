@@ -1,11 +1,13 @@
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2019 The PIVX developers
+// Copyright (c) 2015-2020 The PIVX developers
 // Copyright (c) 2020 The YEP developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef MASTERNODE_SYNC_H
 #define MASTERNODE_SYNC_H
+
+#include <atomic>
 
 #define MASTERNODE_SYNC_INITIAL 0
 #define MASTERNODE_SYNC_SPORKS 1
@@ -63,9 +65,9 @@ public:
 
     CMasternodeSync();
 
-    void AddedMasternodeList(uint256 hash);
-    void AddedMasternodeWinner(uint256 hash);
-    void AddedBudgetItem(uint256 hash);
+    void AddedMasternodeList(const uint256& hash);
+    void AddedMasternodeWinner(const uint256& hash);
+    void AddedBudgetItem(const uint256& hash);
     void GetNextAsset();
     std::string GetSyncStatus();
     void ProcessMessage(CNode* pfrom, std::string& strCommand, CDataStream& vRecv);
@@ -74,6 +76,12 @@ public:
 
     void Reset();
     void Process();
+    /*
+     * Process sync with a single node.
+     * If it returns false, the Process() step is complete.
+     * Otherwise Process() calls it again for a different node.
+     */
+    bool SyncWithNode(CNode* pnode, bool isRegTestNet);
     bool IsSynced();
     bool NotCompleted();
     bool IsSporkListSynced();

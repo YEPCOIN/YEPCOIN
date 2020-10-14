@@ -2,10 +2,10 @@
 
 [Desktop Entry]
 Encoding=UTF-8
-Name=YEP
-Comment=YEP QT main network
+Name=YEP Core
+Comment=YEP Core QT main network
 GenericName=YEP Digital Currency QT client main network
-Exec=YEP.qt %u
+Exec=yep-core.qt %u
 Terminal=false
 Type=Application
 Icon=${SNAP}/share/pixmaps/yep.png

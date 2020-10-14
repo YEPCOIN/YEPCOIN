@@ -39,4 +39,4 @@ public:
 };
 
 
-#endif //YEP_ADDRESSHOLDER_H
+#endif //PIVX_ADDRESSHOLDER_H

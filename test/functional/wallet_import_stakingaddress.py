@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# Copyright (c) 2020 The PIVX developers
 # Copyright (c) 2020 The YEP developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -12,18 +11,18 @@ Node1 imports and rescans. The test checks that cold utxos and staking balance i
 
 from time import sleep
 
-from test_framework.test_framework import YEPTestFramework
+from test_framework.test_framework import YepTestFramework
 from test_framework.util import (
     assert_equal,
     DecimalAmt,
     sync_blocks,
 )
 
-class ImportStakingTest(YEPTestFramework):
+class ImportStakingTest(YepTestFramework):
 
     def set_test_params(self):
         self.num_nodes = 2
-        self.extra_args = [['-staking=0']] * self.num_nodes
+        self.extra_args = [[]] * self.num_nodes
         self.extra_args[0].append('-sporkkey=932HEevBSujW2ud7RfB1YF91AFygbBRQj3de3LyaCRqNzKKgWXi')
 
     def log_title(self):
@@ -48,7 +47,7 @@ class ImportStakingTest(YEPTestFramework):
             delegations.append(self.nodes[0].delegatestake(sa, 10)['txid'])
             # mine a block and check staking balance
             self.nodes[0].generate(1)
-            assert_equal(self.nodes[0].getcoldstakingbalance(), DecimalAmt(10 * (i+1)))
+            assert_equal(self.nodes[0].getdelegatedbalance(), DecimalAmt(10 * (i+1)))
             sync_blocks(self.nodes)
 
         # Export keys
