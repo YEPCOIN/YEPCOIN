@@ -118,6 +118,7 @@ YEPGUI::YEPGUI(const NetworkStyle* networkStyle, QWidget* parent) :
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         stackedContainer->setSizePolicy(sizePolicy);
         stackedContainer->setContentsMargins(0,0,0,0);
+        stackedContainer->setProperty("cssClass", "container-main");
         baseScreensContainer->addWidget(stackedContainer);
 
         // Init

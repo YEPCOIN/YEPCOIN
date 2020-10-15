@@ -41,7 +41,7 @@ DashboardWidget::DashboardWidget(YEPGUI* parent) :
     this->setContentsMargins(0,0,0,0);
 
     // Containers
-    setCssProperty({this, ui->left}, "container");
+    setCssProperty({this, ui->left}, "container-dashboard-left");
     ui->left->setContentsMargins(0,0,0,0);
 
     // Title
@@ -49,10 +49,12 @@ DashboardWidget::DashboardWidget(YEPGUI* parent) :
     setCssTitleScreen(ui->labelTitle2);
 
     /* Subtitle */
-    setCssSubtitleScreen(ui->labelSubtitle);
+//    setCssSubtitleScreen(ui->labelSubtitle);
+    setCssProperty(ui->labelSubtitle, "text-content-white", false);
 
     // Staking Information
-    setCssSubtitleScreen(ui->labelMessage);
+//    setCssSubtitleScreen(ui->labelMessage);
+    setCssProperty(ui->labelMessage, "text");
     setCssProperty(ui->labelSquareYep, "square-chart-yep");
     setCssProperty(ui->labelSquarezYep, "square-chart-zyep");
     setCssProperty(ui->labelYep, "text-chart-yep");
@@ -81,7 +83,7 @@ DashboardWidget::DashboardWidget(YEPGUI* parent) :
     setCssProperty(ui->pushButtonChartRight, "btn-chart-arrow-right");
 
 #ifdef USE_QTCHARTS
-    setCssProperty(ui->right, "container-right");
+    setCssProperty(ui->right, "container-dashboard-right");
     ui->right->setContentsMargins(20,20,20,0);
     connect(ui->comboBoxYears, static_cast<void (QComboBox::*)(const QString&)>(&QComboBox::currentIndexChanged),
         this, &DashboardWidget::onChartYearChanged);
@@ -105,7 +107,7 @@ DashboardWidget::DashboardWidget(YEPGUI* parent) :
         this, &DashboardWidget::onSortTypeChanged);
 
     // Transactions
-    setCssProperty(ui->listTransactions, "container");
+    setCssProperty(ui->listTransactions, "container-dashboard-left");
     ui->listTransactions->setItemDelegate(txViewDelegate);
     ui->listTransactions->setIconSize(QSize(DECORATION_SIZE, DECORATION_SIZE));
     ui->listTransactions->setMinimumHeight(NUM_ITEMS * (DECORATION_SIZE + 2));
@@ -123,13 +125,14 @@ DashboardWidget::DashboardWidget(YEPGUI* parent) :
     ui->emptyContainer->setVisible(false);
     setCssProperty(ui->pushImgEmpty, "img-empty-transactions");
     setCssProperty(ui->labelEmpty, "text-empty");
-    setCssProperty(ui->chartContainer, "container-chart");
+    setCssProperty(ui->chartContainer, "container-chart-trans");
     setCssProperty(ui->pushImgEmptyChart, "img-empty-staking-on");
 
     setCssBtnSecondary(ui->btnHowTo);
 
-    setCssProperty(ui->labelEmptyChart, "text-empty");
-    setCssSubtitleScreen(ui->labelMessageEmpty);
+    setCssProperty(ui->labelEmptyChart, "text");
+//    setCssSubtitleScreen(ui->labelMessageEmpty);
+    setCssProperty(ui->labelMessageEmpty, "text");
 
     // Chart State
     ui->layoutChart->setVisible(false);
@@ -459,7 +462,7 @@ void DashboardWidget::initChart()
     baseScreensContainer->addWidget(chartView);
     ui->chartContainer->setLayout(baseScreensContainer);
     ui->chartContainer->setContentsMargins(0,0,0,0);
-    setCssProperty(ui->chartContainer, "container-chart");
+    setCssProperty(ui->chartContainer, "container-chart-trans");
 }
 
 void DashboardWidget::changeChartColors()

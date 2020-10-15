@@ -145,7 +145,7 @@ void setFilterAddressBook(QComboBox* filter, SortEdit* lineEdit)
 void setSortTx(QComboBox* filter, SortEdit* lineEdit)
 {
     // Sort Transactions
-    initComboBox(filter, lineEdit);
+    initComboBox(filter, lineEdit, "btn-combo-dashboard");
     filter->addItem(QObject::tr("Date desc"), SortTx::DATE_DESC);
     filter->addItem(QObject::tr("Date asc"), SortTx::DATE_ASC);
     filter->addItem(QObject::tr("Amount desc"), SortTx::AMOUNT_ASC);
@@ -154,7 +154,7 @@ void setSortTx(QComboBox* filter, SortEdit* lineEdit)
 
 void setSortTxTypeFilter(QComboBox* filter, SortEdit* lineEditType)
 {
-    initComboBox(filter, lineEditType);
+    initComboBox(filter, lineEditType, "btn-combo-dashboard");
     filter->addItem(QObject::tr("All"), TransactionFilterProxy::ALL_TYPES);
     filter->addItem(QObject::tr("Received"), TransactionFilterProxy::TYPE(TransactionRecord::RecvWithAddress) | TransactionFilterProxy::TYPE(TransactionRecord::RecvFromOther));
     filter->addItem(QObject::tr("Sent"), TransactionFilterProxy::TYPE(TransactionRecord::SendToAddress) | TransactionFilterProxy::TYPE(TransactionRecord::SendToOther));
@@ -219,7 +219,7 @@ QColor getRowColor(bool isLightTheme, bool isHovered, bool isSelected)
         } else if (isHovered) {
             return QColor("#25bababa");
         } else {
-            return QColor("#ffffff");
+            return QColor("#25ffffff");
         }
     } else {
         if (isSelected) {

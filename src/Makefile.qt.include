@@ -324,6 +324,7 @@ RES_ICONS = \
   qt/yep/res/img/bg-welcome@2x.jpg \
   qt/yep/res/img/bg-welcome@3x.jpg \
   qt/yep/res/img/bg-welcome.png \
+  qt/yep/res/img/bg-container.png \
   qt/yep/res/img/ic-check-staking.svg \
   qt/yep/res/img/ic-nav-master.svg \
   qt/yep/res/img/img-dashboard-banner.jpg \
