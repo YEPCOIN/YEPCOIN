@@ -25,7 +25,7 @@ void TxRow::init(bool isLightTheme)
 void TxRow::setConfirmStatus(bool isConfirm)
 {
     if (isConfirm) {
-        setCssProperty(ui->lblAddress, "text-list-body1");
+        setCssProperty(ui->lblAddress, "text-list-body1-tx");
         setCssProperty(ui->lblDate, "text-list-caption");
     } else {
         setCssProperty(ui->lblAddress, "text-list-body-unconfirmed");

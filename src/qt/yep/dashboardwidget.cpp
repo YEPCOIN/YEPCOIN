@@ -60,6 +60,7 @@ DashboardWidget::DashboardWidget(YEPGUI* parent) :
     setCssProperty(ui->labelYep, "text-chart-yep");
     setCssProperty(ui->labelZyep, "text-chart-zyep");
     ui->labelZyep->setVisible(false);
+    ui->labelSquarezYep->setVisible(false);
 
     // Staking Amount
     QFont fontBold;
@@ -474,7 +475,7 @@ void DashboardWidget::changeChartColors()
     if (isLightTheme()) {
         gridLineColorX = QColor(255,255,255);
         linePenColorY = gridLineColorX;
-        backgroundColor = linePenColorY;
+        backgroundColor = QColor(Qt::transparent);
         axisY->setGridLineColor(QColor("#1a000000"));
     } else {
         gridY = QColor("#40ffffff");
